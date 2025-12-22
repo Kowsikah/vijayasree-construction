@@ -1,0 +1,770 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Mahaveer Palace | Vijayasree Construction</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/logo.png">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/gijgo.css">
+    <link rel="stylesheet" href="assets/css/slicknav.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <style>
+        /* Filter and Title Styles */
+        .project-filter.text-right { text-align: right; margin-bottom: 40px; padding-right: 15px; }
+        .project-filter button { background: none; border: none; padding: 0; margin-left: 30px; font-family: "Teko", sans-serif; font-size: 22px; font-weight: 500; text-transform: capitalize; color: #072042; cursor: pointer; transition: 0.3s; outline: none; }
+        .project-filter button.active, .project-filter button:hover { color: #ff5e13; }
+        
+        .section-tittle { position: relative; z-index: 1; }
+        .section-tittle .front-text h2 { font-size: 50px; font-weight: 700; text-transform: uppercase; color: #ea6e35; }
+        .section-tittle .back-text { font-size: 100px; font-weight: 700; color: #fba26b; position: absolute; top: -40px; left: 0; z-index: -1; text-transform: uppercase; }
+
+        /* Project Card Styling */
+        .single-project { position: relative; overflow: hidden; border: 2px solid rgba(255, 255, 255, 0.3); transition: border-color 0.4s ease; }
+        .project-img img { display: block; transition: transform 0.5s ease; }
+        .single-project:hover { border-color: #ff5e13; }
+        .single-project:hover .project-img img { transform: scale(1.1); }
+        .project-cap { position: absolute; bottom: 0; left: 0; width: 100%; height: 100px; background: rgba(7, 32, 66, 0.8); padding: 20px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; box-sizing: border-box; z-index: 5; }
+        .project-cap h4 a { color: #ff5e13; font-family: "Teko", sans-serif; font-size: 26px; text-transform: uppercase; text-decoration: none; }
+        .project-cap span { color:white; font-size: 14px; font-weight: 600; text-transform: uppercase; }
+        .btn-learn { background: #ff5e13; color: #fff !important; padding: 8px 20px; text-transform: uppercase; font-size: 12px; font-weight: 700; border-radius: 4px; transition: 0.3s; text-decoration: none; }
+
+        /* Mahaveer Detail Images */
+        .rounded-shadow { width: 100%; height: auto; max-height: 340px; object-fit: cover; border-radius: 15px; box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease; }
+        .rounded-shadow:hover { transform: translateY(-5px); }
+
+        /* Amenity Card Styling */
+        .single-amenity-card { background: #fff9d6; padding: 40px 20px; border-radius: 30px; border: 1.5px solid #ff7d45; box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05); height: 100%; transition: all 0.3s ease; }
+        .single-amenity-card:hover { transform: translateY(-10px); background: #fffbe6; }
+        .amenity-icon { background: #ffffff; width: 85px; height: 85px; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; border: 1px solid #000; }
+        .amenity-icon img { max-width: 85px; }
+        .single-amenity-card h4 { font-family: "Teko", sans-serif; font-size: 26px; color: #072042; margin-bottom: 12px; }
+        .single-amenity-card p { font-size: 14px; color: #506172; line-height: 1.4; }
+
+        /* Gap Reduction Utilities */
+        .pt-0 { padding-top: 0px !important; }
+        .pb-40 { padding-bottom: 40px !important; }
+
+        @media (max-width: 768px) {
+            .project-filter.text-right { text-align: center; }
+            .project-filter button { margin: 5px 15px; }
+        }
+        /* Review Cards */
+.single-review {
+    background: #fff9d6;
+    border-radius: 30px;
+    border: 1.5px solid #ff7d45;
+    transition: all 0.3s ease;
+}
+.single-review:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.review-user-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+}
+.rating i {
+    color: #ff5e13;
+    font-size: 14px;
+}
+
+/* Enquire Form */
+.enquire-form-wrapper {
+    background: #fff;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    border-top: 5px solid #e32d1e;
+}
+.enquire-form-wrapper h3 {
+    font-family: "Teko", sans-serif;
+    font-size: 32px;
+}
+.custom-input {
+    height: 50px;
+    border: 1px solid #ddd;
+    border-radius: 5px !important;
+}
+.submit-btn {
+    background: #e32d1e !important;
+    color: #fff !important;
+    padding: 20px !important;
+    font-family: "Teko", sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+.submit-btn:hover {
+    background: #072042 !important;
+}
+
+/* Map */
+.map-container {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border-radius: 15px;
+    overflow: hidden;
+}
+        /* --- New Sections Styling --- */
+
+/* Property Specifications & Location Perks */
+.property-specs, .location-perks {
+    background: #ffffff;
+}
+.specs-list h3, .location-perks h3 {
+    font-family: "Teko", sans-serif;
+    font-size: 35px;
+    color: #072042;
+    text-transform: uppercase;
+}
+.specs-list ul li, .location-perks ul li {
+    font-size: 16px;
+    color: #506172;
+    display: flex;
+    align-items: center;
+    line-height: 1.6;
+}
+.specs-list ul li i, .location-perks ul li i {
+    font-size: 18px;
+    min-width: 25px;
+}
+
+/* Photo Gallery */
+.photo-gallery {
+    background-color: #f9f9f9;
+}
+.photo-gallery img, .photo-gallery video {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+.photo-gallery img:hover {
+    transform: scale(1.03);
+}
+
+/* Customer Reviews */
+.single-review {
+    height: 100%;
+    transition: all 0.3s ease;
+}
+.single-review:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 25px rgba(255, 94, 19, 0.1);
+}
+.single-review h4 {
+    font-family: "Teko", sans-serif;
+    font-size: 24px;
+    color: #072042;
+}
+
+/* Enquire Now Form */
+.enquire-form-wrapper {
+    border-top: 4px solid #e32d1e;
+}
+.enquire-form-wrapper h3 {
+    font-family: "Teko", sans-serif;
+    font-size: 30px;
+    color: #072042;
+}
+.enquire-form-wrapper .form-control {
+    border: 1px solid #ebebeb;
+    border-radius: 5px;
+    background: #fcfcfc;
+}
+.enquire-form-wrapper .form-control:focus {
+    border-color: #ff5e13;
+    box-shadow: none;
+}
+.enquire-form-wrapper .btn {
+    font-family: "Teko", sans-serif;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Gap Reduction Utilities */
+.pt-0 { padding-top: 0px !important; }
+.pb-0 { padding-bottom: 0px !important; }
+.pt-60 { padding-top: 60px !important; }
+.pb-60 { padding-bottom: 60px !important; }
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+    .enquire-content {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .property-specs img, .location-perks img {
+        margin-top: 30px;
+    }
+}/* Map Section Styling */
+.project-location {
+    background: #ffffff;
+}
+
+.map-container iframe {
+    filter: grayscale(10%); /* Optional: gives a modern look */
+    transition: filter 0.3s ease;
+}
+
+.map-container:hover iframe {
+    filter: grayscale(0%);
+}
+
+/* Ensure consistent spacing */
+.pb-100 {
+    padding-bottom: 100px !important;
+}
+.pt-0 {
+    padding-top: 0px !important;
+}
+/* Review Card Styling */
+.single-review {
+    background: #fff9d6;
+    border-radius: 30px;
+    border: 1.5px solid #ff7d45;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.single-review:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.review-user-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.single-review h4 {
+    font-family: "Teko", sans-serif;
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: #072042;
+}
+
+.rating i {
+    color: #ff5e13; /* Brand Orange */
+    font-size: 14px;
+}
+
+/* Enquire Section Styling */
+.enquire-form-wrapper {
+    background: #fff;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    border-top: 5px solid #e32d1e; /* Red accent */
+}
+
+.enquire-form-wrapper h3 {
+    font-family: "Teko", sans-serif;
+    font-size: 32px;
+    color: #072042;
+    text-transform: uppercase;
+}
+
+.enquire-form-wrapper .form-control {
+    height: 50px;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.enquire-form-wrapper textarea.form-control {
+    height: 120px;
+    resize: none;
+}
+
+.submit-btn {
+    background: #e32d1e;
+    color: #fff;
+    padding: 18px;
+    font-family: "Teko", sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background 0.3s ease;
+    border: none;
+}
+
+.submit-btn:hover {
+    background: #072042;
+    color: #fff;
+}
+
+.dream-home-img {
+    max-width: 300px;
+}
+
+.contact-quick-info i {
+    color: #ff5e13;
+    margin-right: 10px;
+}
+
+/* Responsive fixes */
+@media (max-width: 991px) {
+    .enquire-content {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .enquire-form-wrapper {
+        padding: 30px !important;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="assets/img/logo/logo.png" alt="" width="200px">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="header-area header-transparent">
+            <div class="main-header ">
+                <div class="header-top d-none d-lg-block">
+                    <div class="container-fluid">
+                        <div class="col-xl-12">
+                            <div class="row d-flex justify-content-between align-items-center">
+                                <div class="header-info-left">
+                                    <ul>     
+                                        <li>+91 77083 85999</li>
+                                        <li>vijaysribuilders@gmail.com</li>
+                                        <li>Mon - Sat 8:00 - 17:30</li>
+                                    </ul>
+                                </div>
+                                <div class="header-info-right">
+                                    <ul class="header-social">    
+                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-bottom header-sticky">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <div class="col-xl-2 col-lg-2 col-md-1">
+                                <div class="logo">
+                                    <a href="index.html" class="big-logo"><img src="assets/img/logo/logo.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-xl-8 col-lg-8 col-md-8">
+                                <div class="main-menu f-right d-none d-lg-block">
+                                    <nav> 
+                                        <ul id="navigation">                                                                                                                   
+                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href="about.html">About</a></li>
+                                            <li><a href="project.html">Projects</a></li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>             
+                            <div class="col-xl-2 col-lg-2 col-md-3">
+                                <div class="header-right-btn f-right d-none d-lg-block">
+                                    <a href="contact.html" class="btn">Contact Now</a>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="slider-area ">
+            <div class="single-slider hero-overly slider-height2 d-flex align-items-center" 
+                 style="background-image: url('assets/img/hero/about.jpg'); background-size: cover; background-position: center;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap pt-100">
+                                <h2>Mahaveer Palace</h2>
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                        <li class="breadcrumb-item"><a href="#">Mahaveer Palace</a></li> 
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="ongoing-project-detail pb-40" style="padding-top: 100px;">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-8 col-lg-10">
+                        <div class="section-tittle text-center mb-80">
+                            <h2 style="color: #072042; font-size: 45px; margin-bottom: 10px;">Mahaveer Palace <br> Apartments</h2>
+                            <p style="font-size: 18px; color: #506172; line-height: 1.6;">
+                                First Fully Equipped Gated community with 15+ <br> 
+                                amenities and great design to enjoy the community <br> 
+                                living with privacy and safety.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center gx-2">
+                    <div class="col-lg-5 col-md-6 mb-30">
+                        <img src="assets/img/service/p1.png" alt="View 1" class="img-fluid rounded-shadow">
+                    </div>
+                    <div class="col-lg-5 col-md-6 mb-30">
+                        <img src="assets/img/service/p2.png" alt="View 2" class="img-fluid rounded-shadow">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="amenities-area pt-0 pb-120" style="background-color: #fffdf2;">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-8 col-lg-10">
+                        <div class="section-tittle text-center mb-60">
+                            <h2 style="color: #072042; font-size: 45px; margin-bottom: 10px;">Amenities</h2>
+                            <p style="font-size: 18px; color: #506172; line-height: 1.6;">
+                                With amazing views and wide-open spaces, it’s the <br> perfect place to move.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 mb-30">
+                        <div class="single-amenity-card text-center">
+                            <div class="amenity-icon"><img src="assets/img/service/i1.png" alt=""></div>
+                            <h4>Security</h4>
+                            <p>24/7 on duty for you</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-30">
+                        <div class="single-amenity-card text-center">
+                            <div class="amenity-icon"><img src="assets/img/service/i2.png" alt=""></div>
+                            <h4>Swimming Pool</h4>
+                            <p>A fun place to cool off.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-30">
+                        <div class="single-amenity-card text-center">
+                            <div class="amenity-icon"><img src="assets/img/service/i3.png" alt=""></div>
+                            <h4>Hospital</h4>
+                            <p>Taking care of all medical emergencies.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-30">
+                        <div class="single-amenity-card text-center">
+                            <div class="amenity-icon"><img src="assets/img/service/i4.png" alt=""></div>
+                            <h4>Supermarket</h4>
+                            <p>Convenience at your doorstep!</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-30">
+                        <div class="single-amenity-card text-center">
+                            <div class="amenity-icon"><img src="assets/img/service/i5.png" alt=""></div>
+                            <h4>Beauty Parlour</h4>
+                            <p>Professional makeovers!</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-30">
+                        <div class="single-amenity-card text-center">
+                            <div class="amenity-icon"><img src="assets/img/service/i6.png" alt=""></div>
+                            <h4>Club House</h4>
+                            <p>Indoor activities under one roof.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-30">
+                        <div class="single-amenity-card text-center">
+                            <div class="amenity-icon"><img src="assets/img/service/i7.png" alt=""></div>
+                            <h4>Children's Play</h4>
+                            <p>Wonderful space for kids to play.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-30">
+                        <div class="single-amenity-card text-center">
+                            <div class="amenity-icon"><img src="assets/img/service/i8.png" alt=""></div>
+                            <h4>Mini Theatre</h4>
+                            <p>Enjoy movie nights in comfort!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="floor-plan-area pt-100 pb-100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-8 col-lg-10">
+                <div class="section-tittle text-center mb-60">
+                    <h2 style="color: #072042; font-size: 45px; margin-bottom: 10px;">Floor Plan</h2>
+                    <p style="font-size: 18px; color: #506172; line-height: 1.6;">
+                        Let us take you through our intricately planned and <br>
+                        detailed floor plan. Get a better idea of what works for you!
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-10 text-center">
+                <img src="assets/img/service/floor plan.jpg" alt="Master Plan" class="img-fluid" style="max-width: 100%; border: 1px solid #eee; padding: 20px;">
+            </div>
+        </div>
+    </div>
+</section>
+
+      <section class="property-specs pt-100 pb-60">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-8 col-lg-10">
+                <div class="section-tittle text-center mb-60">
+                    <h2 style="color: #072042; font-size: 45px;">Property Specifications</h2>
+                    <p>Take an in-depth dive into the advantages of purchasing a property with us!</p>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-lg-5">
+                <div class="specs-list">
+                    <h3 class="mb-30">Key Highlights of Project</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li class="mb-20"><i class="fas fa-check-circle" style="color: #ff5e13; margin-right: 10px;"></i> Offers 1 BHK, 2 BHK & 3 BHK luxurious Apartments</li>
+                        <li class="mb-20"><i class="fas fa-check-circle" style="color: #ff5e13; margin-right: 10px;"></i> Comprises of 200 meticulously planned Apartments</li>
+                        <li class="mb-20"><i class="fas fa-check-circle" style="color: #ff5e13; margin-right: 10px;"></i> Ensures privacy & exclusivity to its residents</li>
+                        <li class="mb-20"><i class="fas fa-check-circle" style="color: #ff5e13; margin-right: 10px;"></i> Both luxurious and affordable</li>
+                        <li class="mb-20"><i class="fas fa-check-circle" style="color: #ff5e13; margin-right: 10px;"></i> Magnificent ambience & lifestyle amenities combined</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <img src="assets/img/service/prop1.jpeg" alt="Interior View" class="img-fluid rounded" style="border-radius: 15px;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="photo-gallery pt-60 pb-60" style="background-color: #f9f9f9;">
+    <div class="container">
+        <div class="section-tittle text-center mb-60">
+            <h2 style="color: #072042; font-size: 45px;">Photo Gallery</h2>
+            <p>Have a look at what we have to offer</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-30"><img src="assets/img/service/p3.png" class="img-fluid rounded" style="border-radius: 15px;"></div>
+            <div class="col-lg-4 col-md-6 mb-30">
+                <div class="video-box" style="position: relative;">
+                    <video controls style="width: 100%; border-radius: 15px;">
+                        <source src="assets/img/service/gallvideo.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-30"><img src="assets/img/service/p4.png" class="img-fluid rounded" style="border-radius: 15px;"></div>
+        </div>
+    </div>
+</section>
+
+<section class="location-perks pt-100 pb-100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-8 col-lg-10">
+                <div class="section-tittle text-center mb-60">
+                    <h2 style="color: #072042; font-size: 45px;">Location Perks</h2>
+                    <p>Take an in-depth dive into the advantages of purchasing a property with us!</p>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-lg-5">
+                <h3 class="mb-30">Key Highlights of Location</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li class="mb-15"><i class="fas fa-check-circle" style="color: #ff5e13; margin-right: 10px;"></i> Located in Heart of the City</li>
+                    <li class="mb-15"><i class="fas fa-check-circle" style="color: #ff5e13; margin-right: 10px;"></i> Stilt Car Parking</li>
+                    <li class="mb-15"><i class="fas fa-check-circle" style="color: #ff5e13; margin-right: 10px;"></i> Earthquake Resistance Structure</li>
+                    <li class="mb-15"><i class="fas fa-check-circle" style="color: #ff5e13; margin-right: 10px;"></i> Near to all Major Govt. Institutions</li>
+                    <li class="mb-15"><i class="fas fa-check-circle" style="color: #ff5e13; margin-right: 10px;"></i> 100% Power Back-up in Common Area</li>
+                    <li class="mb-15"><i class="fas fa-check-circle" style="color: #ff5e13; margin-right: 10px;"></i> 3-Tier Security</li>
+                    <li class="mb-15"><i class="fas fa-check-circle" style="color: #ff5e13; margin-right: 10px;"></i> Loan from all Leading Banks</li>
+                </ul>
+            </div>
+            <div class="col-lg-7">
+                <img src="assets/img/service/p2.png" alt="Exterior View" class="img-fluid" style="border-radius: 15px;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="project-location pt-0 pb-100">
+    <div class="container">
+        <div class="section-tittle text-center mb-60">
+            <h2 style="color: #072042; font-size: 45px;">Project Location</h2>
+            <p>Located in Kitchipalayam, Salem, near the Old Bus, it offers a close proximity to stores, hospitals, schools and other essential outlets.</p>
+        </div>
+        <div class="map-container" style="width: 100%; height: 450px; border-radius: 15px; overflow: hidden; border: 1px solid #eee;">
+           <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15626.565866164417!2d78.1486333!3d11.6489379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf1d000000001%3A0x1e3a4e76a6d68a9!2sKitchipalayam%2C%20Salem%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+        </div>
+    </div>
+</section>
+
+<section class="customer-reviews pt-100 pb-100" style="background-color: #f9f9f9;">
+    <div class="container">
+        <div class="section-tittle text-center mb-60">
+            <h2 style="color: #072042; font-size: 45px;">Our Customer Reviews</h2>
+            <p>Don’t take our word for it. See what our satisfied clients have to say!</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-30">
+                <div class="single-review text-center p-40">
+                    <img src="assets/img/service/user.png" alt="User" class="mb-20 review-user-img">
+                    <h4>R. Rakesh</h4>
+                    <div class="rating mb-15">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>"Here at Mahaveer Palace we have the best deals on amazing homes with plenty of space."</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-30">
+                <div class="single-review text-center p-40">
+                    <img src="assets/img/service/review.png" alt="User" class="mb-20 review-user-img">
+                    <h4>S. Anitha</h4>
+                    <div class="rating mb-15">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>"The amenities provided are top-notch. The gated community feels very safe for my children."</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-30">
+                <div class="single-review text-center p-40">
+                    <img src="assets/img/service/user.png" alt="User" class="mb-20 review-user-img">
+                    <h4>M. Kumar</h4>
+                    <div class="rating mb-15">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p>"Excellent construction quality and very transparent process. Highly recommended for homebuyers."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    </main>
+
+      <footer>
+        <div class="footer-main">
+            <div class="footer-area footer-padding">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-lg-4 col-md-4 col-sm-8">
+                            <div class="single-footer-caption mb-30">
+                                <div class="footer-logo">
+                                    <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                                </div>
+                                <div class="footer-tittle">
+                                    <div class="footer-pera">
+                                        <p class="info1">Vijayasree Construction is one of South India’s most widely recognized in the field of engineering and construction industry.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-5">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h4>Quick Links</h4>
+                                    <ul>
+                                        <li><a href="#">About</a></li>
+                                        <li><a href="#">Services</a></li>
+                                        <li><a href="#">Projects</a></li>
+                                        <li><a href="#">Contact Us</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-7">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h4>Contact</h4>
+                                       <div class="footer-pera">
+                                            <p class="info1">Vijayasree Towers, 139, Cherry Road, Kumarasammypatti, Salem - 636007</p>
+                                        </div>
+                                    <ul>
+                                       <li><a href="#">Phone: +91 77083 85999, +91 77084 43999</a></li>
+                                       <li><a href="#">Cell: 0427-2411107, 0427-2411108</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-8">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-form">
+                                    <div id="mc_embed_signup">
+                                        <form target="_blank" action="#" method="get" class="subscribe_form relative mail_part">
+                                            <input type="email" name="EMAIL" id="newsletter-form-email" placeholder=" Email Address ">
+                                            <div class="form-icon">
+                                                <button type="submit" name="submit" id="newsletter-submit" class="email_icon newsletter-submit button-contactForm">SIGN UP</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+   
+    <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/jquery.slicknav.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
