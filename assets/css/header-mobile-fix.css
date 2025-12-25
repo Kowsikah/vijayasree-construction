@@ -1,0 +1,124 @@
+/* ========================================
+   MOBILE HEADER FIX - Contact Info Inside Hamburger Menu
+   ======================================== */
+
+/* Hide the header-top section on mobile (it will appear in the menu instead) */
+@media (max-width: 991px) {
+    .header-area .header-top {
+        display: none !important;
+    }
+}
+
+/* Style the contact info inside the SlickNav mobile menu */
+@media (max-width: 991px) {
+    /* Add contact info section in mobile menu */
+    .slicknav_nav .mobile-contact-info {
+        padding: 15px 10px;
+        background: #f8f9fa;
+        border-bottom: 2px solid #343ca0;
+        margin-bottom: 10px;
+    }
+    
+    .slicknav_nav .mobile-contact-info .contact-item {
+        padding: 8px 0;
+        color: #000;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        text-align: left;
+    }
+    
+    .slicknav_nav .mobile-contact-info .contact-item i {
+        margin-right: 10px;
+        color: #343ca0;
+        width: 20px;
+        display: inline-block;
+        flex-shrink: 0;
+    }
+    
+    .slicknav_nav .mobile-contact-info .contact-item a {
+        color: #000;
+        text-decoration: none;
+        font-size: 22px;
+        display: inline-block;
+        padding: 0 !important;
+        margin: 0 !important;
+        background: transparent !important;
+    }
+    
+    .slicknav_nav .mobile-contact-info .contact-item a:hover {
+        color: #343ca0;
+    }
+    
+    /* Social media icons in mobile menu */
+    .slicknav_nav .mobile-social {
+        padding: 10px;
+        background: #f8f9fa;
+        text-align: center;
+        border-top: 1px solid #ddd;
+        margin-top: 10px;
+    }
+    
+    .slicknav_nav .mobile-social .social-title {
+        font-size: 24px;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 10px;
+        display: block;
+    }
+    
+    .slicknav_nav .mobile-social a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        background: #343ca0;
+        color: #fff !important;
+        border-radius: 50%;
+        margin: 0 5px;
+        font-size:24px;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+    
+    .slicknav_nav .mobile-social a:hover {
+        background: #2431a1;
+        transform: scale(1.1);
+    }
+    
+    .slicknav_nav .mobile-social a i {
+        line-height: 40px;
+    }
+}
+
+/* Ensure mobile menu has proper spacing */
+@media (max-width: 991px) {
+    .slicknav_nav {
+        padding-top: 0;
+    }
+    
+    .slicknav_nav ul {
+        margin-top: 0;
+    }
+    
+    /* Override slicknav default link styles for contact items */
+    .slicknav_nav .mobile-contact-info a {
+        padding: 0 !important;
+        margin: 0 !important;
+        background: transparent !important;
+        border-radius: 0 !important;
+    }
+    
+    .slicknav_nav .mobile-contact-info a:hover {
+        background: transparent !important;
+        color: #343ca0 !important;
+    }
+}
+
+/* Keep header-top visible on desktop/tablet */
+@media (min-width: 992px) {
+    .mobile-contact-info,
+    .mobile-social {
+        display: none !important;
+    }
+}

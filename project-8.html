@@ -1,75 +1,179 @@
 <!doctype html>
 <html class="no-js" lang="zxx">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>King Palace Apartment</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="manifest" href="site.webmanifest">
+		<link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/logo.png">
 
-<head>
-   <meta charset="utf-8">
-   <meta http-equiv="x-ua-compatible" content="ie=edge">
-   <title>ENGINEERING COLLEGE | Vijaysree Construction</title>
-   <meta name="description" content="">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/logo.png">
-  
-  <!-- CSS here -->
-      <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-      <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-      <link rel="stylesheet" href="assets/css/gijgo.css">
-      <link rel="stylesheet" href="assets/css/slicknav.css">
-      <link rel="stylesheet" href="assets/css/animate.min.css">
-      <link rel="stylesheet" href="assets/css/magnific-popup.css">
-      <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-      <link rel="stylesheet" href="assets/css/themify-icons.css">
-      <link rel="stylesheet" href="assets/css/slick.css">
-      <link rel="stylesheet" href="assets/css/nice-select.css">
-      <link rel="stylesheet" href="assets/css/style.css">
-      <style>
-    /* Table Styling to match existing colors */
-    .custom-project-table {
-        border: 1px solid #dee2e6;
-        font-family: "Teko", sans-serif; /* Matching your heading font */
+		<!-- CSS here -->
+            <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+            <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+            <link rel="stylesheet" href="assets/css/gijgo.css">
+            <link rel="stylesheet" href="assets/css/slicknav.css">
+            <link rel="stylesheet" href="assets/css/animate.min.css">
+            <link rel="stylesheet" href="assets/css/magnific-popup.css">
+            <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+            <link rel="stylesheet" href="assets/css/themify-icons.css">
+            <link rel="stylesheet" href="assets/css/slick.css">
+            <link rel="stylesheet" href="assets/css/nice-select.css">
+            <link rel="stylesheet" href="assets/css/style.css">
+            <link rel="stylesheet" href="assets/css/responsive.css">
+            <!-- Mobile Menu Contact Fix -->
+<link rel="stylesheet" href="assets/css/header-mobile-fix.css">
+   </head>
+  <style>
+     .project-filter.text-right {
+        text-align: right;
+        margin-bottom: 40px;
+        padding-right: 10px; 
     }
-    
-    .custom-project-table th {
-        background-color: #072042; /* Dark Blue from your theme */
-        color: #ffffff;
-        width: 40%;
-        text-transform: uppercase;
-        vertical-align: middle;
+
+    /* Base button styling */
+    .project-filter button {
+        background: none;
+        border: none;
+        padding: 0;
+        margin-left: 30px; 
+        font-family: "Teko", sans-serif;
+        font-size: 22px;
         font-weight: 500;
-        letter-spacing: 1px;
-    }
-    
-    .custom-project-table td {
-        background-color: #f9f9f9;
-        color: #072042;
-        vertical-align: middle;
-        font-size:20px;
-    }
-
-    .custom-project-table tr:hover td {
-        background-color: #fff;
-        color: #ff5e13; /* Orange accent on hover */
+        text-transform: capitalize;
+        color:black; 
+        cursor: pointer;
         transition: 0.3s;
+        outline: none;
     }
 
-    /* Responsive adjustments */
+    /* Active State (Show All) and Hover State */
+    .project-filter button.active, 
+    .project-filter button:hover {
+        color:red; 
+    }
+
+    /* Mobile Responsive adjustment */
     @media (max-width: 768px) {
-        .custom-project-table th {
-            width: 50%;
-            font-size: 14px;
+        .project-filter.text-right {
+            text-align: center; 
+        }
+        .project-filter button {
+            margin: 5px 15px;
         }
     }
-</style>
-</head>
+    
+    /* Ghost Title Styling */
+    .section-tittle {
+        position: relative;
+        z-index: 1;
+    }
+    .section-tittle .front-text h2 {
+        font-size: 50px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color:#072042;
+    }
+    .section-tittle .back-text {
+        font-size: 100px;
+        font-weight: 700;
+        color:#fff;
+        position: absolute;
+        top: -40px;
+        left: 0;
+        z-index: -1;
+        text-transform: uppercase;
+    }
 
-<body>
+    /* Card Container Styling */
+    .single-project {
+        position: relative;
+        overflow: hidden; 
+        border: 2px solid rgba(255, 255, 255, 0.3); 
+        transition: border-color 0.4s ease;
+    }
 
-   <!-- Preloader Start -->
-     <div id="preloader-active">
+
+    .single-project:hover {
+        border-color:#072042; 
+    }
+
+    .single-project:hover .project-img img {
+transform: scale(1.05);
+    }
+
+   /* Reduced height for the images */
+.project-img img {
+    width:100%;       /* Ensures it fills the smaller column */
+    height: 350px;     /* Reduced from 394px */
+    object-fit: cover; /* Prevents image stretching */
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+/* Reduced height for the caption box */
+.project-cap {
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    height: 110px;    /* Reduced from 130px */
+    background: #a7c7e7; 
+    padding: 10px;    /* Tighter padding */
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;    
+    text-align: center;
+    box-sizing: border-box;
+    z-index: 5; 
+}
+
+/* Adjust font size for smaller cards */
+.project-cap h4 a {
+    font-size: 20px;  /* Reduced from 26px */
+}
+    .project-cap span {
+        color:white; 
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+        z-index: 10;
+        position: relative;
+    }
+
+    .project-cap::before {
+        content: '';
+        position: absolute;
+        border: 1px solid rgb        a(255, 255, 255, 0.2);
+        pointer-events: none;
+    }
+    .btn-learn {
+        background:#072042;
+        color: #fff !important;
+        padding: 8px 20px;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 700;
+        border-radius: 4px;
+        transition: 0.3s;
+        text-decoration: none;
+    }
+
+    .btn-learn:hover {
+        background: #fff;
+        color: black !important;
+    }
+  </style>
+   <body>
+    <!-- Preloader Start -->
+    <div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">
             <div class="preloader-inner position-relative">
                 <div class="preloader-circle"></div>
                 <div class="preloader-img pere-text">
-                    <img src="assets/img/logo/logo.png" alt="" width="200px" hieght="300px">
+                    <img src="assets/img/logo/logo.png" alt="">
                 </div>
             </div>
         </div>
@@ -84,18 +188,15 @@
                        <div class="col-xl-12">
                             <div class="row d-flex justify-content-between align-items-center">
                                 <div class="header-info-left">
-                                    <ul>     
-                                        <li>+91 77083 85999</li>
-                                        <li>vijaysribuilders@gmail.com</li>
-                                        <li>Mon - Sat 8:00 - 17:30, Sunday - CLOSED</li>
+                                     <ul>     
+                                        <li><img src="assets/img/icon/phone.png" width="30px" height="30px"></img> <a href="tel:+919384820759">+91 93848 20759</a>, <a href="tel:+919384820760">+91 93848 20760</a></li>
+                                          <li><img src="assets/img/icon/gmail.png" width="30px" height="30px"> vijaysribuilders@gmail.com</li>
                                     </ul>
                                 </div>
                                 <div class="header-info-right">
                                     <ul class="header-social">    
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                       <li> <a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                                        <li><a href="https://www.instagram.com/vijayasree_builders?igsh=eGx6cWx1YWg1ZjBz&utm_source=qr"><i class="fab fa-instagram"></i></a></li>
+                                        <li><a href="https://www.facebook.com/share/1Bx9TS4qri/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -108,10 +209,8 @@
                             <!-- Logo -->
                             <div class="col-xl-2 col-lg-2 col-md-1">
                                 <div class="logo">
-                                    <!-- logo-1 -->
-                                    <a href="index.html" class="big-logo"><img src="assets/img/logo/logo.png" alt=""></a>
-                                    <!-- logo-2 -->
-                                    <a href="index.html" class="small-logo"><img src="assets/img/logo/logo.png" alt=""></a>
+                                    <a href="index.html" class="big-logo"><img src="assets/img/logo/logo.png" alt="" width="150px" height="70px"></a>
+                                    <a href="index.html" class="small-logo"><img src="assets/img/logo/logo.png" alt="" width="120px" height="60px"></a>
                                 </div>
                             </div>
                             <div class="col-xl-8 col-lg-8 col-md-8">
@@ -122,8 +221,6 @@
                                             <li><a href="index.html">Home</a></li>
                                             <li><a href="about.html">About</a></li>
                                             <li><a href="project.html">Projects</a></li>
-                                         
-                                         
                                             <li><a href="contact.html">Contact</a></li>
                                         </ul>
                                     </nav>
@@ -145,20 +242,18 @@
        </div>
         <!-- Header End -->
     </header>
-   <!-- slider Area Start-->
-	<div class="slider-area ">
+    
+    <main>
+        <!-- slider Area Start-->
+	
+	
+ <div class="slider-area ">
 		<div class="single-slider hero-overly slider-height2 d-flex align-items-center" data-background="assets/img/hero/about.jpg">
 			<div class="container">
 				<div class="row">
 					<div class="col-xl-12">
 						<div class="hero-cap pt-100">
-							<h2>ENGINEERING COLLEGE</h2>
-							<nav aria-label="breadcrumb ">
-								<ol class="breadcrumb">
-								<li class="breadcrumb-item"><a href="index.html">Home</a></li>
-								<li class="breadcrumb-item"><a href="#">ENGINEERING COLLEGE</a></li> 
-								</ol>
-							</nav>
+							<h2>King Palace Apartment</h2>
 						</div>
 					</div>
 				</div>
@@ -172,7 +267,7 @@
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="project-details-img mb-30">
-                    <img src="assets/img/service/Engineering.jpg" alt="Durgalakshmi Apartment" class="img-fluid" style="border: 2px solid #ff5e13;">
+                    <img src="assets/img/service/star.jpg" alt="Durgalakshmi Apartment" class="img-fluid" style="border: 2px solid #ff5e13;">
                 </div>
             </div>
             <div class="col-lg-6">
@@ -181,28 +276,27 @@
                         <tbody>
                             <tr>
                                 <th scope="row">Name of the Apartment</th>
-                                <td>ENGINEERING COLLEGE</td>
+                                <td>King Palace Apartment</td>
                             </tr>
                             <tr>
-                                <th scope="row">NAME OF THE INSTITUTION</th>
-                                <td>R.V.S EDUCATIONAL INSTITUTIONS</td>
+                                <th scope="row">Total no of Flats</th>
+                                <td>12(3bhk)</td>
                             </tr>
                             <tr>
                                 <th scope="row">Area of the Buildup Area</th>
-                                <td>(G+3) 3,50,000 SqFt</td>
+                                <td>(G+4), 16000 Sq Ft-sold out</td>
                             </tr>
                             <tr>
                                 <th scope="row">Construction Period</th>
-                                <td>2007 TO 2009</td>
+                                <td>Ongoing</td>
                             </tr>
                             <tr>
                                 <th scope="row">Location of the Project</th>
-                                <td>COIMBATORE DISTRICT, KANAMPALAYAM</td>
+                                <td>Chinnathirupathi Road,Near Jayaram school,Salem.</td>
                             </tr>
                             <tr>
-                                <th scope="row">Specialised Work</th>
-                                <td>ENGINEERING COLLEGE BUILDING WITH LABORATORY FOR ALL
-THE BUILDING.</td>
+                                <th scope="row">Specialized Work</th>
+                                <td>Residential Flats with Community hall and gym with other amenities.</td>
                             </tr>
                         </tbody>
                     </table>
@@ -211,131 +305,123 @@ THE BUILDING.</td>
         </div>
     </div>
 </section>
-   <!--================ Blog Area end =================-->
-       <div class="footer-main">
-            <div class="footer-area footer-padding">
-                <div class="container">
-                    <div class="row  justify-content-between">
-                        <div class="col-lg-4 col-md-4 col-sm-8">
-                            <div class="single-footer-caption mb-30">
-                                <!-- logo -->
-                                <div class="footer-logo">
-                                    <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
-                                </div>
-                                <div class="footer-tittle">
-                                    <div class="footer-pera">
-                                        <p class="info1">Vijayasree Construction is one of South India’s most widely recognized in the field of engineering and construction industry.</p>
+        <!-- slider Area End-->
+        <!-- Project Area Start -->
+       
+        <!-- Project Area End -->
+    </main>
+   <footer>
+   <div class="footer-main">
+                <div class="footer-area footer-padding">
+                    <div class="container">
+                        <div class="row  justify-content-between">
+                            <div class="col-lg-4 col-md-4 col-sm-8">
+                                <div class="single-footer-caption mb-30">
+                                    <!-- logo -->
+                                    <div class="footer-logo">
+                                        <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                                    </div>
+                                    <div class="footer-tittle">
+                                        <div class="footer-pera">
+                                            <p class="info1">Vijayasree Construction is one of South India’s most widely recognized in the field of engineering and construction industry. </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-sm-5">
-                            <div class="single-footer-caption mb-50">
-                                <div class="footer-tittle">
-                                    <h4>Quick Links</h4>
-                                    <ul>
-                                        <li><a href="#">About</a></li>
-                                        <li><a href="#">Services</a></li>
-                                        <li><a href="#">Projects</a></li>
-                                        <li><a href="#">Contact Us</a></li>
-                                    </ul>
+                            <div class="col-lg-2 col-md-4 col-sm-5">
+                                <div class="single-footer-caption mb-50">
+                                    <div class="footer-tittle">
+                                        <h4>Quick Links</h4>
+                                        <ul>
+                                            <li><a href="#">About</a></li>
+                                            <li><a href="#">Services</a></li>
+                                            <li><a href="#">Projects</a></li>
+                                            <li><a href="#">Contact Us</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-7">
-                            <div class="single-footer-caption mb-50">
-                                <div class="footer-tittle">
-                                    <h4>Contact</h4>
-                                       <div class="footer-pera">
+                            <div class="col-lg-3 col-md-4 col-sm-7">
+                                <div class="single-footer-caption mb-50">
+                                    <div class="footer-tittle">
+                                        <h4>Contact</h4>
+                                        <div class="footer-pera">
                                             <p class="info1">Vijayasree Towers, 139, Cherry Road, Kumarasammypatti, Salem - 636007</p>
                                         </div>
-                                    <ul>
-                                       <li><a href="#">Phone: +91 77083 85999, +91 77084 43999, +91 94875 60657</a></li>
-                                       <li><a href="#">Cell: 0427-2411107, 0427-2411108</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-8">
-                            <div class="single-footer-caption mb-50">
-                                <!-- Form -->
-                                <div class="footer-form">
-                                    <div id="mc_embed_signup">
-                                        <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe_form relative mail_part" novalidate="true">
-                                            <input type="email" name="EMAIL" id="newsletter-form-email" placeholder=" Email Address " class="placeholder hide-on-focus" onfocus="this.placeholder = ''" onblur="this.placeholder = ' Email Address '">
-                                            <div class="form-icon">
-                                                <button type="submit" name="submit" id="newsletter-submit" class="email_icon newsletter-submit button-contactForm">
-                                                    SIGN UP
-                                                </button>
-                                            </div>
-                                            <div class="mt-10 info"></div>
-                                        </form>
+                                        <ul>
+                                            <li><a href="#">Phone: +91 93848 20759,+91 93848 20760</a></li>
+                                            <li><a href="#">Cell: 0427-2411107, 0427-2411108</a></li>
+                                        </ul>
                                     </div>
                                 </div>
-                                <!-- Map -->
-                                <div class="map-footer">
-                                    <img src="assets/img/gallery/map-footer.png" alt="">
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-8">
+                                <div class="single-footer-caption mb-50">
+                                    <!-- Form -->
+    
+                                    <!-- Map -->
+                                    <div>
+                                        <h4 style="color:white">Scan for Whatsapp Enquiry</h4>
+                                        <img src="assets/img/service/qrcode.jpeg" alt="s" width="150px" height="150px">
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- Copy-Right -->
-                    <div class="row align-items-center">
-                        <div class="col-xl-12 ">
-                            <div class="footer-copy-right">
-                                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                        <!-- Copy-Right -->
+                        <div class="row align-items-center">
+                            <div class="col-xl-12 ">
+                                <div class="footer-copy-right">
+                                    <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved </a>
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-      </div>
-       <!-- Footer End-->
-   </footer>
-   
-<!-- JS here -->
+        </div>
+        <!-- Footer End-->
+    </footer>
+	<!-- JS here -->
 	
 		<!-- All JS Custom Plugins Link Here here -->
-      <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
 		<!-- Jquery, Popper, Bootstrap -->
 		<script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
-      <script src="./assets/js/popper.min.js"></script>
-      <script src="./assets/js/bootstrap.min.js"></script>
-      <!-- Jquery Mobile Menu -->
-      <script src="./assets/js/jquery.slicknav.min.js"></script>
+        <script src="./assets/js/popper.min.js"></script>
+        <script src="./assets/js/bootstrap.min.js"></script>
+	    <!-- Jquery Mobile Menu -->
+        <script src="./assets/js/jquery.slicknav.min.js"></script>
 
 		<!-- Jquery Slick , Owl-Carousel Plugins -->
-      <script src="./assets/js/owl.carousel.min.js"></script>
-      <script src="./assets/js/slick.min.js"></script>
-      <!-- Date Picker -->
-      <script src="./assets/js/gijgo.min.js"></script>
+        <script src="./assets/js/owl.carousel.min.js"></script>
+        <script src="./assets/js/slick.min.js"></script>
+        <!-- Date Picker -->
+        <script src="./assets/js/gijgo.min.js"></script>
 		<!-- One Page, Animated-HeadLin -->
-      <script src="./assets/js/wow.min.js"></script>
+        <script src="./assets/js/wow.min.js"></script>
 		<script src="./assets/js/animated.headline.js"></script>
-      <script src="./assets/js/jquery.magnific-popup.js"></script>
+        <script src="./assets/js/jquery.magnific-popup.js"></script>
 
 		<!-- Scrollup, nice-select, sticky -->
-      <script src="./assets/js/jquery.scrollUp.min.js"></script>
-      <script src="./assets/js/jquery.nice-select.min.js"></script>
-      <script src="./assets/js/jquery.sticky.js"></script>
-      
-      <!-- counter , waypoint -->
-      <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-      <script src="./assets/js/jquery.counterup.min.js"></script>
+        <script src="./assets/js/jquery.scrollUp.min.js"></script>
+        <script src="./assets/js/jquery.nice-select.min.js"></script>
+		<script src="./assets/js/jquery.sticky.js"></script>
+               
+        <!-- counter , waypoint -->
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+        <script src="./assets/js/jquery.counterup.min.js"></script>
 
-      <!-- contact js -->
-      <script src="./assets/js/contact.js"></script>
-      <script src="./assets/js/jquery.form.js"></script>
-      <script src="./assets/js/jquery.validate.min.js"></script>
-      <script src="./assets/js/mail-script.js"></script>
-      <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+        <!-- contact js -->
+        <script src="./assets/js/contact.js"></script>
+        <script src="./assets/js/jquery.form.js"></script>
+        <script src="./assets/js/jquery.validate.min.js"></script>
+        <script src="./assets/js/mail-script.js"></script>
+        <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
         
 		<!-- Jquery Plugins, main Jquery -->	
-      <script src="./assets/js/plugins.js"></script>
-      <script src="./assets/js/main.js"></script>
-
-</body>
-
+        <script src="./assets/js/plugins.js"></script>
+        <script src="./assets/js/main.js"></script>
+        <script src="./assets/js/mobile-menu-contact.js"></script>
+    </body>
 </html>

@@ -20,171 +20,742 @@
             <link rel="stylesheet" href="assets/css/slick.css">
             <link rel="stylesheet" href="assets/css/nice-select.css">
             <link rel="stylesheet" href="assets/css/style.css">
+            <!-- Mobile Menu Contact Fix -->
+           <link rel="stylesheet" href="assets/css/header-mobile-fix.css">
    </head>
-   <style>
-    /* Container for the filter */
-.project-filter.text-right {
-    text-align: right;
-    margin-bottom: 40px;
-    padding-right: 15px; /* Optional: adjust padding from the edge */
-}
+    <style>
+        /* Section Title Styling */
+        .section-tittle .front-text1 h2 {
+            font-size: 70px;
+            font-weight: 700;
+            text-transform: uppercase;
+            background: linear-gradient(to bottom, #072042 0%, #1a4a8e 50%, #072042 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(2px 4px 3px rgba(0, 0, 0, 0.2));
+            transition: all 0.5s ease;
+        }
 
-/* Base button styling */
-.project-filter button {
-    background: none;
-    border: none;
-    padding: 0;
-    margin-left: 30px; /* Space between the buttons */
-    font-family: "Teko", sans-serif;
-    font-size: 22px;
-    font-weight: 500;
-    text-transform: capitalize;
-    color: #072042; /* Dark Navy color */
-    cursor: pointer;
-    transition: 0.3s;
-    outline: none;
-}
+        .section-tittle:hover .front-text1 h2 {
+            background: linear-gradient(to top, #072042 0%, #3a7bd5 50%, #072042 100%);
+            -webkit-background-clip: text;
+            filter: drop-shadow(4px 8px 6px rgba(0, 0, 0, 0.3));
+            transform: translateY(-2px);
+        }
 
-/* Active State (Show All) and Hover State */
-.project-filter button.active, 
-.project-filter button:hover {
-    color: #ff5e13; /* Your specific Orange/Red color */
-}
+        .section-tittle .back-text {
+            font-size: 100px;
+            font-weight: 700;
+            color: #a7d7ed;
+            position: absolute;
+            top: -40px;
+            left: 0;
+            z-index: -1;
+            text-transform: uppercase;
+            transition: all 0.5s ease-in-out;
+            opacity: 0.3;
+        }
 
-/* Mobile Responsive adjustment */
-@media (max-width: 768px) {
-    .project-filter.text-right {
-        text-align: center; /* Center on mobile for better UX */
-    }
-    .project-filter button {
-        margin: 5px 15px;
-    }
-}
-    /* Ghost Title Styling */
-.section-tittle {
-    position: relative;
-    z-index: 1;
-}
-.section-tittle .front-text h2 {
-    font-size: 50px;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #ea6e35;
-}
-.section-tittle .back-text {
-    font-size: 100px;
-    font-weight: 700;
-    color: #fba26b;
-    position: absolute;
-    top: -40px;
-    left: 0;
-    z-index: -1;
-    text-transform: uppercase;
-}
+        .section-tittle:hover .back-text {
+            letter-spacing: 5px;
+            transform: translateX(10px);
+            opacity: 0.6;
+        }
 
-/* Card Container Styling */
-.single-project {
-    position: relative;
-    overflow: hidden;
-}
+        /* PROJECT CARDS - FIXED 350PX WIDTH FOR ALL DEVICES */
+        
+        /* Reset box-sizing for all elements */
+        * {
+            box-sizing: border-box;
+        }
 
-.project-img img {
-    width: 100%;
-    display: block;
-    transition: transform 0.5s ease;
-}
+        /* Grid Container */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 350px);
+            gap: 30px;
+            justify-content: center;
+            padding: 0 15px;
+            width: 100%;
+            max-width: 100%;
+        }
 
-/* Hover Effect: Zoom Image */
-.single-project:hover .project-img img {
-    transform: scale(1.1);
-}
+        /* Individual Project Item - Fixed 350px */
+        .project-item {
+            width: 350px !important;
+            min-width: 350px !important;
+            max-width: 350px !important;
+            display: block;
+        }
 
-/* Caption Styling (The Card Content) */
-/* 1. The Main Container (The Whole Box) */
-.single-project {
-    position: relative;
-    overflow: hidden; 
-    border: 2px solid rgba(255, 255, 255, 0.3); /* The border for the whole box */
-    transition: border-color 0.4s ease;
-}
+        /* Single Project Card - Fixed 350px */
+        .single-project {
+            position: relative;
+            width: 350px !important;
+            min-width: 350px !important;
+            max-width: 350px !important;
+            height: 420px;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+        }
 
-.single-project:hover {
-    border-color: #ff5e13; /* Border changes color on hover */
-}
+        .single-project::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(7, 32, 66, 0.1) 0%, rgba(167, 199, 231, 0.1) 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 1;
+            pointer-events: none;
+        }
 
-/* 2. The Caption (Positioned at the bottom) */
-.project-cap {
-    position: absolute;
-    bottom: 0; 
-    left: 0;
-    width: 100%;
-    height: 100px; /* Adjust height as needed */
-    background: rgba(7, 32, 66, 0.8); 
-    padding: 20px;
-    display: flex; 
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center;    
-    text-align: center;
-    box-sizing: border-box;
-    z-index: 5; /* Ensures the box is above the image */
-}
+        .single-project:hover {
+            transform: translateY(-15px) scale(1.03);
+            box-shadow: 0 20px 40px rgba(7, 32, 66, 0.3);
+            border-radius: 12px;
+        }
 
-/* 3. The Text (Ensuring visibility) */
-.project-cap h4 {
-    margin: 0;
-    z-index: 10; /* Higher z-index so letters are on top */
-    position: relative;
-    color: #ff5e13;
-}
+        .single-project:hover::before {
+            opacity: 1;
+        }
 
-.project-cap h4 a {
-    color: #ff5e13; /* Forces text to be white */
-    font-family: "Teko", sans-serif;
-    font-size: 26px;
-    text-transform: uppercase;
-    text-decoration: none;
-    display: block;
-}
+        /* Project Image Container - Fixed 350px */
+        .project-img {
+            width: 350px !important;
+            min-width: 350px !important;
+            max-width: 350px !important;
+            height: 420px;
+            position: relative;
+            overflow: hidden;
+        }
 
-.project-cap span {
-    color:white; 
-    font-size: 14px;
-    font-weight: 600;
-    text-transform: uppercase;
-    z-index: 10;
-    position: relative;
-}
+        .project-img img {
+            width: 350px !important;
+            min-width: 350px !important;
+            max-width: 350px !important;
+            height: 420px;
+            object-fit: cover;
+            display: block;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            filter: brightness(1) grayscale(0);
+        }
 
-/* 4. Inset Border Effect (Optional: inner highlight) */
-.project-cap::before {
-    content: '';
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    pointer-events: none;
-}
-   </style>
+        .single-project:hover .project-img img {
+            transform: scale(1.15) rotate(2deg);
+            filter: brightness(1.1) contrast(1.1);
+        }
 
+        /* Project Caption Overlay - Fixed 350px */
+        .project-cap {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 350px !important;
+            min-width: 350px !important;
+            max-width: 350px !important;
+            background: linear-gradient(to top, 
+                rgba(0, 0, 0, 0.9) 0%, 
+                rgba(0, 0, 0, 0.6) 60%, 
+                transparent 100%);
+            padding: 25px 20px;
+            color: #ffffff;
+            box-sizing: border-box;
+            transform: translateY(0);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 2;
+        }
+
+        .single-project:hover .project-cap {
+            background: linear-gradient(to top, 
+                rgba(7, 32, 66, 0.95) 0%, 
+                rgba(7, 32, 66, 0.8) 60%, 
+                rgba(7, 32, 66, 0.3) 100%);
+            transform: translateY(-5px);
+        }
+
+        .project-cap h4 {
+            margin: 0 0 8px 0;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 1.3;
+            color: #ffffff;
+            transition: all 0.3s ease;
+            transform: translateX(0);
+        }
+
+        .single-project:hover .project-cap h4 {
+            transform: translateX(5px);
+            color: #a7d7ed;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-cap span {
+            display: block;
+            font-size: 14px;
+            color: #e0e0e0;
+            line-height: 1.5;
+            margin-top: 4px;
+            transition: all 0.3s ease;
+            transform: translateX(0);
+            opacity: 0.9;
+        }
+
+        .single-project:hover .project-cap span {
+            transform: translateX(5px);
+            color: #ffffff;
+            opacity: 1;
+        }
+
+        /* Shimmer effect on hover */
+        .single-project::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -60%;
+            width: 20%;
+            height: 200%;
+            background: linear-gradient(90deg, 
+                transparent,
+                rgba(255, 255, 255, 0.3),
+                transparent
+            );
+            transform: rotate(30deg);
+            transition: all 0.6s ease;
+            z-index: 3;
+            pointer-events: none;
+        }
+
+        .single-project:hover::after {
+            left: 120%;
+        }
+
+        /* Responsive Design - Maintains 350px cards on all devices */
+        @media (max-width: 1200px) {
+            .project-grid {
+                grid-template-columns: repeat(auto-fit, 350px);
+                gap: 25px;
+            }
+            
+            .section-tittle .front-text1 h2 {
+                font-size: 50px;
+            }
+            
+            .section-tittle .back-text {
+                font-size: 70px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .project-grid {
+                grid-template-columns: 350px;
+                gap: 20px;
+                padding: 0 10px;
+            }
+            
+            .section-tittle .front-text1 h2 {
+                font-size: 40px;
+            }
+            
+            .section-tittle .back-text {
+                font-size: 50px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .project-grid {
+                grid-template-columns: 350px;
+                gap: 20px;
+                padding: 0 5px;
+            }
+        }
+
+        /* Filter Button Styling */
+        .project-filter button {
+            padding: 10px 20px;
+            margin: 0 5px;
+            border: 2px solid #072042;
+            background: transparent;
+            color: #072042;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .project-filter button:hover,
+        .project-filter button.active {
+            background: #072042;
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(7, 32, 66, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .project-filter {
+                text-align: center !important;
+            }
+            
+            .project-filter button {
+                margin: 5px 3px;
+                padding: 8px 15px;
+                font-size: 14px;
+            }
+        }
+
+        /* Animation for cards on scroll */
+        .single-project {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .single-project.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ========== COMPREHENSIVE ANIMATION EFFECTS ========== */
+
+        /* About Section Animations */
+        .support-caption p {
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: all 0.8s ease;
+            line-height: 1.8;
+        }
+
+        .support-caption p.animate {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .support-caption .btn {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .support-caption .btn.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .support-caption .btn:hover {
+            transform: translateY(-5px) scale(1.05) !important;
+            box-shadow: 0 10px 25px rgba(255, 95, 19, 0.5);
+        }
+
+        .red-btn2::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .red-btn2:hover::after {
+            width: 300px;
+            height: 300px;
+        }
+
+        .right-img {
+            opacity: 0;
+            transform: translateX(50px) scale(0.9);
+            transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .right-img.animate {
+            opacity: 1;
+            transform: translateX(0) scale(1);
+        }
+
+        .right-img img {
+            transition: transform 0.5s ease, filter 0.3s ease;
+        }
+
+        .right-img:hover img {
+            transform: scale(1.08) rotate(-3deg);
+            filter: brightness(1.1) drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+        }
+
+        .support-img-cap {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease 0.4s;
+        }
+
+        .support-img-cap.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .support-img-cap:hover {
+            transform: translateY(-5px) !important;
+        }
+
+        .support-img-cap span,
+        .support-img-cap p {
+            transition: all 0.3s ease;
+        }
+
+        .support-img-cap:hover span {
+            color: #072042;
+            transform: scale(1.1);
+        }
+
+        /* Section Titles Animation */
+        .section-tittle .front-text h2,
+        .section-tittle .front-text1 h2 {
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .section-tittle.animate .front-text h2,
+        .section-tittle.animate .front-text1 h2 {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Contact Section Animations */
+        .contact-us-caption p {
+            opacity: 0;
+            transform: translateX(-30px);
+            line-height: 1.9;
+            transition: all 0.8s ease;
+        }
+
+        .contact-us-caption p.animate {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .contact-us-caption .white-btn {
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-us-caption .white-btn.animate {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .contact-us-caption .white-btn:hover {
+            transform: scale(1.08) translateY(-5px) !important;
+            box-shadow: 0 15px 35px rgba(255, 255, 255, 0.4);
+        }
+
+        .white-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(7, 32, 66, 0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .white-btn:hover::before {
+            width: 400px;
+            height: 400px;
+        }
+
+        /* Counter Section Animations */
+        .count-clients {
+            opacity: 0;
+            transform: translateY(40px) scale(0.9);
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .count-clients.animate {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        .count-clients:nth-child(1) {
+            transition-delay: 0.1s;
+        }
+
+        .count-clients:nth-child(2) {
+            transition-delay: 0.2s;
+        }
+
+        .count-clients:nth-child(3) {
+            transition-delay: 0.3s;
+        }
+
+        .count-clients {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .count-clients:hover {
+            transform: translateY(-15px) scale(1.08) !important;
+        }
+
+        .count-number {
+            transition: all 0.3s ease;
+        }
+
+        .count-clients:hover .count-number {
+            transform: scale(1.2) rotate(5deg);
+        }
+
+        .count-clients:hover .count-number span {
+            color: #072042;
+            text-shadow: 2px 2px 8px rgba(7, 32, 66, 0.3);
+        }
+
+        .count-text {
+            transition: all 0.3s ease;
+        }
+
+        .count-clients:hover .count-text {
+            transform: translateY(5px);
+        }
+
+        .count-clients:hover .count-text h5 {
+            color: #072042;
+        }
+
+        /* Testimonial Animations */
+        .single-testimonial {
+            opacity: 0;
+            transform: scale(0.95) translateY(20px);
+            transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .single-testimonial.animate {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }
+
+        .single-testimonial:hover {
+            transform: scale(1.02) translateY(-5px) !important;
+        }
+
+        .testimonial-caption p {
+            line-height: 1.9;
+            transition: all 0.3s ease;
+        }
+
+        .single-testimonial:hover .testimonial-caption p {
+            transform: translateX(5px);
+            color: #072042;
+        }
+
+        /* Filter Buttons Ripple Effect */
+        .project-filter button {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-filter button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(7, 32, 66, 0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .project-filter button:hover::before,
+        .project-filter button.active::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        /* Parallax Scroll Effect */
+        .parallax-section {
+            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        /* Pulse Animation for Important Titles */
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.03);
+            }
+        }
+
+        .section-tittle:hover .front-text1 h2 {
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        /* Smooth fade-in for all sections */
+        .support-company-area,
+        .project-area,
+        .contact-with-area,
+        .count-area,
+        .testimonial-area {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .support-company-area.animate,
+        .project-area.animate,
+        .contact-with-area.animate,
+        .count-area.animate,
+        .testimonial-area.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Hover effect for navigation links */
+        #navigation li a {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        #navigation li a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: #072042;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        #navigation li a:hover::after {
+            width: 100%;
+        }
+
+        #navigation li a:hover {
+            color: #072042;
+            transform: translateY(-2px);
+        }
+
+        /* Smooth transitions for all text elements */
+        p, h1, h2, h3, h4, h5, h6, span {
+            transition: all 0.3s ease;
+        }
+
+        /* See More Button Styling */
+        .see-more-btn {
+            background: linear-gradient(135deg, #072042 0%, #0d3a73 100%);
+            color: #ffffff !important;
+            padding: 15px 40px;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 50px;
+            border: none;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 8px 20px rgba(7, 32, 66, 0.3);
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .see-more-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .see-more-btn:hover::before {
+            width: 500px;
+            height: 500px;
+        }
+
+        .see-more-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 35px rgba(7, 32, 66, 0.5);
+            background: linear-gradient(135deg, #0d3a73 0%, #072042 100%);
+        }
+
+        .see-more-btn::after {
+            content: '→';
+            position: absolute;
+            right: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0;
+            transition: all 0.3s ease;
+            font-size: 20px;
+        }
+
+        .see-more-btn:hover::after {
+            right: 20px;
+            opacity: 1;
+        }
+
+        .see-more-btn:hover {
+            padding-right: 50px;
+        }
+
+        .mt-50 {
+            margin-top: 50px;
+        }
+
+        /* Animation for See More button */
+        .see-more-btn {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards 0.5s;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
    <body>
-   
-
     <!-- Preloader Start -->
     <div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">
             <div class="preloader-inner position-relative">
                 <div class="preloader-circle"></div>
                 <div class="preloader-img pere-text">
-                    <img src="assets/img/logo/logo.png" alt="" width="200px" hieght="300px">
+                    <img src="assets/img/logo/logo.png" alt="">
                 </div>
             </div>
         </div>
     </div>
     <!-- Preloader Start -->
-    <header>
+     <header>
         <!-- Header Start -->
        <div class="header-area header-transparent">
             <div class="main-header ">
@@ -193,18 +764,15 @@
                        <div class="col-xl-12">
                             <div class="row d-flex justify-content-between align-items-center">
                                 <div class="header-info-left">
-                                    <ul>     
-                                        <li>+91 77083 85999</li>
-                                        <li>vijaysribuilders@gmail.com</li>
-                                        <li>Mon - Sat 8:00 - 17:30, Sunday - CLOSED</li>
+                                     <ul>     
+                                        <li><img src="assets/img/icon/phone.png" width="30px" height="30px"></img> <a href="tel:+919384820759">+91 93848 20759</a>, <a href="tel:+919384820760">+91 93848 20760</a></li>
+                                          <li><img src="assets/img/icon/gmail.png" width="30px" height="30px"> vijaysribuilders@gmail.com</li>
                                     </ul>
                                 </div>
                                 <div class="header-info-right">
                                     <ul class="header-social">    
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                       <li> <a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                                        <li><a href="https://www.instagram.com/vijayasree_builders?igsh=eGx6cWx1YWg1ZjBz&utm_source=qr"><i class="fab fa-instagram"></i></a></li>
+                                        <li><a href="https://www.facebook.com/share/1Bx9TS4qri/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -217,10 +785,8 @@
                             <!-- Logo -->
                             <div class="col-xl-2 col-lg-2 col-md-1">
                                 <div class="logo">
-                                    <!-- logo-1 -->
-                                    <a href="index.html" class="big-logo"><img src="assets/img/logo/logo.png" alt=""></a>
-                                    <!-- logo-2 -->
-                                    <a href="index.html" class="small-logo"><img src="assets/img/logo/logo.png" alt=""></a>
+                                    <a href="index.html" class="big-logo"><img src="assets/img/logo/logo.png" alt="" width="150px" height="70px"></a>
+                                    <a href="index.html" class="small-logo"><img src="assets/img/logo/logo.png" alt="" width="120px" height="60px"></a>
                                 </div>
                             </div>
                             <div class="col-xl-8 col-lg-8 col-md-8">
@@ -231,8 +797,6 @@
                                             <li><a href="index.html">Home</a></li>
                                             <li><a href="about.html">About</a></li>
                                             <li><a href="project.html">Projects</a></li>
-                                         
-                                         
                                             <li><a href="contact.html">Contact</a></li>
                                         </ul>
                                     </nav>
@@ -254,6 +818,7 @@
        </div>
         <!-- Header End -->
     </header>
+    
     <main>
 
         <!-- slider Area Start-->
@@ -264,6 +829,7 @@
                         <div class="row">
                             <div class="col-lg-11">
                                 <div class="hero__caption">
+                                   
                                     <h1 data-animation="fadeInUp" data-delay=".5s">advanced</h1>
                                     <div class="stock-text" data-animation="fadeInUp" data-delay=".8s">
                                         <h2>Construction</h2>
@@ -282,14 +848,14 @@
                         <div class="row">
                             <div class="col-lg-11">
                                 <div class="hero__caption">
-                                   
+                                  
                                     <h1 data-animation="fadeInUp" data-delay=".5s">advanced</h1>
                                     <div class="stock-text" data-animation="fadeInUp" data-delay=".8s">
                                         <h2>Construction</h2>
                                         <h2>Construction</h2>
                                     </div>
                                     <div class="hero-text2 mt-110" data-animation="fadeInUp" data-delay=".9s">
-                                        <span><a href="project.html">Our Projects</a></span>
+                                        <span><a href="services.html">Our Services</a></span>
                                     </div>
                                 </div>
                             </div>
@@ -300,7 +866,11 @@
         </div>
         <!-- slider Area End-->
         <!-- Services Area Start -->
-        
+        <div class="services-area1 section-padding30">
+            <div class="container">
+                <!-- section tittle -->
+              
+                
         <!-- Services Area End -->
         <!-- About Area Start -->
         <section class="support-company-area fix pt-10">
@@ -308,13 +878,13 @@
                 <div class="left-content">
                     <!-- section tittle -->
                     <div class="section-tittle section-tittle2 mb-55">
-                        <div class="front-text">
+                        <div class="front-text1">
                             <h2 class="">Who we are</h2>
                         </div>
                         <span class="back-text">About us</span>
                     </div>
                     <div class="support-caption">
-                        <p class="pera-top">Vijayasree Construction is one of South India’s most widely recognized in the field of engineering and construction industry. Our company has 20 years of combined building experience, specializes in Residential, Institutional and Commercial multi-floor projects.</p>
+                        <p class="pera-top">Vijayasree Construction is one of South India's most widely recognized in the field of engineering and construction industry. Our company has 20 years of combined building experience, specializes in Residential, Institutional and Commercial multi-floor projects.</p>
                         <a href="about.html" class="btn red-btn2">read more</a>
                     </div>
                 </div>
@@ -324,7 +894,7 @@
                         <img src="assets/img/gallery/safe_in.png" alt="">
                     </div>
                     <div class="support-img-cap text-center">
-                        <span>20+ Years</span>
+                        <span>20+ year in industry</span>
                         <p>Best choice for construction</p>
                     </div>
                 </div>
@@ -332,168 +902,117 @@
         </section>
         <!-- About Area End -->
         <!-- Project Area Start -->
-         <section class="project-area section-padding30">
-    <div class="container">
+        <section class="project-area section-padding30">
+            <div class="container">
 
-        <!-- Heading -->
-        <div class="project-heading mb-35">
-            <div class="row align-items-end">
-                
-                <div class="col-lg-6">
-                    <div class="section-tittle section-tittle3">
-                        <div class="front-text">
-                            <h2>Our Projects</h2>
+                <!-- Heading -->
+                <div class="project-heading mb-35">
+                    <div class="row align-items-end">
+                        
+                        <div class="col-lg-6">
+                            <div class="section-tittle section-tittle3">
+                                <div class="front-text1">
+                                    <h2>Our Projects</h2>
+                                </div>
+                            </div>
                         </div>
-                        <span class="back-text">Gallery</span>
-                    </div>
-                </div>
 
-                <!-- Filter Buttons -->
-                <div class="col-lg-6">
-                    <div class="properties__button">
-                        <div class="project-filter text-right">
-                            <button class="active" data-filter="*">Show All</button>
-                            <button data-filter=".res">Residential</button>
-                            <button data-filter=".edu">Educational Institutions</button>
+                        <!-- Filter Buttons -->
+                        <div class="col-lg-6">
+                          
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <!-- Grid -->
-        <div class="row project-grid">
-          <div class="col-lg-4 col-md-6 project-item ongoing">
-    <div class="single-project mb-30">
-        <div class="project-img">
-            <img src="assets/img/service/mahaveer.png" alt="Mahaveer Palace" width="366px" height="394px">
-        </div>
-        <div class="project-cap">
-            <h4>Mahaveer Palace</h4>
-            <span>Ongoing Project - Salem</span>
-        </div>
-    </div>
-</div>
-            <!-- Residential 1 -->
-            <div class="col-lg-4 col-md-6 project-item res">
-                <div class="single-project mb-30">
-                    <div class="project-img">
-                        <img src="assets/img/service/Durga.jpg" alt="" width="370px" height="394px">
+                <!-- Grid -->
+                <div class="project-grid">
+                    <div class="project-item ready">
+                        <div class="single-project">
+                            <div class="project-img">
+                                <img src="assets/img/service/mahaveer.jpeg" alt="Mahaveer Palace">
+                            </div>
+                            <div class="project-cap">
+                                <h4>Mahaveer Palace</h4>
+                                <span>Ready to Occupy</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="project-cap">
-                        <h4>Durgalakshmi Apartment</h4>
-                        <span>Lakshmipuram,Salem</span>
+
+                    <div class="project-item completed">
+                        <div class="single-project">
+                            <div class="project-img">
+                                <img src="assets/img/service/Durga.jpg" alt="Durgalakshmi Apartment">
+                            </div>
+                            <div class="project-cap">
+                                <h4>Durgalakshmi Apartment</h4>
+                                <span>Lakshmipuram, Salem</span>
+                                <span>(2008 to 2010)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-item completed">
+                        <div class="single-project">
+                            <div class="project-img">
+                                <img src="assets/img/service/Diamond.jpg" alt="Diamond Palace">
+                            </div>
+                            <div class="project-cap">
+                                <h4>Diamond Palace</h4>
+                                <span>Convent Road, Salem</span>
+                                <span>(2010 to 2012)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-item completed">
+                        <div class="single-project">
+                            <div class="project-img">
+                                <img src="assets/img/service/Golden.jpg" alt="Golden Palace">
+                            </div>
+                            <div class="project-cap">
+                                <h4>Golden Palace</h4>
+                                <span>Junction, Salem</span>
+                                <span>(2014 to 2016)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-item ongoing">
+                        <div class="single-project">
+                            <div class="project-img">
+                                <img src="assets/img/service/sakthi.jpeg" alt="Sakthi Palace Apartment">
+                            </div>
+                            <div class="project-cap">
+                                <h4>Sakthi Palace Apartment</h4>
+                                <span>Chinnathirupathi Road, Near Jayaram School, Salem</span>
+                                <span>(Ongoing)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-item ongoing">
+                        <div class="single-project">
+                            <div class="project-img">
+                                <img src="assets/img/service/Engineering.jpg" alt="King Palace Apartment">
+                            </div>
+                            <div class="project-cap">
+                                <h4>King Palace Apartment</h4>
+                                <span>Chinnathirupathi Road, Near Jayaram School, Salem</span>
+                                <span>(Ongoing)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- See More Button -->
+                <div class="row mt-50">
+                    <div class="col-12 text-center">
+                        <a href="project.html" class="btn see-more-btn">See More Projects</a>
                     </div>
                 </div>
             </div>
-
-            <!-- Residential 2 -->
-            <div class="col-lg-4 col-md-6 project-item res">
-                <div class="single-project mb-30">
-                       <div class="project-img">
-                        <img src="assets/img/service/Diamond.jpg" alt="" width="370px" height="394px">
-                    </div>
-                    <div class="project-cap">
-                        <h4>Diamond Palace Apartment</h4>
-                        <span>Convent Road, Salem.</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Residential 3 -->
-            <div class="col-lg-4 col-md-6 project-item res">
-                <div class="single-project mb-30">
-                      <div class="project-img">
-                        <img src="assets/img/service/Golden.jpg" alt="" width="370px" height="394px">
-                    </div>
-                    <div class="project-cap">
-                        <h4>Golden Palace Apartment</h4>
-                        <span>Junction, Salem</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Residential 4 -->
-            <div class="col-lg-4 col-md-6 project-item res">
-                <div class="single-project mb-30">
-                       <div class="project-img">
-                        <img src="assets/img/service/star.jpg" alt="" width="370px" height="394px">
-                    </div>
-                    <div class="project-cap">
-                        <h4>Stat Apartment</h4>
-                        <span>Chinnathirupathi, salem.</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Educational 1 -->
-            <div class="col-lg-4 col-md-6 project-item edu">
-                <div class="single-project mb-30">
-                    <div class="project-img">
-                        <img src="assets/img/service/polytechnic.jpg" alt="" width="370px" height="394px">
-                    </div>
-                    <div class="project-cap">
-                        <h4>POLITECHNIC BUILDING</h4>
-                        <span>COIMBATORE DISTRICT, KANAMPALAYAM</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Educational 2 -->
-            <div class="col-lg-4 col-md-6 project-item edu">
-                <div class="single-project mb-30">
-                    <div class="project-img">
-                        <img src="assets/img/service/Engineering.jpg" alt="" width="370px" height="394px">
-                    </div>
-                    <div class="project-cap">
-                        <h4>ENGINEERING COLLEGE</h4>
-                        <span>COIMBATORE DISTRICT, KANAMPALAYAM.</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Educational 3 -->
-             <div class="col-lg-4 col-md-6 project-item edu">
-                <div class="single-project mb-30">
-                    <div class="project-img">
-                        <img src="assets/img/service/boys.jpg" alt="" width="370px" height="394px">
-                    </div>
-                    <div class="project-cap">
-                        <h4>BOYS HOSTEL BUILDING</h4>
-                        <span>KARUMATHAM PATTY, COIMBATORE DISTRICT.</span>
-                    </div>
-                </div>
-            </div>
-             <div class="col-lg-4 col-md-6 project-item edu">
-                <div class="single-project mb-30">
-                    <div class="project-img">
-                        <img src="assets/img/service/kecb.jpg" alt="" width="370px" height="394px">
-                    </div>
-                    <div class="project-cap">
-                        <h4>ENGINEERING COLLEGE BUILDING</h4>
-                        <span>KARUMATHAM PATTY, COIMBATORE DISTRICT</span>
-                    </div>
-                </div>
-            </div>
- <div class="col-lg-4 col-md-6 project-item edu">
-                <div class="single-project mb-30">
-                    <div class="project-img">
-                        <img src="assets/img/service/hostel-building.jpg" alt="" width="370px" height="394px">
-                    </div>
-                    <div class="project-cap">
-                        <h4>HOSTEL BUILDING</h4>
-                        <span>NAMAKKAL DISTRICT</span>
-                    </div>
-                </div>
-            </div>
-           
-         
-        </div>
-    </div>
-</section>
-
-
-
+        </section>
         <!-- Project Area End -->
         <!-- contact with us Start -->
         <section class="contact-with-area" data-background="assets/img/gallery/section-bg2.jpg">
@@ -507,9 +1026,9 @@
                                     <div class="front-text">
                                         <h2 class="">Lets talk with us</h2>
                                     </div>
-                                    <span class="back-text">Let`s chat</span>
+                                    <span class="back-text">Lat`s chat</span>
                                 </div>
-                                <p>Planning a new construction project or need expert guidance? We’re here to help. From initial planning and design to execution and completion, our team is ready to discuss your requirements and deliver reliable, high-quality construction solutions. Get in touch with us today and let’s build something strong together.</p>
+                                <p>Planning a new construction project or need expert guidance? We're here to help. From initial planning and design to execution and completion, our team is ready to discuss your requirements and deliver reliable, high-quality construction solutions. Get in touch with us today and let's build something strong together.</p>
                                 <a href="#" class="white-btn">read more</a>
                             </div>
                         </div>
@@ -517,12 +1036,11 @@
                 </div>
             </div>
         </section>
-      
         <!-- contact with us End-->
         <!-- CountDown Area Start -->
         <div class="count-area">
             <div class="container">
-                <div class="count-wrapper count-bg" data-background="assets/img/gallery/section-bg3.jpg">
+                <div class="count-wrapper count-bg" style="background-color:#a7d7ed;">
                     <div class="row justify-content-center" >
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="count-clients">
@@ -569,10 +1087,11 @@
         </div>
         <!-- CountDown Area End -->
         <!-- Team Start -->
-       <br>
-       <br>
-       <br>
-       <br>
+    
+      <br>
+      <br>
+      <br>
+      <br>
         <!-- Team End -->
         <!-- Testimonial Start -->
         <div class="testimonial-area t-bg testimonial-padding">
@@ -601,15 +1120,10 @@
                                         <path fill-rule="evenodd"  stroke-width="1px" stroke="rgb(255, 95, 19)" fill-opacity="0" fill="rgb(0, 0, 0)"
                                         d="M82.623,59.861 L48.661,59.861 L48.661,25.988 L59.982,3.406 L76.963,3.406 L65.642,25.988 L82.623,25.988 L82.623,59.861 ZM3.377,25.988 L14.698,3.406 L31.679,3.406 L20.358,25.988 L37.340,25.988 L37.340,59.861 L3.377,59.861 L3.377,25.988 Z"/>
                                         </svg>
-                                        <p>Working with this team was a smooth and stress-free experience. From planning to completion, they maintained clear communication, met timelines, and delivered excellent workmanship. The quality of construction and attention to detail exceeded our expectations, and we would confidently recommend their services to anyone looking for reliable and professional construction solutions.</p>
+                                       <p>Working with this team was a smooth and stress-free experience. From planning to completion, they maintained clear communication, met timelines, and delivered excellent workmanship. The quality of construction and attention to detail exceeded our expectations, and we would confidently recommend their services to anyone looking for reliable and professional construction solutions.</p>
                                     </div>
                                     <!-- founder -->
-                                    <div class="testimonial-founder d-flex align-items-center">
-                                       <div class="founder-text">
-                                            <span></span>
-                                            <p>Co Founder</p>
-                                       </div>
-                                    </div>
+                                    
                                 </div>
                             </div>
                             <!-- Single Testimonial -->
@@ -622,13 +1136,11 @@
                                         <path fill-rule="evenodd"  stroke-width="1px" stroke="rgb(255, 95, 19)" fill-opacity="0" fill="rgb(0, 0, 0)"
                                         d="M82.623,59.861 L48.661,59.861 L48.661,25.988 L59.982,3.406 L76.963,3.406 L65.642,25.988 L82.623,25.988 L82.623,59.861 ZM3.377,25.988 L14.698,3.406 L31.679,3.406 L20.358,25.988 L37.340,25.988 L37.340,59.861 L3.377,59.861 L3.377,25.988 Z"/>
                                         </svg>
-                                        <p>Mollit anim laborum.Dvcuis aute iruxvfg dhjkolohr in re voluptate velit esscillumlore eu quife nrulla parihatur. Excghcepteur sfwsignjnt occa cupidatat non aute iruxvfg dhjinulpadeserunt mollitemnth incididbnt ut;o5tu layjobore mofllit anim. Mollit anim laborum.Dvcuis aute iruxvfg dhjkolohr in re voluptate velit esscillumlore eu quife nrulla parihatur. Excghcepteur sfwsignjn.</p>
+                                        <p>Vijayasree Construction is one of South India's most widely recognized in the field of engineering and construction industry.</p>
                                     </div>
                                     <!-- founder -->
                                     <div class="testimonial-founder d-flex align-items-center">
                                        <div class="founder-text">
-                                            <span>Jessya Inn</span>
-                                            <p>Co Founder</p>
                                        </div>
                                     </div>
                                 </div>
@@ -639,16 +1151,11 @@
             </div>
         </div>
         <!-- Testimonial End -->
-        <!--latest Nnews Area start -->
-       <br>
-       <br>
-       <br>
-        <!--latest News Area End -->
+     
 
     </main>
-    <footer>
-        <!-- Footer Start-->
-        <div class="footer-main">
+      <footer>
+   <div class="footer-main">
                 <div class="footer-area footer-padding">
                     <div class="container">
                         <div class="row  justify-content-between">
@@ -660,7 +1167,7 @@
                                     </div>
                                     <div class="footer-tittle">
                                         <div class="footer-pera">
-                                            <p class="info1">Vijayasree Construction is one of South India’s most widely recognized in the field of engineering and construction industry. </p>
+                                            <p class="info1">Vijayasree Construction is one of South India's most widely recognized in the field of engineering and construction industry. </p>
                                         </div>
                                     </div>
                                 </div>
@@ -686,7 +1193,7 @@
                                             <p class="info1">Vijayasree Towers, 139, Cherry Road, Kumarasammypatti, Salem - 636007</p>
                                         </div>
                                         <ul>
-                                            <li><a href="#">Phone: +91 77083 85999, +91 77084 43999, +91 94875 60657</a></li>
+                                            <li><a href="#">Phone: +91 93848 20759,+91 93848 20760</a></li>
                                             <li><a href="#">Cell: 0427-2411107, 0427-2411108</a></li>
                                         </ul>
                                     </div>
@@ -695,22 +1202,11 @@
                             <div class="col-lg-3 col-md-6 col-sm-8">
                                 <div class="single-footer-caption mb-50">
                                     <!-- Form -->
-                                    <div class="footer-form">
-                                        <div id="mc_embed_signup">
-                                            <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe_form relative mail_part" novalidate="true">
-                                                <input type="email" name="EMAIL" id="newsletter-form-email" placeholder=" Email Address " class="placeholder hide-on-focus" onfocus="this.placeholder = ''" onblur="this.placeholder = ' Email Address '">
-                                                <div class="form-icon">
-                                                    <button type="submit" name="submit" id="newsletter-submit" class="email_icon newsletter-submit button-contactForm">
-                                                        SIGN UP
-                                                    </button>
-                                                </div>
-                                                <div class="mt-10 info"></div>
-                                            </form>
-                                        </div>
-                                    </div>
+    
                                     <!-- Map -->
-                                    <div class="map-footer">
-                                        <img src="assets/img/gallery/map-footer.png" alt="">
+                                    <div>
+                                        <h4 style="color:white">Scan for Whatsapp Enquiry</h4>
+                                        <img src="assets/img/service/qrcode.jpeg" alt="s" width="150px" height="150px">
                                     </div>
                                 </div>
                             </div>
@@ -730,9 +1226,7 @@
         </div>
         <!-- Footer End-->
     </footer>
-   
 	<!-- JS here -->
-	
 		<!-- All JS Custom Plugins Link Here here -->
         <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
 		<!-- Jquery, Popper, Bootstrap -->
@@ -741,8 +1235,6 @@
         <script src="./assets/js/bootstrap.min.js"></script>
 	    <!-- Jquery Mobile Menu -->
         <script src="./assets/js/jquery.slicknav.min.js"></script>
-        <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-       <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 
 		<!-- Jquery Slick , Owl-Carousel Plugins -->
         <script src="./assets/js/owl.carousel.min.js"></script>
@@ -773,24 +1265,165 @@
 		<!-- Jquery Plugins, main Jquery -->	
         <script src="./assets/js/plugins.js"></script>
         <script src="./assets/js/main.js"></script>
-         <script>
-$(window).on('load', function () {
-
-    var $grid = $('.project-grid').isotope({
-        itemSelector: '.project-item',
-        layoutMode: 'fitRows'
-    });
-
-    $('.project-filter button').on('click', function () {
-        $('.project-filter button').removeClass('active');
-        $(this).addClass('active');
-
-        var filterValue = $(this).attr('data-filter');
-        $grid.isotope({ filter: filterValue });
-    });
-
-});
-</script>
+        <script src="./assets/js/mobile-menu-contact.js"></script>
         
+        <!-- Intersection Observer for Project Cards -->
+        <script>
+        const observerOptions = {
+            threshold: 0.2 // Trigger when 20% of the card is visible
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    // Optional: stop watching once animated
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Target all your project cards
+        document.querySelectorAll('.single-project').forEach(card => {
+            observer.observe(card);
+        });
+        </script>
+        
+        <!-- Project Filter Script -->
+        <script>
+            // Check if jQuery is loaded
+            if (typeof jQuery === 'undefined') {
+                console.error('jQuery is not loaded! Please check your script paths.');
+            } else {
+                console.log('jQuery loaded successfully');
+                
+                $(document).ready(function() {
+                    console.log('Document ready - initializing scripts');
+                    
+                    // Initialize - show all items
+                    $('.project-item').show();
+                    
+                    // Filter functionality
+                    $('.project-filter button').on('click', function(e) {
+                        e.preventDefault();
+                        
+                        // Remove active class from all buttons
+                        $('.project-filter button').removeClass('active');
+                        
+                        // Add active class to clicked button
+                        $(this).addClass('active');
+                        
+                        // Get filter value
+                        var filterValue = $(this).attr('data-filter');
+                        
+                        console.log('Filter clicked:', filterValue); // Debug log
+                        
+                        if(filterValue === '*') {
+                            // Show all items
+                            $('.project-item').fadeIn(400);
+                        } else {
+                            // Remove the dot from filterValue to get the class name
+                            var filterClass = filterValue.replace('.', '');
+                            
+                            // Hide all items first
+                            $('.project-item').fadeOut(300, function() {
+                                // Show only items that have the filter class
+                                $('.project-item').each(function() {
+                                    if($(this).hasClass(filterClass)) {
+                                        $(this).fadeIn(400);
+                                    }
+                                });
+                            });
+                        }
+                    });
+
+                    // ========== SCROLL ANIMATION SYSTEM ==========
+                    
+                    try {
+                        // Intersection Observer for scroll animations
+                        const observerOptions = {
+                            threshold: 0.15,
+                            rootMargin: '0px 0px -50px 0px'
+                        };
+
+                        const animateOnScroll = new IntersectionObserver(function(entries) {
+                            entries.forEach(entry => {
+                                if (entry.isIntersecting) {
+                                    entry.target.classList.add('animate');
+                                }
+                            });
+                        }, observerOptions);
+
+                        // Target all elements that should animate on scroll
+                        const elementsToAnimate = [
+                            '.support-caption p',
+                            '.support-caption .btn',
+                            '.right-img',
+                            '.support-img-cap',
+                            '.section-tittle',
+                            '.contact-us-caption p',
+                            '.contact-us-caption .white-btn',
+                            '.count-clients',
+                            '.single-testimonial',
+                            '.support-company-area',
+                            '.project-area',
+                            '.contact-with-area',
+                            '.count-area',
+                            '.testimonial-area'
+                        ];
+
+                        elementsToAnimate.forEach(selector => {
+                            document.querySelectorAll(selector).forEach(el => {
+                                animateOnScroll.observe(el);
+                            });
+                        });
+
+                        // Project cards animation
+                        document.querySelectorAll('.single-project').forEach(card => {
+                            animateOnScroll.observe(card);
+                        });
+                    } catch(error) {
+                        console.error('Error setting up scroll animations:', error);
+                    }
+
+                    // Parallax scroll effect for images
+                    $(window).on('scroll', function() {
+                        try {
+                            const scrolled = $(window).scrollTop();
+                            
+                            // Parallax for right image in about section
+                            if ($('.right-img').length) {
+                                $('.right-img').css('transform', 'translateY(' + (scrolled * 0.1) + 'px)');
+                            }
+                        } catch(error) {
+                            console.error('Error in parallax scroll:', error);
+                        }
+                    });
+
+                    // Smooth scroll for navigation links
+                    $('a[href^="#"]').on('click', function(e) {
+                        e.preventDefault();
+                        const target = $(this.hash);
+                        if (target.length) {
+                            $('html, body').animate({
+                                scrollTop: target.offset().top - 80
+                            }, 800);
+                        }
+                    });
+
+                    // Add stagger delay for counter items
+                    $('.count-clients').each(function(index) {
+                        $(this).css('transition-delay', (index * 0.1) + 's');
+                    });
+
+                    // Initialize animations for elements in viewport on page load
+                    setTimeout(function() {
+                        $(window).trigger('scroll');
+                    }, 100);
+                    
+                    console.log('All scripts initialized successfully');
+                });
+            }
+        </script>
     </body>
 </html>
