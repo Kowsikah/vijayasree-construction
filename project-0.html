@@ -6,6 +6,7 @@
         <title>Mahaveer Palace Apartment</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="manifest" href="site.webmanifest">
 		<link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/logo.png">
 
 		<!-- CSS here -->
@@ -485,7 +486,7 @@
     position: relative;
     overflow: hidden;
     border-radius: 15px;
-    animation: fadeInUp 0.8s ease-out;
+   
 }
 
 /* ========== AMENITY CARDS HIGHLIGHTING ========== */
@@ -761,14 +762,13 @@
 
 .property-specs img,
 .location-perks img {
-    transition: all 0.4s ease;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .property-specs img:hover,
 .location-perks img:hover {
-    transform: scale(1.05) rotate(-2deg);
+
     box-shadow: 0 15px 40px rgba(7, 32, 66, 0.2);
 }
 
@@ -908,7 +908,7 @@ body {
 }
   </style>
    <body>
-    <!-- Preloader Start 
+    <!-- Preloader Start -->
     <div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">
             <div class="preloader-inner position-relative">
@@ -919,7 +919,7 @@ body {
             </div>
         </div>
     </div>
-     Preloader Start -->
+    <!-- Preloader Start -->
     <header>
         <!-- Header Start -->
        <div class="header-area header-transparent">
@@ -1325,7 +1325,7 @@ body {
                             <div class="col-xl-12 ">
                                 <div class="footer-copy-right">
                                     <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved </a>
+  Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved </a>
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                                 </div>
                             </div>
@@ -1362,7 +1362,7 @@ body {
 		<script src="./assets/js/jquery.sticky.js"></script>
                
         <!-- counter , waypoint -->
-        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
         <script src="./assets/js/jquery.counterup.min.js"></script>
 
         <!-- contact js -->
@@ -1373,3 +1373,42 @@ body {
         <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
         
 	
+<!-- Jquery Plugins, main Jquery -->	
+        <script src="./assets/js/plugins.js"></script>
+        <script src="./assets/js/main.js"></script>
+
+<script>
+// WhatsApp Form Function
+function openWhatsApp() {
+    var name = document.getElementById('w_name').value;
+    var email = document.getElementById('w_email').value;
+    var message = document.getElementById('w_message').value;
+    
+    if (!name || name.trim() === '') {
+        alert('Please enter your name');
+        return;
+    }
+    
+    if (!message || message.trim() === '') {
+        alert('Please enter your message/enquiry');
+        return;
+    }
+    
+    var phoneNumber = "919384820759";
+    
+    var whatsappMessage = "*New Enquiry from Project Page*%0a%0a";
+    whatsappMessage += "*Name:* " + encodeURIComponent(name) + "%0a";
+    
+    if (email && email.trim() !== '') {
+        whatsappMessage += "*Email:* " + encodeURIComponent(email) + "%0a";
+    }
+    
+    whatsappMessage += "%0a*Message/Enquiry:*%0a" + encodeURIComponent(message);
+    
+    var url = "https://api.whatsapp.com/send?phone=" + phoneNumber + "&text=" + whatsappMessage;
+    window.open(url, '_blank');
+}
+</script>
+
+</body>
+</html>
