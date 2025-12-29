@@ -4,331 +4,125 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>Projects | Vijayasree Construction</title>
-        <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="manifest" href="site.webmanifest">
-		<link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/logo.png">
+        <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/logo.png">
 
-		<!-- CSS here -->
-            <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-            <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-            <link rel="stylesheet" href="assets/css/gijgo.css">
-            <link rel="stylesheet" href="assets/css/slicknav.css">
-            <link rel="stylesheet" href="assets/css/animate.min.css">
-            <link rel="stylesheet" href="assets/css/magnific-popup.css">
-            <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-            <link rel="stylesheet" href="assets/css/themify-icons.css">
-            <link rel="stylesheet" href="assets/css/slick.css">
-            <link rel="stylesheet" href="assets/css/nice-select.css">
-            <link rel="stylesheet" href="assets/css/style.css">
-            <link rel="stylesheet" href="assets/css/responsive.css">
-            <!-- Mobile Menu Contact Fix -->
-            <link rel="stylesheet" href="assets/css/header-mobile-fix.css">
-   </head>
-  <style>
-    /* Reset box-sizing */
-    * {
-        box-sizing: border-box;
-    }
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/responsive.css">
+        <link rel="stylesheet" href="assets/css/header-mobile-fix.css">
 
-    /* Filter Button Styling */
-    .project-filter.text-right {
-        text-align: right;
-        margin-bottom: 40px;
-        padding-right: 10px; 
-    }
-
-    .project-filter button {
-        background: transparent;
-        border: 2px solid #072042;
-        padding: 10px 20px;
-        margin-left: 15px; 
-        font-family: "Teko", sans-serif;
-        font-size: 18px;
-        font-weight: 600;
-        text-transform: capitalize;
-        color: #072042; 
-        cursor: pointer;
-        transition: all 0.3s ease;
-        outline: none;
-        border-radius: 5px;
-    }
-
-    .project-filter button.active, 
-    .project-filter button:hover {
-        background: #072042;
-        color: #ffffff;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 8px rgba(7, 32, 66, 0.3);
-    }
-
-    /* Mobile Responsive adjustment */
-    @media (max-width: 768px) {
-        .project-filter.text-right {
-            text-align: center; 
-            margin-bottom: 30px;
-        }
-        .project-filter button {
-            margin: 5px 5px;
-            padding: 8px 15px;
-            font-size: 16px;
-        }
-    }
-    
-    /* Section Title Styling */
-    .section-tittle {
-        position: relative;
-        z-index: 1;
-    }
-
-    .section-tittle .front-text h2 {
-        font-size: 50px;
-        font-weight: 700;
-        text-transform: uppercase;
-        color: #072042;
-    }
-
-    .section-tittle .back-text {
-        font-size: 100px;
-        font-weight: 700;
-        color: #fff;
-        position: absolute;
-        top: -40px;
-        left: 0;
-        z-index: -1;
-        text-transform: uppercase;
-    }
-
-    /* PROJECT CARDS - FIXED 350PX WIDTH FOR ALL DEVICES */
-    
-    /* Grid Container */
-    .project-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, 350px);
-        gap: 30px;
-        justify-content: center;
-        padding: 0 15px;
-        width: 100%;
-        max-width: 100%;
-    }
-
-    /* Individual Project Item - Fixed 350px */
-    .project-item {
-        width: 350px !important;
-        min-width: 350px !important;
-        max-width: 350px !important;
-        display: block;
-    }
-
-    /* Single Project Card - Fixed 350px */
-    .single-project {
-        position: relative;
-        width: 350px !important;
-        min-width: 350px !important;
-        max-width: 350px !important;
-        height: 480px;
-        overflow: hidden;
-        border: 2px solid rgba(255, 255, 255, 0.3);
-        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        cursor: pointer;
-    }
-
-    .single-project::before {
-        content: '';
-        position: absolute;
+        <style>
+            .header-sticky.sticky-bar {
+        position: fixed;
         top: 0;
-        left: 0;
         width: 100%;
-        height: 100%;
-        background: linear-gradient(135deg, rgba(7, 32, 66, 0.1) 0%, rgba(167, 199, 231, 0.1) 100%);
-        opacity: 0;
-        transition: opacity 0.4s ease;
-        z-index: 1;
-        pointer-events: none;
-    }
-
-    .single-project:hover {
-        border-color: #072042;
-        transform: translateY(-15px) scale(1.03);
-        box-shadow: 0 20px 40px rgba(7, 32, 66, 0.3);
-    }
-
-    .single-project:hover::before {
-        opacity: 1;
-    }
-
-    /* Project Image Container - Fixed 350px */
-    .project-img {
-        width: 350px !important;
-        min-width: 350px !important;
-        max-width: 350px !important;
-        height: 350px;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .project-img img {
-        width: 350px !important;
-        min-width: 350px !important;
-        max-width: 350px !important;
-        height: 350px;
-        object-fit: cover;
-        display: block;
-        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        filter: brightness(1) grayscale(0);
-    }
-
-    .single-project:hover .project-img img {
-        transform: scale(1.15) rotate(2deg);
-        filter: brightness(1.1) contrast(1.1);
-    }
-
-    /* Project Caption - Fixed 350px */
-    .project-cap {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 350px !important;
-        min-width: 350px !important;
-        max-width: 350px !important;
-        height: 130px;
-        background: #a7c7e7;
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        box-sizing: border-box;
-        z-index: 5;
-        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        transform: translateY(0);
-    }
-
-    .single-project:hover .project-cap {
-        background: #072042;
-        transform: translateY(-5px);
-    }
-
-    .project-cap h4 {
-        font-size: 20px;
-        margin: 5px 0;
-        color: #072042;
-        font-weight: 600;
-        transition: all 0.3s ease;
-        transform: translateX(0);
-    }
-
-    .single-project:hover .project-cap h4 {
-        color: #a7d7ed;
-        transform: translateX(5px);
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    }
-
-    .project-cap span {
-        color: white;
-        font-size: 14px;
-        font-weight: 600;
-        text-transform: uppercase;
-        z-index: 10;
-        position: relative;
-        margin: 2px 0;
-        transition: all 0.3s ease;
-        transform: translateX(0);
-        opacity: 0.9;
-    }
-
-    .single-project:hover .project-cap span {
-        transform: translateX(5px);
-        opacity: 1;
-    }
-
-    .btn-learn {
-        background: #072042;
-        color: #fff !important;
-        padding: 8px 20px;
-        text-transform: uppercase;
-        font-size: 12px;
-        font-weight: 700;
-        border-radius: 4px;
-        transition: all 0.3s ease;
-        text-decoration: none;
-        margin-top: 5px;
-        display: inline-block;
-        transform: translateY(0);
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    }
-
-    .single-project:hover .btn-learn {
+        z-index: 9999;
         background: #fff;
-        color: #072042 !important;
-        border: 2px solid #072042;
-        transform: translateY(-3px);
-        box-shadow: 0 5px 15px rgba(7, 32, 66, 0.4);
+        box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
     }
+            /* HERO FIX: Ensures image shows even if JS fails */
+            .slider-height2 {
+                background-repeat: no-repeat !important;
+                background-size: cover !important;
+                background-position: center center !important;
+                min-height: 400px; /* Adjust height as needed */
+            }
 
-    /* Shimmer effect on hover */
-    .single-project::after {
-        content: '';
-        position: absolute;
-        top: -50%;
-        left: -60%;
-        width: 20%;
-        height: 200%;
-        background: linear-gradient(90deg, 
-            transparent,
-            rgba(255, 255, 255, 0.3),
-            transparent
-        );
-        transform: rotate(30deg);
-        transition: all 0.6s ease;
-        z-index: 3;
-        pointer-events: none;
-    }
+            /* Grid Layout */
+            .project-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, 338px);
+                gap: 40px;
+                justify-content: center;
+                padding: 60px 0;
+                background-color: #ffffff;
+            }
 
-    .single-project:hover::after {
-        left: 120%;
-    }
+            /* Card Dimensions Locked to 338x448 */
+            .single-project {
+                width: 338px !important;
+                height: 448px !important;
+                background: #ffffff;
+                border-radius: 5px;
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+                transition: transform 0.3s ease;
+                border: 1px solid #f0f0f0;
+                margin-bottom: 20px;
+            }
 
-    /* Responsive Design - Maintains 350px cards on all devices */
-    @media (max-width: 1200px) {
-        .project-grid {
-            grid-template-columns: repeat(auto-fit, 350px);
-            gap: 25px;
-        }
-    }
+            .single-project:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+            }
 
-    @media (max-width: 767px) {
-        .project-grid {
-            grid-template-columns: 350px;
-            gap: 20px;
-            padding: 0 10px;
-        }
-    }
+            .project-img {
+                width: 338px !important;
+                height: 230px !important;
+                overflow: hidden;
+            }
 
-    @media (max-width: 400px) {
-        .project-grid {
-            grid-template-columns: 350px;
-            gap: 20px;
-            padding: 0 5px;
-        }
-    }
-  </style>
-   <body>
-    <!-- Preloader Start -->
-    <div id="preloader-active">
-        <div class="preloader d-flex align-items-center justify-content-center">
-            <div class="preloader-inner position-relative">
-                <div class="preloader-circle"></div>
-                <div class="preloader-img pere-text">
-                    <img src="assets/img/logo/logo.png" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Preloader Start -->
-     <header>
+            .project-img img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            /* Caption Styling - Centered text as per your image */
+            .project-cap {
+                padding: 25px 15px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                flex-grow: 1;
+            }
+
+            .location-text { color: #888; font-size: 14px; display: block; margin-bottom: 5px; }
+            .project-cap h4 { font-size: 19px; font-weight: 700; color: #2c234d; text-transform: uppercase; margin-bottom: 8px; line-height: 1.2;}
+            .date-text { color: #555; font-size: 14px; display: block; margin-bottom: 20px; }
+
+            /* Yellow Button Style */
+            .btn-learn {
+                background: #FFF9C4 !important;
+                color: #000 !important;
+                padding: 10px 25px;
+                font-size: 13px;
+                font-weight: 700;
+                text-transform: uppercase;
+                border-radius: 4px;
+                display: inline-block;
+                margin: 0 auto;
+                text-decoration: none;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            }
+            .btn-learn:hover { background: #FBC02D !important; transform: scale(1.05); }
+
+            /* Filter Bar Styling */
+            .project-filter button {
+                background: transparent;
+                border: 1px solid #5D1A1D;
+                padding: 10px 25px;
+                margin: 5px;
+                font-weight: 600;
+                cursor: pointer;
+                border-radius: 30px;
+                transition: 0.3s;
+                color: #5D1A1D;
+            }
+            .project-filter button.active, .project-filter button:hover {
+                background: #5D1A1D;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+              <header>
         <!-- Header Start -->
        <div class="header-area header-transparent">
             <div class="main-header ">
@@ -339,7 +133,7 @@
                                 <div class="header-info-left">
                                      <ul>     
                                         <li><img src="assets/img/icon/phone.png" width="30px" height="30px"></img> <a href="tel:+919384820759">+91 93848 20759</a>, <a href="tel:+919384820760">+91 93848 20760</a></li>
-                                          <li><img src="assets/img/icon/gmail.png" width="30px" height="30px"> vijaysribuilders@gmail.com</li>
+                                        <li><img src="assets/img/icon/gmail.png" width="30px" height="30px"> vijaysribuilders@gmail.com</li>
                                     </ul>
                                 </div>
                                 <div class="header-info-right">
@@ -392,194 +186,181 @@
         <!-- Header End -->
     </header>
     
-    <main>
-        <!-- slider Area Start-->
-        <div class="slider-area ">
-            <div class="single-slider hero-overly slider-height2 d-flex align-items-center" data-background="assets/img/hero/about.jpg">
+            <div class="slider-area">
+                <div class="single-slider hero-overly slider-height2 d-flex align-items-center" 
+                     style="background-image: url('assets/img/hero/about.jpg');height:600px;" 
+                     data-background="assets/img/hero/about.jpg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div class="hero-cap pt-100 text-center">
+                                    <h2 style="color: white; font-size: 50px;">Our Projects</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="project-area section-padding30">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="hero-cap pt-100">
-                                <h2>Our projects</h2>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-12 text-center">
+                            <div class="project-filter mb-50">
+                                <button class="active" data-filter="*">All Projects</button>
+                                <button data-filter=".ready">Ready to Occupy</button>
+                                <button data-filter=".ongoing">Ongoing</button>
+                                <button data-filter=".sold">Sold</button>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <!-- slider Area End-->
-        
-        <!-- Project Area Start -->
-        <section class="project-area section-padding30">
-            <div class="container">
-                <div class="project-heading mb-35">
-                    <div class="row align-items-end">
-                        <div class="col-lg-6">
-                            <div class="section-tittle section-tittle3">
-                                <div class="front-text">
-                                    <h2>Our Projects</h2>
+
+                    <div class="project-grid">
+                        
+                        <div class="project-item ready">
+                            <div class="single-project">
+                                <div class="project-img"><img src="assets/img/service/mahaveer.jpeg" alt=""></div>
+                                <div class="project-cap">
+                                    <div>
+                                        <span class="location-text">Salem</span>
+                                        <h4>Mahaveer Palace</h4>
+                                        <span class="date-text">• Ready to Occupy •</span>
+                                    </div>
+                                    <a href="project-0.html" class="btn-learn">Learn More</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6">
-                            <div class="properties__button">
-                               <div class="project-filter text-right">
-                                    <button class="active" data-filter="*">Show All</button>
-                                    <button data-filter=".completed">Completed</button>
-                                    <button data-filter=".ready">Ready to Occupy</button>
-                                    <button data-filter=".ongoing">Ongoing</button>
+
+                        <div class="project-item sold">
+                            <div class="single-project">
+                                <div class="project-img"><img src="assets/img/service/Durga.jpg" alt=""></div>
+                                <div class="project-cap">
+                                    <div>
+                                        <span class="location-text">Lakshmipuram, Salem</span>
+                                        <h4>Durgalakshmi Apartment</h4>
+                                        <span class="date-text">• (2008 to 2010) •</span>
+                                    </div>
+                                    <a href="project-1.html" class="btn-learn">Learn More</a>
                                 </div>
                             </div>
                         </div>
+
+                        <div class="project-item sold">
+                            <div class="single-project">
+                                <div class="project-img"><img src="assets/img/service/Diamond.jpg" alt=""></div>
+                                <div class="project-cap">
+                                    <div>
+                                        <span class="location-text">Convent Road, Salem</span>
+                                        <h4>Diamond Palace</h4>
+                                        <span class="date-text">• (2010 to 2012) •</span>
+                                    </div>
+                                    <a href="project-2.html" class="btn-learn">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-item sold">
+                            <div class="single-project">
+                                <div class="project-img"><img src="assets/img/service/Golden.jpg" alt=""></div>
+                                <div class="project-cap">
+                                    <div>
+                                        <span class="location-text">Junction, Salem</span>
+                                        <h4>Golden Palace</h4>
+                                        <span class="date-text">• (2014 to 2016) •</span>
+                                    </div>
+                                    <a href="project-3.html" class="btn-learn">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-item sold">
+                            <div class="single-project">
+                                <div class="project-img"><img src="assets/img/service/star.jpg" alt=""></div>
+                                <div class="project-cap">
+                                    <div>
+                                        <span class="location-text">Chinnathirupathi, Salem</span>
+                                        <h4>Star Apartment</h4>
+                                        <span class="date-text">• (2012 to 2014) •</span>
+                                    </div>
+                                    <a href="project-4.html" class="btn-learn">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-item sold">
+                            <div class="single-project">
+                                <div class="project-img"><img src="assets/img/service/Sun.jpg" alt=""></div>
+                                <div class="project-cap">
+                                    <div>
+                                        <span class="location-text">Kannankurichi, Salem</span>
+                                        <h4>Sun Palace Apartment</h4>
+                                        <span class="date-text">• (2016 to 2018) •</span>
+                                    </div>
+                                    <a href="project-5.html" class="btn-learn">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-item sold">
+                            <div class="single-project">
+                                <div class="project-img"><img src="assets/img/service/lotus.jpg" alt=""></div>
+                                <div class="project-cap">
+                                    <div>
+                                        <span class="location-text">Alagapuram Pudur, Salem</span>
+                                        <h4>Lotus Apartment</h4>
+                                        <span class="date-text">• (2018 to 2019) •</span>
+                                    </div>
+                                    <a href="project-6.html" class="btn-learn">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-item ongoing">
+                            <div class="single-project">
+                                <div class="project-img"><img src="assets/img/service/sakthi.jpeg" alt=""></div>
+                                <div class="project-cap">
+                                    <div>
+                                        <span class="location-text">Near Jayaram School, Salem</span>
+                                        <h4>Sakthi Palace Apartment</h4>
+                                        <span class="date-text">• (Ongoing) •</span>
+                                    </div>
+                                    <a href="project-7.html" class="btn-learn">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-item ongoing">
+                            <div class="single-project">
+                                <div class="project-img"><img src="assets/img/service/king.png" alt=""></div>
+                                <div class="project-cap">
+                                    <div>
+                                        <span class="location-text">Near Jayaram School, Salem</span>
+                                        <h4>King Palace Apartment</h4>
+                                        <span class="date-text">• (Ongoing) •</span>
+                                    </div>
+                                    <a href="project-8.html" class="btn-learn">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-item ongoing">
+                            <div class="single-project">
+                                <div class="project-img"><img src="assets/img/service/polytechnic.jpg" alt=""></div>
+                                <div class="project-cap">
+                                    <div>
+                                        <span class="location-text">Vidhya Nagar, Ammapet</span>
+                                        <h4>Vaishnavi Palace Apartment</h4>
+                                        <span class="date-text">• (Ongoing) •</span>
+                                    </div>
+                                    <a href="project-9.html" class="btn-learn">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-           
-                <div class="project-grid">
-                    <div class="project-item ready">
-                        <div class="single-project">
-                            <div class="project-img">
-                                <img src="assets/img/service/mahaveer.jpeg" alt="Mahaveer Palace">
-                            </div>
-                            <div class="project-cap">
-                                <h4>Mahaveer Palace</h4>
-                                <span>Ready to Occupy - Salem</span>
-                                <a href="project-0.html" class="btn-learn">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-item completed">
-                        <div class="single-project">
-                            <div class="project-img">
-                                <img src="assets/img/service/Durga.jpg" alt="Durgalakshmi Apartment">
-                            </div>
-                            <div class="project-cap">
-                                <h4>Durgalakshmi Apartment</h4>
-                                <span>Lakshmipuram, Salem</span>
-                                <span>(2008 to 2010)</span>
-                                <a href="project-1.html" class="btn-learn">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-item completed">
-                        <div class="single-project">
-                            <div class="project-img">
-                                <img src="assets/img/service/Diamond.jpg" alt="Diamond Palace">
-                            </div>
-                            <div class="project-cap">
-                                <h4>Diamond Palace</h4>
-                                <span>Convent Road, Salem</span>
-                                <span>(2010 to 2012)</span>
-                                <a href="project-2.html" class="btn-learn">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-item completed">
-                        <div class="single-project">
-                            <div class="project-img">
-                                <img src="assets/img/service/Golden.jpg" alt="Golden Palace">
-                            </div>
-                            <div class="project-cap">
-                                <h4>Golden Palace</h4>
-                                <span>Junction, Salem</span>
-                                <span>(2014 to 2016)</span>
-                                <a href="project-3.html" class="btn-learn">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-item completed">
-                        <div class="single-project">
-                            <div class="project-img">
-                                <img src="assets/img/service/star.jpg" alt="Star Apartment">
-                            </div>
-                            <div class="project-cap">
-                                <h4>Star Apartment</h4>
-                                <span>Chinnathirupathi, Salem</span>
-                                <span>(2012 to 2014)</span>
-                                <a href="project-4.html" class="btn-learn">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-item completed">
-                        <div class="single-project">
-                            <div class="project-img">
-                                <img src="assets/img/service/Diamond.jpg" alt="Sun Palace Apartment">
-                            </div>
-                            <div class="project-cap">
-                                <h4>Sun Palace Apartment</h4>
-                                <span>Kannankurichi, Salem</span>
-                                <span>(2016 to 2018)</span>
-                                <a href="project-5.html" class="btn-learn">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-item completed">
-                        <div class="single-project">
-                            <div class="project-img">
-                                <img src="assets/img/service/Diamond.jpg" alt="Lotus Apartment">
-                            </div>
-                            <div class="project-cap">
-                                <h4>Lotus Apartment</h4>
-                                <span>Alagapuram Pudur, Salem</span>
-                                <span>(2018 to 2019)</span>
-                                <a href="project-6.html" class="btn-learn">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-item ongoing">
-                        <div class="single-project">
-                            <div class="project-img">
-                                <img src="assets/img/service/sakthi.jpeg" alt="Sakthi Palace Apartment">
-                            </div>
-                            <div class="project-cap">
-                                <h4>Sakthi Palace Apartment</h4>
-                                <span>Chinnathirupathi Road, Near Jayaram School</span>
-                                <span>(Ongoing)</span>
-                                <a href="project-7.html" class="btn-learn">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-item ongoing">
-                        <div class="single-project">
-                            <div class="project-img">
-                                <img src="assets/img/service/Engineering.jpg" alt="King Palace Apartment">
-                            </div>
-                            <div class="project-cap">
-                                <h4>King Palace Apartment</h4>
-                                <span>Chinnathirupathi Road, Near Jayaram School</span>
-                                <span>(Ongoing)</span>
-                                <a href="project-8.html" class="btn-learn">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-item ongoing">
-                        <div class="single-project">
-                            <div class="project-img">
-                                <img src="assets/img/service/polytechnic.jpg" alt="Vaishnavi Palace Apartment">
-                            </div>
-                            <div class="project-cap">
-                                <h4>Vaishnavi Palace Apartment</h4>
-                                <span>Pallavan Road, Vidhya Nagar, Ammapet</span>
-                                <span>(Ongoing)</span>
-                                <a href="project-9.html" class="btn-learn">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Project Area End -->
-    </main>
-    
-    <footer>
+            </section>
+              <footer>
         <div class="footer-main">
             <div class="footer-area footer-padding">
                 <div class="container">
@@ -592,7 +373,7 @@
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">
-                                        <p class="info1">Vijayasree Construction is one of South India's most widely recognized in the field of engineering and construction industry.</p>
+                                        <p class="info1">Vijayasree Construction is one of South India's most widely recognized in the field of engineering and construction industry. </p>
                                     </div>
                                 </div>
                             </div>
@@ -637,7 +418,7 @@
                     <div class="row align-items-center">
                         <div class="col-xl-12 ">
                             <div class="footer-copy-right">
-                                <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved</p>
+                                <p>Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved</p>
                             </div>
                         </div>
                     </div>
@@ -646,12 +427,12 @@
         </div>
         <!-- Footer End-->
     </footer>
-   
-	<!-- JS here -->
-		<!-- All JS Custom Plugins Link Here here -->
-        <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+        </main>
+             <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
 		<!-- Jquery, Popper, Bootstrap -->
 		<script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+		<!-- jQuery CDN Fallback -->
+		<script>window.jQuery || document.write('<script src="https://code.jquery.com/jquery-3.6.0.min.js"><\/script>')</script>
         <script src="./assets/js/popper.min.js"></script>
         <script src="./assets/js/bootstrap.min.js"></script>
 	    <!-- Jquery Mobile Menu -->
@@ -682,49 +463,24 @@
         <script src="./assets/js/jquery.validate.min.js"></script>
         <script src="./assets/js/mail-script.js"></script>
         <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
-        <script src="./assets/js/mobile-menu-contact.js"></script>
         
 		<!-- Jquery Plugins, main Jquery -->	
         <script src="./assets/js/plugins.js"></script>
         <script src="./assets/js/main.js"></script>
+        <script src="./assets/js/mobile-menu-contact.js"></script>
         
-        <!-- Project Filter Script -->
+        <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
         <script>
             $(document).ready(function() {
-                // Initialize - show all items
-                $('.project-item').show();
-                
-                // Filter functionality
-                $('.project-filter button').on('click', function(e) {
-                    e.preventDefault();
-                    
-                    // Remove active class from all buttons
+                $('.project-filter button').on('click', function() {
                     $('.project-filter button').removeClass('active');
-                    
-                    // Add active class to clicked button
                     $(this).addClass('active');
-                    
-                    // Get filter value
                     var filterValue = $(this).attr('data-filter');
-                    
-                    console.log('Filter clicked:', filterValue); // Debug log
-                    
                     if(filterValue === '*') {
-                        // Show all items
                         $('.project-item').fadeIn(400);
                     } else {
-                        // Remove the dot from filterValue to get the class name
-                        var filterClass = filterValue.replace('.', '');
-                        
-                        // Hide all items first
-                        $('.project-item').fadeOut(300, function() {
-                            // Show only items that have the filter class
-                            $('.project-item').each(function() {
-                                if($(this).hasClass(filterClass)) {
-                                    $(this).fadeIn(400);
-                                }
-                            });
-                        });
+                        $('.project-item').hide();
+                        $(filterValue).fadeIn(400);
                     }
                 });
             });

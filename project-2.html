@@ -26,9 +26,8 @@
 <link rel="stylesheet" href="assets/css/header-mobile-fix.css">
    </head>
   <style>
-   
-.custom-project-table {
-    border: 3px solid #072042 !important;
+custom-project-table {
+    border: 3px solid #fa6239 !important;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(7, 32, 66, 0.15);
@@ -66,10 +65,10 @@
 
 .custom-project-table tbody th {
     background: linear-gradient(135deg, #fff9d6 0%, #fffbe6 100%);
-    color: #072042;
+    color: #000;
     font-weight: 600;
     padding: 15px;
-    border-right: 2px solid #072042;
+    border-right: 2px solid red;
     width: 40%;
     font-size: 15px;
     vertical-align: middle;
@@ -141,7 +140,7 @@
 
 /* Badge/Label for image */
 .project-details-img::after {
-    content: 'COMPLETED PROJECT';
+    content: 'SOLD OUT';
     position: absolute;
     top: 20px;
     right: -50px;
@@ -294,6 +293,40 @@
 
 .table-responsive::-webkit-scrollbar-thumb:hover {
     background: #ff7d45;
+}
+
+/* ========== ADDITIONAL ENHANCEMENTS ========== */
+
+/* Add subtle pattern to background */
+.project-details-area::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(7, 32, 66, 0.02) 35px, rgba(7, 32, 66, 0.02) 70px);
+    pointer-events: none;
+}
+
+.project-details-area .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Row alignment enhancement */
+.project-details-area .row {
+    align-items: stretch;
+}
+
+/* Equal height for both columns */
+.project-details-img,
+.project-details-cap {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
   </style>

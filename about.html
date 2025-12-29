@@ -6,7 +6,7 @@
         <title>About us | Vijayasree Construction</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="manifest" href="site.webmanifest">
+        <!-- <link rel="manifest" href="site.webmanifest"> -->
 		<link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/logo.png">
 
 		<!-- CSS here -->
@@ -24,25 +24,105 @@
             <link rel="stylesheet" href="assets/css/responsive.css">
             <!-- Mobile Menu Contact Fix -->
             <link rel="stylesheet" href="assets/css/header-mobile-fix.css">
-            
             <style>
+    /* Google Stars Color */
+    .founder-text span {
+        color: #fbbc05; /* Google Star Yellow */
+        font-size: 20px;
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    /* Professional Review Card Styling */
+    .single-testimonial {
+        background: #ffffff;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08) !important;
+        margin: 15px;
+    }
+
+    /* Dark Red Review Button */
+    .google-review-btn {
+        background: #5D1A1D; /* The Dark Red from your preferred theme */
+        color: #ffffff !important;
+        padding: 15px 35px;
+        border-radius: 4px;
+        font-weight: 700;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+    }
+
+    .google-review-btn:hover {
+        background: #072042; /* Changes to logo blue on hover */
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+</style>
+            <style>
+                /* ========== COLOR SCHEME ========== */
+                :root {
+                    --primary-yellow: #FFF4B4;
+                    --bright-red: #E21F26;
+                    --dark-gray: #1A1A1A;
+                    --accent-yellow: #FFD700;
+                    --white: #FFFFFF;
+                }
+
                 /* Section Title Styling */
                 .section-tittle .front-text h2 {
                     font-size: 70px;
                     font-weight: 700;
                     text-transform: uppercase;
-                    background: linear-gradient(to bottom, #072042 0%, #1a4a8e 50%, #072042 100%);
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                    filter: drop-shadow(2px 4px 3px rgba(0, 0, 0, 0.2));
+                    color: var(--bright-red);
+                    filter: drop-shadow(2px 4px 3px rgba(0, 0, 0, 0.15));
                     transition: all 0.5s ease;
                 }
 
                 .section-tittle:hover .front-text h2 {
-                    background: linear-gradient(to top, #072042 0%, #3a7bd5 50%, #072042 100%);
-                    -webkit-background-clip: text;
-                    filter: drop-shadow(4px 8px 6px rgba(0, 0, 0, 0.3));
+                    color: var(--dark-gray);
+                    filter: drop-shadow(4px 8px 6px rgba(0, 0, 0, 0.2));
                     transform: translateY(-2px);
+                }
+
+                /* Update button colors */
+                .btn, .red-btn2 {
+                    background: var(--bright-red) !important;
+                    color: var(--white) !important;
+                    border-color: var(--bright-red) !important;
+                }
+
+                .btn:hover, .red-btn2:hover {
+                    background: var(--dark-gray) !important;
+                    border-color: var(--dark-gray) !important;
+                }
+
+                /* Header background */
+                .header-area {
+                    background: var(--primary-yellow) !important;
+                }
+
+                /* Update section backgrounds */
+                .about-area,
+                .wantToWork-area {
+                    background: var(--primary-yellow) !important;
+                }
+
+                /* Counter section */
+                .count-area .count-wrapper {
+                    background: var(--primary-yellow) !important;
+                }
+
+                /* Team section cards */
+                .team-wrapper {
+                    background: var(--white);
+                    border: 2px solid var(--accent-yellow);
+                }
+
+                /* Update text colors for better contrast */
+                .support-caption h3,
+                .team-caption h3 {
+                    color: var(--dark-gray);
                 }
 
                 /* ========== ANIMATION EFFECTS ========== */
@@ -123,7 +203,7 @@
 
                 .mission-vision-area {
                     padding: 100px 0;
-                    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+                    background: linear-gradient(135deg, var(--primary-yellow) 0%, #fffae6 100%);
                     position: relative;
                     overflow: hidden;
                 }
@@ -135,16 +215,16 @@
                     right: -10%;
                     width: 500px;
                     height: 500px;
-                    background: radial-gradient(circle, rgba(7, 32, 66, 0.05) 0%, transparent 70%);
+                    background: radial-gradient(circle, rgba(226, 31, 38, 0.05) 0%, transparent 70%);
                     border-radius: 50%;
                 }
 
                 .mission-vision-card {
-                    background: #ffffff;
+                    background: var(--white);
                     border-radius: 20px;
                     padding: 50px 40px;
                     margin-bottom: 30px;
-                    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+                    box-shadow: 0 10px 40px rgba(226, 31, 38, 0.1);
                     position: relative;
                     overflow: hidden;
                     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -153,6 +233,7 @@
                     display: flex;
                     flex-direction: column;
                     height: 100%;
+                    border: 2px solid var(--accent-yellow);
                 }
                 
                 /* Make mission and vision row equal height */
@@ -178,7 +259,7 @@
                     left: 0;
                     width: 5px;
                     height: 100%;
-                    background: linear-gradient(to bottom, #072042, #1a4a8e);
+                    background: linear-gradient(to bottom, var(--bright-red), var(--accent-yellow));
                     transition: width 0.4s ease;
                 }
 
@@ -189,13 +270,13 @@
 
                 .mission-vision-card:hover {
                     transform: translateY(-15px) scale(1.02);
-                    box-shadow: 0 20px 60px rgba(7, 32, 66, 0.2);
+                    box-shadow: 0 20px 60px rgba(226, 31, 38, 0.25);
                 }
 
                 .mission-vision-card .icon-wrapper {
                     width: 80px;
                     height: 80px;
-                    background: linear-gradient(135deg, #072042 0%, #1a4a8e 100%);
+                    background: linear-gradient(135deg, var(--bright-red) 0%, var(--accent-yellow) 100%);
                     border-radius: 50%;
                     display: flex;
                     align-items: center;
@@ -207,7 +288,7 @@
 
                 .mission-vision-card:hover .icon-wrapper {
                     transform: rotate(360deg) scale(1.1);
-                    box-shadow: 0 10px 30px rgba(7, 32, 66, 0.4);
+                    box-shadow: 0 10px 30px rgba(226, 31, 38, 0.4);
                 }
 
                 .mission-vision-card .icon-wrapper i {
@@ -354,7 +435,7 @@
                                 <div class="header-info-left">
                                      <ul>     
                                         <li><img src="assets/img/icon/phone.png" width="30px" height="30px"></img> <a href="tel:+919384820759">+91 93848 20759</a>, <a href="tel:+919384820760">+91 93848 20760</a></li>
-                                          <li><img src="assets/img/icon/gmail.png" width="30px" height="30px"> vijaysribuilders@gmail.com</li>
+                                        <li><img src="assets/img/icon/gmail.png" width="30px" height="30px"> vijaysribuilders@gmail.com</li>
                                     </ul>
                                 </div>
                                 <div class="header-info-right">
@@ -494,59 +575,12 @@
             </div>
         </section>
         <!-- Mission & Vision Area End -->
-
+       <!-- Elfsight Google Reviews | Untitled Google Reviews -->
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<p style="text-align:center;font-size:28px;font-weight:900;padding-top:20px;">What our Client's Say?</p>
+<div class="elfsight-app-c2bd8387-43b2-4af1-aa68-e3abbb7d3d65" data-elfsight-app-lazy></div>
         <!-- Testimonial Start -->
-        <div class="testimonial-area t-bg testimonial-padding">
-            <div class="container ">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <!-- Section Tittle -->
-                        <div class="section-tittle section-tittle6 mb-50">
-                            <div class="front-text1">
-                                <h2 class="" style="color:#ffffff;font-weight:50px;">Testimonial</h2>
-                            </div>
-                            <span class="back-text">Feedback</span>
-                        </div>
-                    </div>
-                </div>
-               <div class="row">
-                    <div class="col-xl-10 col-lg-11 col-md-10 offset-xl-1">
-                        <div class="h1-testimonial-active">
-                            <!-- Single Testimonial -->
-                            <div class="single-testimonial">
-                                <div class="testimonial-caption ">
-                                    <div class="testimonial-top-cap">
-                                        <!-- SVG icon -->
-                                        <svg xmlns="http://www.w3.org/2000/svg"xmlns:xlink="http://www.w3.org/1999/xlink"width="86px" height="63px">
-                                        <path fill-rule="evenodd"  stroke-width="1px" stroke="rgb(255, 95, 19)" fill-opacity="0" fill="rgb(0, 0, 0)"
-                                        d="M82.623,59.861 L48.661,59.861 L48.661,25.988 L59.982,3.406 L76.963,3.406 L65.642,25.988 L82.623,25.988 L82.623,59.861 ZM3.377,25.988 L14.698,3.406 L31.679,3.406 L20.358,25.988 L37.340,25.988 L37.340,59.861 L3.377,59.861 L3.377,25.988 Z"/>
-                                        </svg>
-                                       <p>Working with this team was a smooth and stress-free experience. From planning to completion, they maintained clear communication, met timelines, and delivered excellent workmanship. The quality of construction and attention to detail exceeded our expectations, and we would confidently recommend their services to anyone looking for reliable and professional construction solutions.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Single Testimonial -->
-                            <div class="single-testimonial">
-                                <div class="testimonial-caption ">
-                                    <div class="testimonial-top-cap">
-                                        <!-- SVG icon -->
-                                        <svg xmlns="http://www.w3.org/2000/svg"xmlns:xlink="http://www.w3.org/1999/xlink"width="86px" height="63px">
-                                        <path fill-rule="evenodd"  stroke-width="1px" stroke="rgb(255, 95, 19)" fill-opacity="0" fill="rgb(0, 0, 0)"
-                                        d="M82.623,59.861 L48.661,59.861 L48.661,25.988 L59.982,3.406 L76.963,3.406 L65.642,25.988 L82.623,25.988 L82.623,59.861 ZM3.377,25.988 L14.698,3.406 L31.679,3.406 L20.358,25.988 L37.340,25.988 L37.340,59.861 L3.377,59.861 L3.377,25.988 Z"/>
-                                        </svg>
-                                        <p>Vijayasree Construction is one of South India's most widely recognized in the field of engineering and construction industry. Their dedication to quality and customer satisfaction is unmatched.</p>
-                                    </div>
-                                    <div class="testimonial-founder d-flex align-items-center">
-                                       <div class="founder-text">
-                                       </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-               </div>
-            </div>
-        </div>
+      
         <!-- Testimonial End -->
     </main>
     
@@ -608,7 +642,7 @@
                     <div class="row align-items-center">
                         <div class="col-xl-12 ">
                             <div class="footer-copy-right">
-                                <p>Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved</p>
+                                <p>Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved</p>
                             </div>
                         </div>
                     </div>
@@ -623,6 +657,8 @@
         <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
 		<!-- Jquery, Popper, Bootstrap -->
 		<script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+		<!-- jQuery CDN Fallback -->
+		<script>window.jQuery || document.write('<script src="https://code.jquery.com/jquery-3.6.0.min.js"><\/script>')</script>
         <script src="./assets/js/popper.min.js"></script>
         <script src="./assets/js/bootstrap.min.js"></script>
 	    <!-- Jquery Mobile Menu -->
@@ -661,14 +697,12 @@
         
         <!-- Animation Script -->
         <script>
-            // Check if jQuery is loaded
-            if (typeof jQuery === 'undefined') {
-                console.error('jQuery is not loaded! Please check your script paths.');
-            } else {
-                console.log('jQuery loaded successfully');
-                
+        // Wait for window load to ensure all scripts are loaded
+        window.addEventListener('load', function() {
+            // Use jQuery with noConflict just in case
+            (function($) {
                 $(document).ready(function() {
-                    console.log('Document ready - initializing animations');
+                    console.log('Document ready - jQuery version:', $.fn.jquery);
                     
                     try {
                         // Intersection Observer for scroll animations
@@ -737,10 +771,12 @@
                         console.log('All animations initialized successfully');
                         
                     } catch(error) {
-                        console.error('Error initializing animations:', error);
+                        console.error('Animation script error:', error);
                     }
                 });
-            }
+            })(jQuery);
+        });
         </script>
+        
     </body>
 </html>

@@ -3,11 +3,35 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Home | Vijayasree Construction</title>
-        <meta name="description" content="">
+        <title>Vijayasree Construction - Top Builders, Land Promoters & Construction Company in Salem</title>
+        <meta name="description" content="Vijayasree Construction is a leading construction company in Salem, Tamil Nadu. We are premier builders and land promoters specializing in residential construction, commercial construction, and real estate development with 20+ years of experience.">
+        <meta name="keywords" content="construction, builders, land promoters, construction company, builders in Salem, construction company in Salem, residential construction, commercial construction, building contractors, real estate developers, land developers, Vijayasree Construction, construction services, Tamil Nadu builders, Salem builders, home builders, apartment builders, villa construction">
+        <meta name="author" content="Vijayasree Construction">
+        <meta name="robots" content="index, follow">
+        <meta name="googlebot" content="index, follow">
+        
+        <!-- Open Graph Meta Tags for Social Media -->
+        <meta property="og:title" content="Vijayasree Construction - Top Builders, Land Promoters & Construction Company">
+        <meta property="og:description" content="Leading construction company, builders and land promoters in Salem, Tamil Nadu with 20+ years of excellence in residential and commercial construction.">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://www.vijayasreeconstruction.com/">
+        <meta property="og:image" content="assets/img/logo/logo.png">
+        <meta property="og:locale" content="en_IN">
+        
+        <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Vijayasree Construction - Top Builders & Construction Company">
+        <meta name="twitter:description" content="Leading builders, land promoters and construction company in Salem, Tamil Nadu">
+        
+        <!-- Geo Tags -->
+        <meta name="geo.region" content="IN-TN">
+        <meta name="geo.placename" content="Salem">
+        <meta name="geo.position" content="11.6643;78.1460">
+        
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="manifest" href="site.webmanifest">
+        <!-- <link rel="manifest" href="site.webmanifest"> -->
 		<link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/logo.png">
+        <link rel="canonical" href="https://www.vijayasreeconstruction.com/">
 
 		<!-- CSS here -->
             <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -20,8 +44,55 @@
             <link rel="stylesheet" href="assets/css/slick.css">
             <link rel="stylesheet" href="assets/css/nice-select.css">
             <link rel="stylesheet" href="assets/css/style.css">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/peledies/google-places@master/google-places.css">
             <!-- Mobile Menu Contact Fix -->
            <link rel="stylesheet" href="assets/css/header-mobile-fix.css">
+           
+           <!-- Structured Data - Schema.org -->
+           <script type="application/ld+json">
+           {
+             "@context": "https://schema.org",
+             "@type": "GeneralContractor",
+             "name": "Vijayasree Construction",
+             "alternateName": "Vijayasree Builders",
+             "description": "Leading construction company, builders and land promoters in Salem, Tamil Nadu specializing in residential and commercial construction",
+             "url": "https://www.vijayasreeconstruction.com",
+             "logo": "https://www.vijayasreeconstruction.com/assets/img/logo/logo.png",
+             "image": "https://www.vijayasreeconstruction.com/assets/img/logo/logo.png",
+             "telephone": "+91-93848-20759",
+             "email": "vijayasreebuilders@gmail.com",
+             "address": {
+               "@type": "PostalAddress",
+               "streetAddress": "Vijayasree Towers, 139, Cherry Road, Kumarasammypatti",
+               "addressLocality": "Salem",
+               "addressRegion": "Tamil Nadu",
+               "postalCode": "636007",
+               "addressCountry": "IN"
+             },
+             "geo": {
+               "@type": "GeoCoordinates",
+               "latitude": "11.6643",
+               "longitude": "78.1460"
+             },
+             "sameAs": [
+               "https://www.instagram.com/vijayasree_builders",
+               "https://www.facebook.com/share/1Bx9TS4qri"
+             ],
+             "areaServed": {
+               "@type": "State",
+               "name": "Tamil Nadu"
+             },
+             "serviceType": [
+               "Construction",
+               "Residential Building",
+               "Commercial Construction",
+               "Land Development",
+               "Real Estate Development"
+             ],
+             "foundingDate": "2000",
+             "priceRange": "₹₹₹"
+           }
+           </script>
    </head>
     <style>
         /* Section Title Styling */
@@ -29,15 +100,43 @@
             font-size: 70px;
             font-weight: 700;
             text-transform: uppercase;
-            background: linear-gradient(to bottom, #072042 0%, #1a4a8e 50%, #072042 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            filter: drop-shadow(2px 4px 3px rgba(0, 0, 0, 0.2));
-            transition: all 0.5s ease;
+            color: #000; /* Fallback color */
+           
+        }
+
+        .section-tittle .front-text1 {
+            overflow: visible !important;
+            width: auto !important;
+        }
+
+        .section-tittle {
+            overflow: visible !important;
+        }
+
+        /* Fix parent containers cutting off text */
+        .project-heading .col-lg-6 {
+            overflow: visible !important;
+        }
+
+        .project-heading .row {
+            overflow: visible !important;
+        }
+
+        .section-tittle3 {
+            overflow: visible !important;
+        }
+
+        /* Force visible text if gradient fails */
+        @supports not (background-clip: text) {
+            .section-tittle .front-text1 h2 {
+                color: #072042 !important;
+                -webkit-text-fill-color: #072042 !important;
+            }
         }
 
         .section-tittle:hover .front-text1 h2 {
             background: linear-gradient(to top, #072042 0%, #3a7bd5 50%, #072042 100%);
+            background-clip: text;
             -webkit-background-clip: text;
             filter: drop-shadow(4px 8px 6px rgba(0, 0, 0, 0.3));
             transform: translateY(-2px);
@@ -54,12 +153,48 @@
             text-transform: uppercase;
             transition: all 0.5s ease-in-out;
             opacity: 0.3;
+            white-space: nowrap;
+            overflow: visible !important;
         }
 
         .section-tittle:hover .back-text {
             letter-spacing: 5px;
             transform: translateX(10px);
             opacity: 0.6;
+        }
+
+        /* Responsive font sizes for smaller screens */
+        @media (min-width: 992px) {
+            .section-tittle .front-text1 h2 {
+                font-size: 60px; /* Slightly smaller for better fit */
+            }
+        }
+
+        @media (max-width: 991px) and (min-width: 769px) {
+            .section-tittle .front-text1 h2 {
+                font-size: 50px;
+            }
+            .section-tittle .back-text {
+                font-size: 75px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section-tittle .front-text1 h2 {
+                font-size: 40px;
+            }
+            .section-tittle .back-text {
+                font-size: 60px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section-tittle .front-text1 h2 {
+                font-size: 32px;
+            }
+            .section-tittle .back-text {
+                font-size: 50px;
+            }
         }
 
         /* PROJECT CARDS - FIXED 350PX WIDTH FOR ALL DEVICES */
@@ -662,7 +797,7 @@
 
         /* See More Button Styling */
         .see-more-btn {
-            background: linear-gradient(135deg, #072042 0%, #0d3a73 100%);
+            background:#E21F26;
             color: #ffffff !important;
             padding: 15px 40px;
             font-size: 16px;
@@ -688,7 +823,7 @@
             width: 0;
             height: 0;
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.2);
+            background:#E21F26;
             transform: translate(-50%, -50%);
             transition: width 0.6s, height 0.6s;
         }
@@ -701,7 +836,7 @@
         .see-more-btn:hover {
             transform: translateY(-5px) scale(1.05);
             box-shadow: 0 15px 35px rgba(7, 32, 66, 0.5);
-            background: linear-gradient(135deg, #0d3a73 0%, #072042 100%);
+            background: #E21F26;
         }
 
         .see-more-btn::after {
@@ -741,6 +876,179 @@
                 transform: translateY(0);
             }
         }
+
+        /* ========== ONGOING PROJECTS CAROUSEL STYLING ========== */
+        .ongoing-projects-carousel {
+            padding: 20px 0;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .ongoing-projects-carousel .item {
+            padding: 0 15px;
+        }
+
+        /* Project Card Styling */
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+            height: 100%;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-card-img {
+            width: 100%;
+            height:650px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .project-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .project-card:hover .project-card-img img {
+            transform: scale(1.05);
+        }
+
+        .project-card-content {
+            padding: 30px 25px;
+            text-align: center;
+            background: white;
+        }
+
+        .project-location {
+            font-size: 14px;
+            color: #666;
+            margin: 0 0 10px 0;
+            font-weight: 400;
+        }
+
+        .project-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #333;
+            margin: 10px 0 15px 0;
+            line-height: 1.3;
+        }
+
+        .project-year {
+            font-size: 14px;
+            color: #999;
+            margin: 0 0 20px 0;
+            font-weight: 500;
+            letter-spacing: 2px;
+        }
+
+        .learn-more-btn {
+            display: inline-block;
+            background:red;
+            color: #fff;
+            padding: 12px 35px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 1px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .learn-more-btn:hover {
+            background:rgb(249, 243, 162);
+            color: white;
+            border-color: #072042;
+            transform: scale(1.05);
+        }
+
+        /* Hide Navigation Arrows */
+        .ongoing-projects-carousel .owl-nav {
+            display: none;
+        }
+
+        /* Dots */
+        .ongoing-projects-carousel .owl-dots {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .ongoing-projects-carousel .owl-dot {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            background: #ddd;
+            border-radius: 50%;
+            margin: 0 6px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .ongoing-projects-carousel .owl-dot:hover {
+            background:red;
+        }
+
+        .ongoing-projects-carousel .owl-dot.active {
+            background:red;
+            width: 35px;
+            border-radius: 7px;
+        }
+
+        /* Responsive - Different widths for different screens */
+        @media (min-width: 1400px) {
+            .ongoing-projects-carousel {
+                max-width: 1000px;
+            }
+            .project-card-img {
+                height: 400px;
+            }
+        }
+
+        @media (min-width: 1200px) and (max-width: 1399px) {
+            .ongoing-projects-carousel {
+                max-width: 900px;
+            }
+        }
+
+        @media (min-width: 992px) and (max-width: 1199px) {
+            .ongoing-projects-carousel {
+                max-width: 800px;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 991px) {
+            .ongoing-projects-carousel {
+                max-width: 700px;
+            }
+            .project-card-img {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .ongoing-projects-carousel {
+                max-width: 100%;
+                padding: 20px 10px;
+            }
+            .project-card-img {
+                height: 280px;
+            }
+            .project-title {
+                font-size: 20px;
+            }
+            .project-card-content {
+                padding: 25px 20px;
+            }
+        }
     </style>
    <body>
     <!-- Preloader Start -->
@@ -766,7 +1074,7 @@
                                 <div class="header-info-left">
                                      <ul>     
                                         <li><img src="assets/img/icon/phone.png" width="30px" height="30px"></img> <a href="tel:+919384820759">+91 93848 20759</a>, <a href="tel:+919384820760">+91 93848 20760</a></li>
-                                          <li><img src="assets/img/icon/gmail.png" width="30px" height="30px"> vijaysribuilders@gmail.com</li>
+                                        <li><img src="assets/img/icon/gmail.png" width="30px" height="30px"> vijaysribuilders@gmail.com</li>
                                     </ul>
                                 </div>
                                 <div class="header-info-right">
@@ -912,7 +1220,7 @@
                         <div class="col-lg-6">
                             <div class="section-tittle section-tittle3">
                                 <div class="front-text1">
-                                    <h2>Our Projects</h2>
+                                    <h2>Ongoing Projects</h2>
                                 </div>
                             </div>
                         </div>
@@ -925,82 +1233,55 @@
                     </div>
                 </div>
 
-                <!-- Grid -->
-                <div class="project-grid">
-                    <div class="project-item ready">
-                        <div class="single-project">
-                            <div class="project-img">
-                                <img src="assets/img/service/mahaveer.jpeg" alt="Mahaveer Palace">
+                <!-- Ongoing Projects Carousel -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="ongoing-projects-carousel owl-carousel owl-theme">
+                            
+                            <!-- Project 1 - Sakthi Palace -->
+                            <div class="item">
+                                <div class="project-card">
+                                    <div class="project-card-img">
+                                        <img src="assets/img/service/sakthi.jpeg" alt="Sakthi Palace Apartment">
+                                    </div>
+                                    <div class="project-card-content">
+                                        <p class="project-location">Chinnathirupathi Road, Near Jayaram School, Salem</p>
+                                        <h3 class="project-title">Sakthi Palace Apartment</h3>
+                                        <p class="project-year">• Ongoing •</p>
+                                        <a href="project-7.html" class="learn-more-btn">LEARN MORE</a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="project-cap">
-                                <h4>Mahaveer Palace</h4>
-                                <span>Ready to Occupy</span>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="project-item completed">
-                        <div class="single-project">
-                            <div class="project-img">
-                                <img src="assets/img/service/Durga.jpg" alt="Durgalakshmi Apartment">
+                            <!-- Project 2 - King Palace -->
+                            <div class="item">
+                                <div class="project-card">
+                                    <div class="project-card-img">
+                                        <img src="assets/img/service/Engineering.jpg" alt="King Palace Apartment">
+                                    </div>
+                                    <div class="project-card-content">
+                                        <p class="project-location">Chinnathirupathi Road, Near Jayaram School, Salem</p>
+                                        <h3 class="project-title">King Palace Apartment</h3>
+                                        <p class="project-year">• Ongoing •</p>
+                                        <a href="project-8.html" class="learn-more-btn">LEARN MORE</a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="project-cap">
-                                <h4>Durgalakshmi Apartment</h4>
-                                <span>Lakshmipuram, Salem</span>
-                                <span>(2008 to 2010)</span>
+                        
+                            <div class="item">
+                                <div class="project-card">
+                                    <div class="project-card-img">
+                                        <img src="assets/img/service/Engineering.jpg" alt="King Palace Apartment">
+                                    </div>
+                                    <div class="project-card-content">
+                                        <p class="project-location">Pallavan Road, Vidhya Nagar, Ammapet</p>
+                                        <h3 class="project-title">Vaishnavi Palace Apartment</h3>
+                                        <p class="project-year">• Ongoing •</p>
+                                        <a href="project-9.html" class="learn-more-btn">LEARN MORE</a>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="project-item completed">
-                        <div class="single-project">
-                            <div class="project-img">
-                                <img src="assets/img/service/Diamond.jpg" alt="Diamond Palace">
-                            </div>
-                            <div class="project-cap">
-                                <h4>Diamond Palace</h4>
-                                <span>Convent Road, Salem</span>
-                                <span>(2010 to 2012)</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-item completed">
-                        <div class="single-project">
-                            <div class="project-img">
-                                <img src="assets/img/service/Golden.jpg" alt="Golden Palace">
-                            </div>
-                            <div class="project-cap">
-                                <h4>Golden Palace</h4>
-                                <span>Junction, Salem</span>
-                                <span>(2014 to 2016)</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-item ongoing">
-                        <div class="single-project">
-                            <div class="project-img">
-                                <img src="assets/img/service/sakthi.jpeg" alt="Sakthi Palace Apartment">
-                            </div>
-                            <div class="project-cap">
-                                <h4>Sakthi Palace Apartment</h4>
-                                <span>Chinnathirupathi Road, Near Jayaram School, Salem</span>
-                                <span>(Ongoing)</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-item ongoing">
-                        <div class="single-project">
-                            <div class="project-img">
-                                <img src="assets/img/service/Engineering.jpg" alt="King Palace Apartment">
-                            </div>
-                            <div class="project-cap">
-                                <h4>King Palace Apartment</h4>
-                                <span>Chinnathirupathi Road, Near Jayaram School, Salem</span>
-                                <span>(Ongoing)</span>
-                            </div>
+               
                         </div>
                     </div>
                 </div>
@@ -1015,7 +1296,7 @@
         </section>
         <!-- Project Area End -->
         <!-- contact with us Start -->
-        <section class="contact-with-area" data-background="assets/img/gallery/section-bg2.jpg">
+        <section class="contact-with-area" data-background="assets/img/gallery/bg.png">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-8 col-lg-9 offset-xl-1 offset-lg-1">
@@ -1026,7 +1307,7 @@
                                     <div class="front-text">
                                         <h2 class="">Lets talk with us</h2>
                                     </div>
-                                    <span class="back-text">Lat`s chat</span>
+                                    <span class="back-text">Let`s chat</span>
                                 </div>
                                 <p>Planning a new construction project or need expert guidance? We're here to help. From initial planning and design to execution and completion, our team is ready to discuss your requirements and deliver reliable, high-quality construction solutions. Get in touch with us today and let's build something strong together.</p>
                                 <a href="#" class="white-btn">read more</a>
@@ -1040,7 +1321,7 @@
         <!-- CountDown Area Start -->
         <div class="count-area">
             <div class="container">
-                <div class="count-wrapper count-bg" style="background-color:#a7d7ed;">
+                <div class="count-wrapper count-bg" style="background-color:rgb(249, 243, 162);">
                     <div class="row justify-content-center" >
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="count-clients">
@@ -1094,63 +1375,9 @@
       <br>
         <!-- Team End -->
         <!-- Testimonial Start -->
-        <div class="testimonial-area t-bg testimonial-padding">
-            <div class="container ">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <!-- Section Tittle -->
-                        <div class="section-tittle section-tittle6 mb-50">
-                            <div class="front-text">
-                                <h2 class="">Testimonial</h2>
-                            </div>
-                            <span class="back-text">Feedback</span>
-                        </div>
-                    </div>
-                </div>
-               <div class="row">
-                    <div class="col-xl-10 col-lg-11 col-md-10 offset-xl-1">
-                        <div class="h1-testimonial-active">
-                            <!-- Single Testimonial -->
-                            <div class="single-testimonial">
-                                 <!-- Testimonial Content -->
-                                <div class="testimonial-caption ">
-                                    <div class="testimonial-top-cap">
-                                        <!-- SVG icon -->
-                                        <svg xmlns="http://www.w3.org/2000/svg"xmlns:xlink="http://www.w3.org/1999/xlink"width="86px" height="63px">
-                                        <path fill-rule="evenodd"  stroke-width="1px" stroke="rgb(255, 95, 19)" fill-opacity="0" fill="rgb(0, 0, 0)"
-                                        d="M82.623,59.861 L48.661,59.861 L48.661,25.988 L59.982,3.406 L76.963,3.406 L65.642,25.988 L82.623,25.988 L82.623,59.861 ZM3.377,25.988 L14.698,3.406 L31.679,3.406 L20.358,25.988 L37.340,25.988 L37.340,59.861 L3.377,59.861 L3.377,25.988 Z"/>
-                                        </svg>
-                                       <p>Working with this team was a smooth and stress-free experience. From planning to completion, they maintained clear communication, met timelines, and delivered excellent workmanship. The quality of construction and attention to detail exceeded our expectations, and we would confidently recommend their services to anyone looking for reliable and professional construction solutions.</p>
-                                    </div>
-                                    <!-- founder -->
-                                    
-                                </div>
-                            </div>
-                            <!-- Single Testimonial -->
-                            <div class="single-testimonial">
-                                 <!-- Testimonial Content -->
-                                <div class="testimonial-caption ">
-                                    <div class="testimonial-top-cap">
-                                        <!-- SVG icon -->
-                                        <svg xmlns="http://www.w3.org/2000/svg"xmlns:xlink="http://www.w3.org/1999/xlink"width="86px" height="63px">
-                                        <path fill-rule="evenodd"  stroke-width="1px" stroke="rgb(255, 95, 19)" fill-opacity="0" fill="rgb(0, 0, 0)"
-                                        d="M82.623,59.861 L48.661,59.861 L48.661,25.988 L59.982,3.406 L76.963,3.406 L65.642,25.988 L82.623,25.988 L82.623,59.861 ZM3.377,25.988 L14.698,3.406 L31.679,3.406 L20.358,25.988 L37.340,25.988 L37.340,59.861 L3.377,59.861 L3.377,25.988 Z"/>
-                                        </svg>
-                                        <p>Vijayasree Construction is one of South India's most widely recognized in the field of engineering and construction industry.</p>
-                                    </div>
-                                    <!-- founder -->
-                                    <div class="testimonial-founder d-flex align-items-center">
-                                       <div class="founder-text">
-                                       </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-               </div>
-            </div>
-        </div>
-        <!-- Testimonial End -->
+       <script src="https://elfsightcdn.com/platform.js" async></script>
+<p style="text-align:center;font-size:32px;font-weight:900;padding-top:20px;">What our Client's Say?</p>
+<div class="elfsight-app-c2bd8387-43b2-4af1-aa68-e3abbb7d3d65" data-elfsight-app-lazy></div>
      
 
     </main>
@@ -1231,6 +1458,8 @@
         <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
 		<!-- Jquery, Popper, Bootstrap -->
 		<script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+		<!-- jQuery CDN Fallback -->
+		<script>window.jQuery || document.write('<script src="https://code.jquery.com/jquery-3.6.0.min.js"><\/script>')</script>
         <script src="./assets/js/popper.min.js"></script>
         <script src="./assets/js/bootstrap.min.js"></script>
 	    <!-- Jquery Mobile Menu -->
@@ -1289,57 +1518,55 @@
         });
         </script>
         
-        <!-- Project Filter Script -->
+        <!-- Project Scripts and Carousel Initialization -->
         <script>
-            // Check if jQuery is loaded
-            if (typeof jQuery === 'undefined') {
-                console.error('jQuery is not loaded! Please check your script paths.');
-            } else {
-                console.log('jQuery loaded successfully');
-                
+        // Wait for window load to ensure all scripts are loaded
+        window.addEventListener('load', function() {
+            // Use jQuery with noConflict just in case
+            (function($) {
                 $(document).ready(function() {
-                    console.log('Document ready - initializing scripts');
-                    
-                    // Initialize - show all items
-                    $('.project-item').show();
-                    
-                    // Filter functionality
-                    $('.project-filter button').on('click', function(e) {
-                        e.preventDefault();
-                        
-                        // Remove active class from all buttons
-                        $('.project-filter button').removeClass('active');
-                        
-                        // Add active class to clicked button
-                        $(this).addClass('active');
-                        
-                        // Get filter value
-                        var filterValue = $(this).attr('data-filter');
-                        
-                        console.log('Filter clicked:', filterValue); // Debug log
-                        
-                        if(filterValue === '*') {
-                            // Show all items
-                            $('.project-item').fadeIn(400);
-                        } else {
-                            // Remove the dot from filterValue to get the class name
-                            var filterClass = filterValue.replace('.', '');
-                            
-                            // Hide all items first
-                            $('.project-item').fadeOut(300, function() {
-                                // Show only items that have the filter class
-                                $('.project-item').each(function() {
-                                    if($(this).hasClass(filterClass)) {
-                                        $(this).fadeIn(400);
-                                    }
-                                });
-                            });
-                        }
-                    });
-
-                    // ========== SCROLL ANIMATION SYSTEM ==========
+                    console.log('Document ready - jQuery version:', $.fn.jquery);
                     
                     try {
+                        // Initialize - show all items
+                        $('.project-item').show();
+                    
+                        // Filter functionality
+                        $('.project-filter button').on('click', function(e) {
+                            e.preventDefault();
+                            
+                            // Remove active class from all buttons
+                            $('.project-filter button').removeClass('active');
+                            
+                            // Add active class to clicked button
+                            $(this).addClass('active');
+                            
+                            // Get filter value
+                            var filterValue = $(this).attr('data-filter');
+                            
+                            console.log('Filter clicked:', filterValue);
+                            
+                            if(filterValue === '*') {
+                                // Show all items
+                                $('.project-item').fadeIn(400);
+                            } else {
+                                // Remove the dot from filterValue to get the class name
+                                var filterClass = filterValue.replace('.', '');
+                                
+                                // Hide all items first
+                                $('.project-item').fadeOut(300, function() {
+                                    // Show only items that have the filter class
+                                    $('.project-item').each(function() {
+                                        if($(this).hasClass(filterClass)) {
+                                            $(this).fadeIn(400);
+                                        }
+                                    });
+                                });
+                            }
+                        });
+
+                        // ========== SCROLL ANIMATION SYSTEM ==========
+                        
                         // Intersection Observer for scroll animations
                         const observerOptions = {
                             threshold: 0.15,
@@ -1382,48 +1609,77 @@
                         document.querySelectorAll('.single-project').forEach(card => {
                             animateOnScroll.observe(card);
                         });
-                    } catch(error) {
-                        console.error('Error setting up scroll animations:', error);
-                    }
 
-                    // Parallax scroll effect for images
-                    $(window).on('scroll', function() {
-                        try {
+                        // Parallax scroll effect for images
+                        $(window).on('scroll', function() {
                             const scrolled = $(window).scrollTop();
                             
                             // Parallax for right image in about section
                             if ($('.right-img').length) {
                                 $('.right-img').css('transform', 'translateY(' + (scrolled * 0.1) + 'px)');
                             }
-                        } catch(error) {
-                            console.error('Error in parallax scroll:', error);
-                        }
-                    });
+                        });
 
-                    // Smooth scroll for navigation links
-                    $('a[href^="#"]').on('click', function(e) {
-                        e.preventDefault();
-                        const target = $(this.hash);
-                        if (target.length) {
-                            $('html, body').animate({
-                                scrollTop: target.offset().top - 80
-                            }, 800);
-                        }
-                    });
+                        // Smooth scroll for navigation links
+                        $('a[href^="#"]').on('click', function(e) {
+                            e.preventDefault();
+                            const target = $(this.hash);
+                            if (target.length) {
+                                $('html, body').animate({
+                                    scrollTop: target.offset().top - 80
+                                }, 800);
+                            }
+                        });
 
-                    // Add stagger delay for counter items
-                    $('.count-clients').each(function(index) {
-                        $(this).css('transition-delay', (index * 0.1) + 's');
-                    });
+                        // Add stagger delay for counter items
+                        $('.count-clients').each(function(index) {
+                            $(this).css('transition-delay', (index * 0.1) + 's');
+                        });
 
-                    // Initialize animations for elements in viewport on page load
-                    setTimeout(function() {
-                        $(window).trigger('scroll');
-                    }, 100);
-                    
-                    console.log('All scripts initialized successfully');
+                        // Initialize animations for elements in viewport on page load
+                        setTimeout(function() {
+                            $(window).trigger('scroll');
+                        }, 100);
+                        
+                        console.log('All scripts initialized successfully');
+
+                        // ========== ONGOING PROJECTS CAROUSEL ==========
+                        setTimeout(function() {
+                            if ($('.ongoing-projects-carousel').length) {
+                                $('.ongoing-projects-carousel').owlCarousel({
+                                    items: 1,
+                                    loop: true,
+                                    margin: 30,
+                                    nav: false,
+                                    dots: true,
+                                    autoplay: true,
+                                    autoplayTimeout: 3500,
+                                    autoplayHoverPause: true,
+                                    autoplaySpeed: 1000,
+                                    smartSpeed: 1000,
+                                    responsive: {
+                                        0: {
+                                            items: 1
+                                        },
+                                        600: {
+                                            items: 1
+                                        },
+                                        1000: {
+                                            items: 1
+                                        }
+                                    }
+                                });
+                                console.log('Ongoing projects carousel initialized - showing 1 item at a time');
+                            }
+                        }, 500);
+                        
+                    } catch(error) {
+                        console.error('Script error:', error);
+                    }
                 });
-            }
+            })(jQuery);
+        });
         </script>
+        
     </body>
 </html>
