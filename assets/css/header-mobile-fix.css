@@ -45,9 +45,6 @@
         margin: 0 !important;
     }
     
-    .slicknav_nav .mobile-contact-info .contact-item a:hover {
-        color:#E21F26;
-    }
     
     /* Social media icons in mobile menu */
     .slicknav_nav .mobile-social {
@@ -82,7 +79,6 @@
     
     .slicknav_nav .mobile-social a:hover {
         background:#E21F26;
-        transform: scale(1.1);
     }
     
     .slicknav_nav .mobile-social a i {
@@ -104,12 +100,10 @@
     .slicknav_nav .mobile-contact-info a {
         padding: 0 !important;
         margin: 0 !important;
-        background: transparent !important;
         border-radius: 0 !important;
     }
     
     .slicknav_nav .mobile-contact-info a:hover {
-        background: transparent !important;
         color:#E21F26 !important;
     }
 }

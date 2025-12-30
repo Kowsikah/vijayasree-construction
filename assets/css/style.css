@@ -1655,31 +1655,31 @@ hr {
 }
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
   .section-padding30 {
-    padding-top: 183px;
-    padding-bottom: 170px;
+    padding-top:20px;
+    padding-bottom:20px;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .section-padding30 {
-    padding-top: 150px;
+    padding-top:20px;
     padding-bottom: 120px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .section-padding30 {
-    padding-top: 100px;
+    padding-top:20px;
     padding-bottom: 70px;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .section-padding30 {
-    padding-top: 70px;
+    padding-top:20px;
     padding-bottom: 20px;
   }
 }
 @media (max-width: 575px) {
   .section-padding30 {
-    padding-top: 70px;
+    padding-top:20px;
     padding-bottom: 20px;
   }
 }
@@ -1870,6 +1870,7 @@ hr {
 }
 .section-tittle.section-tittle3 .front-text h2 {
   font-size: 70px;
+  text-align:center;
 }
 @media (max-width: 575px) {
   .section-tittle.section-tittle3 .front-text h2 {
@@ -1999,21 +2000,21 @@ hr {
   color: #ff5f13;
 }
 .header-area .header-top {
-  padding: 13px 100px;
+  padding:3px 20px;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
   .header-area .header-top {
-    padding: 13px 80px;
+    padding:3px 20px;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .header-area .header-top {
-    padding: 13px 15px;
+    padding:3px 10px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .header-area .header-top {
-    padding: 13px 50px;
+    padding: 13px 10px;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
@@ -2027,21 +2028,21 @@ hr {
   }
 }
 .header-area .header-bottom {
-  padding: 0px 100px;
+  padding: 0px 10px;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
   .header-area .header-bottom {
-    padding: 0px 80px;
+    padding: 0px 10px;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .header-area .header-bottom {
-    padding: 0px 35px;
+    padding: 0px 15px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .header-area .header-bottom {
-    padding: 10px 50px;
+    padding: 10px 10px;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
@@ -2051,7 +2052,7 @@ hr {
 }
 @media (max-width: 575px) {
   .header-area .header-bottom {
-    padding: 10px 20px;
+    padding:10px 20px;
   }
 }
 .header-area {
@@ -2116,7 +2117,7 @@ hr {
 .main-header .main-menu ul li a {
   color:#000;
   font-weight: 500;
-  padding: 39px 19px;
+  padding:18px 18px;
   display: block;
   font-size:28px;
   -webkit-transition: all 0.3s ease-out 0s;
@@ -2128,7 +2129,7 @@ hr {
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .main-header .main-menu ul li a {
-    padding: 39px 14px;
+    padding:13px 2px;
   }
 }
 .main-header .main-menu ul li:hover > a {
@@ -2139,11 +2140,11 @@ hr {
   width: 170px;
   background: #fff;
   left: 0;
-  top: 90%;
+  top: 50%;
   visibility: hidden;
   opacity: 0;
   box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.05);
-  padding: 17px 0;
+  padding:7px 0;
   border-top: 5px solid #ff5f13;
   -webkit-transition: all 0.3s ease-out 0s;
   -moz-transition: all 0.3s ease-out 0s;
@@ -2180,7 +2181,7 @@ hr {
 .main-header ul > li:hover > ul.submenu {
   visibility: visible;
   opacity: 1;
-  top: 100%;
+  top:0%;
 }
 .header-transparent {
   position: absolute;
@@ -2213,14 +2214,14 @@ hr {
   background:rgb(255, 244, 180);
 }
 .header-sticky ul li a {
-  padding: 10px 19px;
+  padding:5px 10px;
 }
 .header-sticky.sticky-bar.sticky .main-menu ul > li > a {
-  padding: 26px 20px;
+  padding:16px 10px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .header-sticky.sticky-bar.sticky .main-menu ul > li > a {
-    padding: 39px 14px;
+    padding:29px 10px;
   }
 }
 .slicknav_menu .slicknav_icon-bar {
@@ -2230,7 +2231,7 @@ hr {
   margin-top: 0px;
 }
 .header-area .slicknav_btn {
-  top: -45px;
+ 
 }
 .slicknav_menu .slicknav_nav a:hover {
   background: transparent;
@@ -2238,7 +2239,7 @@ hr {
 }
 .slicknav_menu {
   background: transparent;
-  margin-top: 4px !important;
+  margin-top: 1px !important;
 }
 .mobile_menu {
   position: absolute;
@@ -2592,6 +2593,7 @@ hr {
 }
 .services-area1 .single-service-cap {
   overflow: hidden;
+  top:-120;
 }
 .services-area1 .single-service-cap .service-img {
   overflow: hidden;
@@ -6093,4 +6095,103 @@ del {
 }
 .switch-wrap {
   margin-bottom: 10px;
+}
+
+/* ========== MOBILE HEADER HEIGHT REDUCTION ========== */
+
+/* Reduce header top padding on mobile */
+@media (max-width: 991px) {
+  .header-area .header-top {
+    padding: 5px 10px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .header-area .header-top {
+    padding: 3px 10px !important;
+  }
+}
+
+/* Reduce header bottom padding on mobile */
+@media (max-width: 991px) {
+  .header-area .header-bottom {
+    padding: 5px 10px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .header-area .header-bottom {
+    padding: 3px 10px !important;
+  }
+}
+
+/* Reduce logo size on mobile */
+@media (max-width: 991px) {
+  .header-area .logo img {
+    max-height: 50px !important;
+    width: auto !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .header-area .logo img {
+    max-height: 40px !important;
+    width: auto !important;
+  }
+}
+
+/* Compact mobile menu button */
+@media (max-width: 991px) {
+  .slicknav_menu {
+    margin-top: 0px !important;
+    padding: 5px 0 !important;
+  }
+  
+  .slicknav_btn {
+    margin: 5px 0 !important;
+    padding: 5px !important;
+  }
+}
+
+/* Reduce overall header height on mobile */
+@media (max-width: 991px) {
+  .header-area {
+    min-height: auto !important;
+  }
+  
+  .main-header {
+    min-height: auto !important;
+  }
+}
+
+/* Extra compact for very small screens */
+@media (max-width: 575px) {
+  .header-area .header-top {
+    padding: 30px 5px !important;
+  }
+  
+  .header-area .header-bottom {
+    padding:8px 5px !important;
+  }
+  
+  .header-area .logo img {
+    max-height:45px !important;
+  }
+  
+  .header-area .header-top .header-info-left ul li {
+    font-size: 11px !important;
+    margin-right: 10px !important;
+  }
+  
+  .header-area .header-top .header-info-right .header-social li a {
+    font-size: 16px !important;
+    padding-left: 10px !important;
+  }
+}
+
+/* Hide header top section on very small screens to save space */
+@media (max-width: 575px) {
+  .header-area .header-top {
+    display: none !important;
+  }
 }
