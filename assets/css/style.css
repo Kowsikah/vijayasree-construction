@@ -6987,3 +6987,172 @@ del {
     scroll-behavior: smooth !important;
   }
 }
+
+
+/* ========== MOBILE MENU HAMBURGER FIX ========== */
+
+/* Ensure mobile menu is hidden on desktop */
+@media (min-width: 992px) {
+  .mobile_menu {
+    display: none !important;
+  }
+}
+
+/* Show mobile menu on tablets and mobile */
+@media (max-width: 991px) {
+  .mobile_menu {
+    display: block !important;
+    position: relative !important;
+    width: 100% !important;
+    z-index: 999 !important;
+  }
+  
+  /* Hide desktop menu */
+  .main-menu {
+    display: none !important;
+  }
+}
+
+/* SlickNav Button Styling */
+.slicknav_btn {
+  background-color: #072042 !important;
+  padding: 10px 15px !important;
+  margin: 10px 0 !important;
+  border-radius: 4px !important;
+  cursor: pointer !important;
+  position: relative !important;
+  display: inline-block !important;
+}
+
+.slicknav_menu {
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.slicknav_nav {
+  background: #ffffff !important;
+  border: 1px solid #e1e1e1 !important;
+  border-radius: 4px !important;
+  margin-top: 10px !important;
+  padding: 10px 0 !important;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1) !important;
+}
+
+.slicknav_nav a {
+  padding: 12px 20px !important;
+  margin: 0 !important;
+  font-size: 15px !important;
+  color: #072042 !important;
+  border-bottom: 1px solid #f0f0f0 !important;
+  display: block !important;
+}
+
+.slicknav_nav a:hover {
+  background: #fdf5b1 !important;
+  color: #072042 !important;
+  padding-left: 25px !important;
+}
+
+.slicknav_nav li:last-child a {
+  border-bottom: none !important;
+}
+
+/* Hamburger icon bars */
+.slicknav_icon-bar {
+  display: block !important;
+  width: 25px !important;
+  height: 3px !important;
+  background-color: #ffffff !important;
+  margin: 5px 0 !important;
+  border-radius: 2px !important;
+}
+
+/* Menu label */
+.slicknav_menutxt {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  margin-right: 10px !important;
+}
+
+/* Arrow icons */
+.slicknav_arrow {
+  float: right !important;
+  font-size: 18px !important;
+  color: #072042 !important;
+}
+
+/* When menu is open */
+.slicknav_nav {
+  display: none;
+}
+
+.slicknav_nav.slicknav_open {
+  display: block !important;
+}
+
+/* Mobile menu container positioning */
+@media (max-width: 991px) {
+  .header-bottom .row {
+    position: relative !important;
+  }
+  
+  .mobile_menu {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    padding: 0 15px !important;
+  }
+  
+  .header-bottom {
+    position: relative !important;
+  }
+}
+
+/* Ensure proper z-index layering */
+.header-area {
+  position: relative !important;
+  z-index: 999 !important;
+}
+
+.slicknav_menu {
+  z-index: 1000 !important;
+}
+
+/* Active/current page styling */
+.slicknav_nav .current a,
+.slicknav_nav li.active a {
+  background: #072042 !important;
+  color: #ffffff !important;
+}
+
+/* Sub-menu styling if you have dropdowns */
+.slicknav_nav .slicknav_item a {
+  padding-left: 30px !important;
+}
+
+.slicknav_nav .slicknav_parent-link a {
+  border-bottom: none !important;
+}
+
+/* Button hover state */
+.slicknav_btn:hover {
+  background-color: #0a2d5c !important;
+}
+
+/* Fix for Contact Now button on mobile */
+@media (max-width: 991px) {
+  .header-right-btn {
+    display: none !important;
+  }
+}
+
+/* Make sure the hamburger is clickable */
+.slicknav_btn {
+  pointer-events: auto !important;
+  touch-action: manipulation !important;
+}
