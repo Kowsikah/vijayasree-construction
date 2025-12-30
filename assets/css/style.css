@@ -6111,3 +6111,87 @@ del {
     padding: 3px 10px !important;
   }
 }
+
+/* Reduce header bottom padding on mobile */
+@media (max-width: 991px) {
+  .header-area .header-bottom {
+    padding: 5px 10px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .header-area .header-bottom {
+    padding: 3px 10px !important;
+  }
+}
+
+/* Reduce logo size on mobile */
+@media (max-width: 991px) {
+  .header-area .logo img {
+    max-height: 50px !important;
+    width: auto !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .header-area .logo img {
+    max-height: 40px !important;
+    width: auto !important;
+  }
+}
+
+/* Compact mobile menu button */
+@media (max-width: 991px) {
+  .slicknav_menu {
+    margin-top: 0px !important;
+    padding: 5px 0 !important;
+  }
+  
+  .slicknav_btn {
+    margin: 5px 0 !important;
+    padding: 5px !important;
+  }
+}
+
+/* Reduce overall header height on mobile */
+@media (max-width: 991px) {
+  .header-area {
+    min-height: auto !important;
+  }
+  
+  .main-header {
+    min-height: auto !important;
+  }
+}
+
+/* Extra compact for very small screens */
+@media (max-width: 575px) {
+  .header-area .header-top {
+    padding: 30px 5px !important;
+  }
+  
+  .header-area .header-bottom {
+    padding:1px 5px !important;
+  }
+  
+  .header-area .logo img {
+    max-height:45px !important;
+  }
+  
+  .header-area .header-top .header-info-left ul li {
+    font-size: 11px !important;
+    margin-right: 10px !important;
+  }
+  
+  .header-area .header-top .header-info-right .header-social li a {
+    font-size: 16px !important;
+    padding-left: 10px !important;
+  }
+}
+
+/* Hide header top section on very small screens to save space */
+@media (max-width: 575px) {
+  .header-area .header-top {
+    display: none !important;
+  }
+}
