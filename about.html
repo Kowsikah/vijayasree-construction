@@ -58,6 +58,183 @@
         transform: translateY(-3px);
         box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     }
+    .who-we-are-component * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .who-we-are-component {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            width: 100%;
+        }
+
+        .who-we-are-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .who-we-are-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: stretch;
+        }
+
+        .who-we-are-content-left {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .who-we-are-content-right {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .who-we-are-title {
+            font-size: 3rem;
+            color: #003d82;
+            font-weight: bold;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        .who-we-are-description {
+            font-size: 1.5rem;
+            line-height: 1.8;
+            color: #000;
+            text-align: justify;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .who-we-are-btn {
+            display: inline-block;
+            background-color: #dc143c;
+            color: white;
+            padding: 15px 40px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            letter-spacing: 1px;
+            margin-top: 10px;
+        }
+
+        .who-we-are-btn:hover {
+            background-color: #b01030;
+        }
+
+        .who-we-are-image-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            flex: 1;
+        }
+
+        .who-we-are-hero-image {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .who-we-are-overlay-box {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #003d82;
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .who-we-are-overlay-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
+
+        .who-we-are-overlay-subtitle {
+            font-size: 0.95rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 300;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .who-we-are-title {
+                font-size: 2rem;
+                margin-bottom: 20px;
+            }
+
+            .who-we-are-description {
+                font-size: 0.95rem;
+                margin-bottom: 18px;
+            }
+
+            .who-we-are-btn {
+                padding: 12px 30px;
+                font-size: 0.85rem;
+                width: 100%;
+                text-align: center;
+            }
+
+            .who-we-are-section {
+                gap: 30px;
+            }
+
+            .who-we-are-overlay-box {
+                padding: 30px 20px;
+            }
+
+            .who-we-are-overlay-title {
+                font-size: 1.8rem;
+            }
+
+            .who-we-are-overlay-subtitle {
+                font-size: 0.75rem;
+                letter-spacing: 2px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .who-we-are-container {
+                padding: 30px 15px;
+            }
+
+            .who-we-are-title {
+                font-size: 1.8rem;
+            }
+
+            .who-we-are-description {
+                font-size: 0.9rem;
+            }
+
+            .who-we-are-overlay-title {
+                font-size: 1.5rem;
+            }
+
+            .who-we-are-overlay-subtitle {
+                font-size: 1rem;
+                letter-spacing: 1.5px;
+            }
+        }
 </style>
             <style>
                 /* ========== COLOR SCHEME ========== */
@@ -506,34 +683,37 @@
         <!-- slider Area End-->
 
         <!-- About Area Start -->
-        <section class="support-company-area fix pt-10">
-            <div class="support-wrapper align-items-end">
-                <div class="left-content">
-                    <!-- section tittle -->
-                    <div class="section-tittle section-tittle2 mb-55">
-                        <div class="front-text">
-                            <h2 class="">Who we are</h2>
-                        </div>
-                        <span class="back-text">About us</span>
-                    </div>
-                    <div class="support-caption">
-                        <p class="pera-top">Founded in 2000 by our visionary leader Dr. D. J. Rajendran, Vijayasree Builders has grown into one of Tamil Nadu's most trusted and experienced construction companies. With over 30 years of excellence, we have delivered high-quality buildings across multiple sectors including educational institutions, hospitals, hostels, and industrial facilities—covering more than one crore sq. ft. across the state.</p>
-                        <p class="pera-top">In 2007, we launched our first residential project in Salem, marking the beginning of a remarkable journey. Since then, we have successfully delivered 700+ homes across 10 landmark residential projects. Our legacy of trust continues to grow as we fulfil the dreams of customers seeking their ideal home.</p>
-                        <p class="pera-top">At Vijayasree Builders, our reputation is built on honesty, transparency, timely delivery, and uncompromising quality. These values have consistently positioned us as a leading builder in Salem, Tamil Nadu.</p>
-                    </div>
+         <div class="who-we-are-component">
+        <div class="who-we-are-container">
+            <div class="who-we-are-section">
+                <div class="who-we-are-content-left">
+                    <h1 class="who-we-are-title">WHO WE ARE</h1>
+                    <p class="who-we-are-description">
+                        Founded in 2000 by our visionary leader Dr. D. J. Rajendran, Vijayasree Builders has grown into one of Tamil Nadu's most trusted and experienced construction companies. With over 30 years of excellence, we have delivered high-quality buildings across multiple sectors including educational institutions, hospitals, hostels, and industrial facilities—covering more than one crore sq. ft. across the state.
+                    </p>
+                    <p class="who-we-are-description">
+                        In 2007, we launched our first residential project in Salem, marking the beginning of a remarkable journey. Since then, we have successfully delivered 700+ homes across 10 landmark residential projects. Our legacy of trust continues to grow as we fulfil the dreams of customers seeking their ideal home.
+                    </p>
+                    <p class="who-we-are-description">
+                        At Vijayasree Builders, our reputation is built on honesty, transparency, timely delivery, and uncompromising quality. These values have consistently positioned us as a leading builder in Salem, Tamil Nadu.
+                    </p>
+                   
                 </div>
-                <div class="right-content">
-                    <!-- img -->
-                    <div class="">
-                        <img src="assets/img/gallery/safe_in.png" alt="" width="600px" height="750px">
-                    </div>
-                    <div class="support-img-cap text-center">
-                        <span>20+ years in experience</span>
-                        <p>Best choice for construction</p>
+
+                <div class="who-we-are-content-right">
+                    <div class="who-we-are-image-container">
+                        <!-- Replace this image URL with your own image -->
+                        <img src="assets/img/gallery/safe_in.png" alt="Dr. D. J. Rajendran - Vijayasree Builders" class="who-we-are-hero-image">
+                        <div class="who-we-are-overlay-box">
+                            <h2 class="who-we-are-overlay-title" style="color:white;" >20+ YEARS OF<br>EXCELLENCE</h2>
+                            <p class="who-we-are-overlay-subtitle">TRUSTED CONSTRUCTION LEADER</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+
         <!-- About Area End -->
 
         <!-- Mission & Vision Area Start -->
