@@ -1148,6 +1148,7 @@
         font-weight: bold;
         margin-bottom: 10px;
         text-transform: uppercase;
+        color:white;
     }
 
     .who-we-are-overlay-subtitle {
@@ -1969,19 +1970,31 @@
                         console.log('All scripts initialized successfully');
 
                         // ========== ONGOING PROJECTS CAROUSEL ==========
+                          setTimeout(function() {
+                            $(window).trigger('scroll');
+                        }, 100);
+                        
+                        console.log('All scripts initialized successfully');
+
+                        // ========== ONGOING PROJECTS CAROUSEL ==========
                         setTimeout(function() {
                             if ($('.ongoing-projects-carousel').length) {
-                                $('.ongoing-projects-carousel').owlCarousel({
+                                var carousel = $('.ongoing-projects-carousel');
+                                
+                                carousel.owlCarousel({
                                     items: 1,
                                     loop: true,
                                     margin: 30,
                                     nav: false,
                                     dots: true,
                                     autoplay: true,
-                                    autoplayTimeout: 3500,
-                                    autoplayHoverPause: true,
-                                    autoplaySpeed: 1000,
-                                    smartSpeed: 1000,
+                                    autoplayTimeout: 1500,
+                                    autoplayHoverPause: false,
+                                    autoplaySpeed: 0,
+                                    smartSpeed: 0,
+                                    dragEndSpeed: 0,
+                                    touchDrag: true,
+                                    mouseDrag: true,
                                     responsive: {
                                         0: {
                                             items: 1
@@ -1994,6 +2007,44 @@
                                         }
                                     }
                                 });
+                                
+                                var resumeTimer;
+                                var isPaused = false;
+                                
+                                function pauseCarousel() {
+                                    if (!isPaused) {
+                                        clearTimeout(resumeTimer);
+                                        carousel.trigger('stop.owl.autoplay');
+                                        isPaused = true;
+                                    }
+                                }
+                                
+                                function resumeCarousel() {
+                                    clearTimeout(resumeTimer);
+                                    resumeTimer = setTimeout(function() {
+                                        if (isPaused) {
+                                            carousel.trigger('play.owl.autoplay', [1500]);
+                                            isPaused = false;
+                                        }
+                                    }, 500);
+                                }
+                                
+                                // Pause on interactions
+                                carousel.on('mousedown touchstart mouseenter', function() {
+                                    pauseCarousel();
+                                });
+                                
+                                // Resume after delay
+                                carousel.on('mouseup touchend mouseleave', function() {
+                                    resumeCarousel();
+                                });
+                                
+                                // Handle drag end
+                                carousel.on('dragged.owl.carousel', function() {
+                                    pauseCarousel();
+                                    resumeCarousel();
+                                });
+                                
                                 console.log('Ongoing projects carousel initialized - showing 1 item at a time');
                             }
                         }, 500);
