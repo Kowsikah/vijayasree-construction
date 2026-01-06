@@ -877,6 +877,576 @@
             }
         }
 
+        /* ========== HERO PROJECTS CAROUSEL STYLING ========== */
+        .hero-projects-carousel-section {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        .ongoing-projects-carousel-hero {
+            width: 100%;
+        }
+
+        .ongoing-projects-carousel-hero .item {
+            position: relative;
+        }
+
+        .hero-project-card {
+            position: relative;
+            width: 100%;
+            height: 750px;
+            overflow: hidden;
+        }
+
+        .hero-project-img {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .hero-project-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .hero-project-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                135deg,
+                rgba(7, 32, 66, 0.88) 0%,
+                rgba(7, 32, 66, 0.75) 40%,
+                rgba(7, 32, 66, 0.5) 70%,
+                rgba(7, 32, 66, 0.3) 100%
+            );
+            z-index: 1;
+        }
+
+        .hero-project-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 80px 0 70px; /* Increased bottom padding from 60px to 70px */
+            z-index: 2;
+        }
+        
+        /* Ensure container has proper padding on mobile */
+        .hero-project-content .container {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        
+        @media (max-width: 576px) {
+            .hero-project-content .container {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: #E21F26;
+            color: #ffffff;
+            padding: 8px 20px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-radius: 25px;
+            margin-bottom: 20px;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .hero-project-title {
+            font-size: 72px;
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+            animation: fadeInUp 0.8s ease 0.2s forwards;
+            opacity: 0;
+        }
+
+        .hero-project-location {
+            font-size: 20px;
+            color: #e0e0e0;
+            margin-bottom: 35px;
+            font-weight: 400;
+            animation: fadeInUp 0.8s ease 0.4s forwards;
+            opacity: 0;
+        }
+
+        .hero-project-location i {
+            margin-right: 8px;
+            font-size: 22px;
+            color: #E21F26;
+        }
+
+        .hero-project-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 0.6s forwards;
+            opacity: 0;
+        }
+
+        .hero-btn-primary {
+            background: #E21F26;
+            color: #ffffff !important;
+            padding: 12px 20px; /* Taller (12px) and narrower (20px) */
+            font-size: 11px; /* Smaller font to fit */
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px; /* Tighter */
+            border-radius: 30px;
+            border: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(226, 31, 38, 0.3);
+            text-decoration: none;
+            display: inline-block;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+            white-space: nowrap; /* Keep text in one line */
+        }
+
+        .hero-btn-primary:hover,
+        .hero-btn-primary:active {
+            background: #c01a20;
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(226, 31, 38, 0.5);
+        }
+
+        .hero-btn-secondary {
+            background: transparent;
+            color: #ffffff !important;
+            padding: 12px 20px; /* Taller (12px) and narrower (20px) */
+            font-size: 11px; /* Smaller font to fit */
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px; /* Tighter */
+            border-radius: 30px;
+            border: 2px solid #ffffff;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+            white-space: nowrap; /* Keep text in one line */
+        }
+
+        .hero-btn-secondary:hover,
+        .hero-btn-secondary:active {
+            background: #ffffff;
+            color: #072042 !important;
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(255, 255, 255, 0.3);
+        }
+        
+        .hero-project-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: nowrap !important; /* Never wrap to new line */
+            flex-direction: row !important; /* Always horizontal */
+            align-items: center;
+        }
+        
+        .hero-btn-primary, .hero-btn-secondary {
+            flex-shrink: 1; /* Allow shrinking to fit */
+            min-width: 0; /* Allow buttons to shrink below content size */
+        }
+
+        /* Owl Carousel Navigation for Hero - HIDDEN */
+        .ongoing-projects-carousel-hero .owl-nav {
+            display: none !important; /* Navigation arrows removed */
+        }
+
+        .ongoing-projects-carousel-hero .owl-nav button {
+            display: none !important;
+        }
+
+        /* Owl Carousel Dots for Hero */
+        .ongoing-projects-carousel-hero .owl-dots {
+            position: absolute;
+            bottom: 35px;
+            width: 100%;
+            text-align: center;
+            z-index: 10;
+        }
+
+        .ongoing-projects-carousel-hero .owl-dots .owl-dot {
+            width: 16px;
+            height: 16px;
+            background: rgba(255, 255, 255, 0.3) !important;
+            border: 2px solid #ffffff;
+            border-radius: 50%;
+            margin: 0 8px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .ongoing-projects-carousel-hero .owl-dots .owl-dot.active {
+            background: #E21F26 !important;
+            border-color: #E21F26;
+            width: 50px;
+            border-radius: 12px;
+        }
+
+        .ongoing-projects-carousel-hero .owl-dots .owl-dot:hover {
+            background: rgba(255, 255, 255, 0.6) !important;
+        }
+
+        /* Animation keyframes */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Reset animation when slide changes */
+        .ongoing-projects-carousel-hero .owl-item:not(.active) .hero-badge,
+        .ongoing-projects-carousel-hero .owl-item:not(.active) .hero-project-title,
+        .ongoing-projects-carousel-hero .owl-item:not(.active) .hero-project-location,
+        .ongoing-projects-carousel-hero .owl-item:not(.active) .hero-project-buttons {
+            opacity: 0;
+        }
+
+        .ongoing-projects-carousel-hero .owl-item.active .hero-badge {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .ongoing-projects-carousel-hero .owl-item.active .hero-project-title {
+            animation: fadeInUp 0.8s ease 0.2s forwards;
+        }
+
+        .ongoing-projects-carousel-hero .owl-item.active .hero-project-location {
+            animation: fadeInUp 0.8s ease 0.4s forwards;
+        }
+
+        .ongoing-projects-carousel-hero .owl-item.active .hero-project-buttons {
+            animation: fadeInUp 0.8s ease 0.6s forwards;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1400px) {
+            .hero-project-title {
+                font-size: 64px;
+            }
+            
+            .hero-project-content {
+                padding: 70px 0 50px;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .hero-project-card {
+                height: 600px;
+            }
+            
+            .hero-project-content {
+                padding: 60px 0 45px;
+            }
+            
+            .hero-project-title {
+                font-size: 56px;
+            }
+            
+            .hero-project-location {
+                font-size: 18px;
+            }
+            
+            .hero-btn-primary, .hero-btn-secondary {
+                padding: 11px 18px; /* Taller, narrower */
+                font-size: 10px;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .hero-project-card {
+                height: 550px;
+            }
+            
+            .hero-project-content {
+                padding: 50px 0 40px;
+            }
+            
+            .hero-project-title {
+                font-size: 48px;
+                letter-spacing: 1.5px;
+            }
+            
+            .hero-project-location {
+                font-size: 17px;
+                margin-bottom: 30px;
+            }
+            
+            .hero-badge {
+                font-size: 12px;
+                padding: 7px 18px;
+                margin-bottom: 18px;
+            }
+            
+            .hero-btn-primary, .hero-btn-secondary {
+                padding: 11px 16px; /* Taller, narrower */
+                font-size: 10px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .hero-project-card {
+                height: 500px;
+            }
+            
+            .hero-project-content {
+                padding: 40px 0 35px;
+            }
+            
+            .hero-project-title {
+                font-size: 36px;
+                margin-bottom: 15px;
+                letter-spacing: 1px;
+            }
+            
+            .hero-project-location {
+                font-size: 15px;
+                margin-bottom: 25px;
+            }
+            
+            .hero-project-location i {
+                font-size: 18px;
+            }
+            
+            .hero-badge {
+                font-size: 11px;
+                padding: 6px 16px;
+                margin-bottom: 15px;
+            }
+            
+            .hero-project-buttons {
+                gap: 8px;
+                flex-wrap: nowrap !important; /* Stay inline */
+            }
+            
+            .hero-btn-primary, .hero-btn-secondary {
+                padding: 10px 14px; /* Taller, narrower */
+                font-size: 9px;
+                letter-spacing: 0.3px;
+            }
+            
+            .ongoing-projects-carousel-hero .owl-dots {
+                bottom: 20px;
+            }
+            
+            .ongoing-projects-carousel-hero .owl-dots .owl-dot {
+                width: 12px;
+                height: 12px;
+                margin: 0 5px;
+            }
+            
+            .ongoing-projects-carousel-hero .owl-dots .owl-dot.active {
+                width: 35px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-project-card {
+                height: 480px;
+            }
+            
+            .hero-project-content {
+                padding: 35px 0 60px; /* Increased bottom padding significantly */
+            }
+            
+            .hero-project-title {
+                font-size: 30px;
+                letter-spacing: 0.5px;
+                margin-bottom: 12px;
+                line-height: 1.3;
+            }
+            
+            .hero-project-location {
+                font-size: 14px;
+                margin-bottom: 20px;
+            }
+            
+            .hero-badge {
+                font-size: 10px;
+                padding: 5px 14px;
+                margin-bottom: 12px;
+                letter-spacing: 1.5px;
+            }
+            
+            .hero-project-buttons {
+                flex-direction: row !important; /* Force horizontal */
+                flex-wrap: nowrap !important; /* Stay inline */
+                gap: 6px;
+                width: 100%;
+                justify-content: space-between;
+                margin-bottom: 20px; /* More space below buttons */
+            }
+            
+            .hero-btn-primary, .hero-btn-secondary {
+                flex: 1 1 auto; /* Grow and shrink equally */
+                padding: 10px 8px; /* Taller, very narrow */
+                font-size: 9px;
+                letter-spacing: 0.3px;
+                max-width: 48%; /* Ensure both fit */
+            }
+            
+            .ongoing-projects-carousel-hero .owl-dots {
+                bottom: 15px; /* Keep dots at bottom */
+            }
+            
+            .ongoing-projects-carousel-hero .owl-dots .owl-dot {
+                width: 10px;
+                height: 10px;
+                margin: 0 4px;
+            }
+            
+            .ongoing-projects-carousel-hero .owl-dots .owl-dot.active {
+                width: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-project-card {
+                height: 450px;
+            }
+            
+            .hero-project-content {
+                padding: 30px 0 55px; /* Increased bottom padding significantly */
+            }
+            
+            .hero-project-title {
+                font-size: 26px;
+                margin-bottom: 10px;
+            }
+            
+            .hero-project-location {
+                font-size: 13px;
+                margin-bottom: 18px;
+            }
+            
+            .hero-project-location i {
+                font-size: 16px;
+                margin-right: 5px;
+            }
+            
+            .hero-badge {
+                font-size: 9px;
+                padding: 5px 12px;
+                margin-bottom: 10px;
+            }
+            
+            .hero-project-buttons {
+                gap: 5px;
+                flex-direction: row !important;
+                flex-wrap: nowrap !important;
+                margin-bottom: 20px; /* More space below buttons */
+            }
+            
+            .hero-btn-primary, .hero-btn-secondary {
+                flex: 1 1 auto; /* Equal width */
+                padding: 9px 6px; /* Taller, very narrow */
+                font-size: 8px;
+                max-width: 48%;
+            }
+            
+            .ongoing-projects-carousel-hero .owl-dots {
+                bottom: 12px; /* Keep dots at bottom */
+            }
+        }
+
+        @media (max-width: 400px) {
+            .hero-project-card {
+                height: 420px;
+            }
+            
+            .hero-project-content {
+                padding: 25px 0 55px; /* Increased bottom padding significantly */
+            }
+            
+            .hero-project-title {
+                font-size: 24px;
+            }
+            
+            .hero-project-location {
+                font-size: 12px;
+                margin-bottom: 15px;
+            }
+            
+            .hero-project-buttons {
+                gap: 4px;
+                flex-direction: row !important;
+                flex-wrap: nowrap !important;
+                margin-bottom: 20px; /* More space below buttons */
+            }
+            
+            .hero-btn-primary, .hero-btn-secondary {
+                flex: 1 1 auto; /* Equal width */
+                padding: 9px 5px; /* Taller, very narrow */
+                font-size: 8px;
+                max-width: 48%;
+            }
+            
+            .ongoing-projects-carousel-hero .owl-dots {
+                bottom: 12px; /* Keep dots at bottom */
+            }
+        }
+
+        /* Extra small devices - 360px and below */
+        @media (max-width: 360px) {
+            .hero-project-card {
+                height: 400px;
+            }
+            
+            .hero-project-title {
+                font-size: 22px;
+            }
+            
+            .hero-project-location {
+                font-size: 11px;
+            }
+            
+            .hero-project-content {
+                padding: 20px 0 55px; /* Increased bottom padding significantly */
+            }
+            
+            .hero-project-buttons {
+                gap: 4px;
+                flex-direction: row !important;
+                flex-wrap: nowrap !important;
+                margin-bottom: 20px; /* More space below buttons */
+            }
+            
+            .hero-btn-primary, .hero-btn-secondary {
+                flex: 1 1 auto; /* Equal width */
+                padding: 8px 4px; /* Taller, extra narrow */
+                font-size: 7px;
+                max-width: 48%;
+            }
+            
+            .ongoing-projects-carousel-hero .owl-dots {
+                bottom: 12px; /* Keep dots at bottom */
+            }
+        }
+
         /* ========== ONGOING PROJECTS CAROUSEL STYLING ========== */
         .ongoing-projects-carousel {
             padding: 20px 0;
@@ -1408,7 +1978,7 @@
                                 <div class="header-info-left">
                                      <ul>     
                                         <li><img src="assets/img/icon/phone.png" width="30px" height="30px"></img> <a href="tel:+919384820759">+91 93848 20759</a>, <a href="tel:+919384820760">+91 93848 20760</a></li>
-                                        <li><img src="assets/img/icon/gmail.png" width="30px" height="30px"> vijaysribuilders@gmail.com</li>
+                                          <li><img src="assets/img/icon/gmail.png" width="30px" height="30px"> vijaysribuilders@gmail.com</li>
                                     </ul>
                                 </div>
                                 <div class="header-info-right">
@@ -1464,37 +2034,81 @@
     <main>
 
         <!-- slider Area Start-->
-        <div class="slider-area " style="padding-bottom: 0px;">
-            <div class="slider-active">
-                <div class="single-slider  hero-overly slider-height d-flex align-items-center" data-background="assets/img/hero/h1_hero.jpg">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-11">
-                                <div class="hero__caption">
-                                   
-                                    <h1 data-animation="fadeInUp" data-delay=".5s">advanced Construction</h1>
-                                    
-                                    <div class="hero-text2 mt-110" data-animation="fadeInUp" data-delay=".9s">
-                                       <span><a href="project.html">Our Projects</a></span>
+        <!-- Hero Section - Ongoing Projects Carousel -->
+        <section class="hero-projects-carousel-section">
+            <div class="container-fluid px-0">
+                <div class="ongoing-projects-carousel-hero owl-carousel owl-theme">
+                      <div class="item">
+                        <div class="hero-project-card">
+                            <div class="hero-project-img">
+                                <img src="assets/img/service/king.png" alt="King Palace Apartment">
+                                <div class="hero-project-overlay"></div>
+                            </div>
+                            <div class="hero-project-content">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-8">
+                                            <span class="hero-badge">ONGOING PROJECT</span>
+                                            <h1 class="hero-project-title">King Palace Apartment</h1>
+                                            <p class="hero-project-location"><i class="ti-location-pin"></i> Chinnathirupathi Road, Near Jayaram School, Salem</p>
+                                            <div class="hero-project-buttons">
+                                                <a href="project-8.html" class="btn hero-btn-primary">VIEW PROJECT</a>
+                                                <a href="contact.html" class="btn hero-btn-secondary">CONTACT US</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="single-slider  hero-overly slider-height d-flex align-items-center" data-background="assets/img/hero/h1_hero.jpg">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-11">
-                                <div class="hero__caption">
-                                  
-                                    <h1 data-animation="fadeInUp" data-delay=".5s">advanced</h1>
-                                    <div class="stock-text" data-animation="fadeInUp" data-delay=".8s">
-                                        <h2>Construction</h2>
-                                        <h2>Construction</h2>
+
+                    <!-- Project 1 - Sakthi Palace -->
+                    <div class="item">
+                        <div class="hero-project-card">
+                            <div class="hero-project-img">
+                                <img src="assets/img/service/sakthi.jpeg" alt="Sakthi Palace Apartment">
+                                <div class="hero-project-overlay"></div>
+                            </div>
+                            <div class="hero-project-content">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-8">
+                                            <span class="hero-badge">ONGOING PROJECT</span>
+                                            <h1 class="hero-project-title">Sakthi Palace Apartment</h1>
+                                            <p class="hero-project-location"><i class="ti-location-pin"></i> Chinnathirupathi Road, Near Jayaram School, Salem</p>
+                                            <div class="hero-project-buttons">
+                                                <a href="project-7.html" class="btn hero-btn-primary">VIEW PROJECT</a>
+                                                <a href="contact.html" class="btn hero-btn-secondary">CONTACT US</a>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="hero-text2 mt-110" data-animation="fadeInUp" data-delay=".9s">
-                                        <span><a href="services.html">Our Services</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 - King Palace -->
+                  
+                
+                    <!-- Project 3 - Vaishnavi Palace -->
+                    <div class="item">
+                        <div class="hero-project-card">
+                            <div class="hero-project-img">
+                                <img src="assets/img/service/vaishnavi.jpg" alt="Vaishnavi Palace Apartment">
+                                <div class="hero-project-overlay"></div>
+                            </div>
+                            <div class="hero-project-content">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-8">
+                                            <span class="hero-badge">ONGOING PROJECT</span>
+                                            <h1 class="hero-project-title">Vaishnavi Palace Apartment</h1>
+                                            <p class="hero-project-location"><i class="ti-location-pin"></i> Pallavan Road, Vidhya Nagar, Ammapet</p>
+                                            <div class="hero-project-buttons">
+                                                <a href="project-9.html" class="btn hero-btn-primary">VIEW PROJECT</a>
+                                                <a href="contact.html" class="btn hero-btn-secondary">CONTACT US</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1502,8 +2116,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- slider Area End-->
+        </section>
+        <!-- Hero Section End -->
         <!-- Services Area Start -->
         <div class="services-area1 section-padding30">
             <div class="container">
@@ -1515,89 +2129,7 @@
       
         <!-- About Area End -->
         <!-- Project Area Start -->
-        <section class="project-area section-padding30" style="padding-top:0px;">
-            <div class="container" style="padding-top:0px;">
-
-                <!-- Heading -->
-                <div class="project-heading mb-35">
-                    <div class="row align-items-end">
-                        
-                        <div class="col-lg-6">
-                            <div class="front-text1">
-                                <h2 style="font-weight:700;text-align:center;padding-top:0px;display:inline-block;white-space:nowrap;">ONGOING PROJECTS</h2>
-                            </div>
-                        </div>
-
-                        <!-- Filter Buttons -->
-                        <div class="col-lg-6">
-                          
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Ongoing Projects Carousel -->
-                <div class="row">
-                    <div class="col-12">
-                        <div class="ongoing-projects-carousel owl-carousel owl-theme">
-                            
-                            <!-- Project 1 - Sakthi Palace -->
-                            <div class="item">
-                                <div class="project-card">
-                                    <div class="project-card-img">
-                                        <img src="assets/img/service/sakthi.jpeg" alt="Sakthi Palace Apartment">
-                                    </div>
-                                    <div class="project-card-content">
-                                        <p class="project-location">Chinnathirupathi Road, Near Jayaram School, Salem</p>
-                                        <h3 class="project-title">Sakthi Palace Apartment</h3>
-                                        <p class="project-year">• Ongoing •</p>
-                                        <a href="project-7.html" class="learn-more-btn">LEARN MORE</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Project 2 - King Palace -->
-                            <div class="item">
-                                <div class="project-card">
-                                    <div class="project-card-img">
-                                        <img src="assets/img/service/king.png" alt="King Palace Apartment">
-                                    </div>
-                                    <div class="project-card-content">
-                                        <p class="project-location">Chinnathirupathi Road, Near Jayaram School, Salem</p>
-                                        <h3 class="project-title">King Palace Apartment</h3>
-                                        <p class="project-year">• Ongoing •</p>
-                                        <a href="project-8.html" class="learn-more-btn">LEARN MORE</a>
-                                    </div>
-                                </div>
-                            </div>
-                        
-                            <div class="item">
-                                <div class="project-card">
-                                    <div class="project-card-img">
-                                        <img src="assets/img/service/vaishnavi.jpg" alt="King Palace Apartment">
-                                    </div>
-                                    <div class="project-card-content">
-                                        <p class="project-location">Pallavan Road, Vidhya Nagar, Ammapet</p>
-                                        <h3 class="project-title">Vaishnavi Palace Apartment</h3>
-                                        <p class="project-year">• Ongoing •</p>
-                                        <a href="project-9.html" class="learn-more-btn">LEARN MORE</a>
-                                    </div>
-                                </div>
-                            </div>
-               
-                        </div>
-                    </div>
-                </div>
-
-                <!-- See More Button -->
-                <div class="row mt-50">
-                    <div class="col-12 text-center">
-                        <a href="project.html" class="btn see-more-btn">See More Projects</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+        
         <div class="who-we-are-component">
     <div class="who-we-are-container">
         <div class="who-we-are-section">
@@ -1706,7 +2238,7 @@
         <!-- Team End -->
         <!-- Testimonial Start -->
     <p style="text-align:center;font-size:32px;font-weight:900;padding-top:20px;">What our Client's Say?</p>
-     <div class="tagembed-widget" style="width:100%;height:100%;overflow:auto;" data-widget-id="312383" data-website="1"></div><script src="https://widget.tagembed.com/embed.min.js" type="text/javascript"></script>
+     <div class="tagembed-widget" style="width:100%;height:100%;overflow:auto;" data-widget-id="312383" data-website="1"></div><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://widget.tagembed.com/embed.min.js" type="text/javascript"></script>
     </main>
       <footer>
    <div class="footer-main">
@@ -1853,6 +2385,12 @@
                 $(document).ready(function() {
                     console.log('Document ready - jQuery version:', $.fn.jquery);
                     
+                    // Check if Owl Carousel is loaded
+                    if (typeof $.fn.owlCarousel === 'undefined') {
+                        console.error('Owl Carousel library not loaded!');
+                        return;
+                    }
+                    
                     try {
                         // Initialize - show all items
                         $('.project-item').show();
@@ -1969,17 +2507,66 @@
                         
                         console.log('All scripts initialized successfully');
 
-                        // ========== ONGOING PROJECTS CAROUSEL ==========
-                          setTimeout(function() {
-                            $(window).trigger('scroll');
-                        }, 100);
-                        
-                        console.log('All scripts initialized successfully');
+                        // ========== HERO ONGOING PROJECTS CAROUSEL ==========
+                        setTimeout(function() {
+                            try {
+                                if ($('.ongoing-projects-carousel-hero').length && typeof $.fn.owlCarousel === 'function') {
+                                    var heroCarousel = $('.ongoing-projects-carousel-hero');
+                                    
+                                    heroCarousel.owlCarousel({
+                                        items: 1,
+                                        loop: true,
+                                        margin: 0,
+                                        nav: false, // Removed navigation arrows
+                                        dots: true,
+                                        autoplay: true,
+                                        autoplayTimeout: 3000, // Changes every 3 seconds
+                                        autoplayHoverPause: false, // Never stops - continues even on hover
+                                        autoplaySpeed: 1000,
+                                        smartSpeed: 1000,
+                                        mouseDrag: false, // Disable dragging
+                                        touchDrag: false, // Disable touch dragging
+                                        pullDrag: false,
+                                        responsive: {
+                                            0: {
+                                                items: 1,
+                                                nav: false,
+                                                dots: true,
+                                                autoplay: true
+                                            },
+                                            768: {
+                                                items: 1,
+                                                nav: false,
+                                                dots: true,
+                                                autoplay: true
+                                            },
+                                            1000: {
+                                                items: 1,
+                                                nav: false,
+                                                autoplay: true
+                                            }
+                                        }
+                                    });
+                                    
+                                    // Force autoplay to start and never stop
+                                    setTimeout(function() {
+                                        heroCarousel.trigger('play.owl.autoplay', [3000]);
+                                    }, 100);
+                                    
+                                    console.log('Hero carousel initialized with continuous automatic scrolling (no arrows)');
+                                } else {
+                                    console.warn('Hero carousel element not found or Owl Carousel not loaded');
+                                }
+                            } catch (error) {
+                                console.error('Error initializing hero carousel:', error);
+                            }
+                        }, 500);
 
                         // ========== ONGOING PROJECTS CAROUSEL ==========
                         setTimeout(function() {
-                            if ($('.ongoing-projects-carousel').length) {
-                                var carousel = $('.ongoing-projects-carousel');
+                            try {
+                                if ($('.ongoing-projects-carousel').length && typeof $.fn.owlCarousel === 'function') {
+                                    var carousel = $('.ongoing-projects-carousel');
                                 
                                 carousel.owlCarousel({
                                     items: 1,
@@ -2046,16 +2633,20 @@
                                 });
                                 
                                 console.log('Ongoing projects carousel initialized - showing 1 item at a time');
+                            } else {
+                                console.warn('Ongoing projects carousel element not found or Owl Carousel not loaded');
                             }
-                        }, 500);
-                        
-                    } catch(error) {
-                        console.error('Script error:', error);
+                        } catch (error) {
+                            console.error('Error initializing ongoing projects carousel:', error);
+                        }
+                    }, 700);
+                    
+                    } catch (error) {
+                        console.error('Error in main script initialization:', error);
                     }
                 });
             })(jQuery);
         });
         </script>
-        
     </body>
 </html>
