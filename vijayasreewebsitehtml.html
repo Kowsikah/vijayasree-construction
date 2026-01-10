@@ -1,0 +1,3637 @@
+<!doctype html>
+<html lang="en" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta name="version" content="3.0.0">
+  <meta name="description" content="Vijayasree Builders - Premier residential construction company in Salem, Tamil Nadu. 30+ years of excellence, 700+ happy families, 11 completed projects. Quality homes, timely delivery, transparent dealings.">
+  <meta name="keywords" content="Vijayasree Builders, Salem builders, residential apartments Salem, 2BHK 3BHK Salem, real estate Salem, flats in Salem, apartments in Ammapet, property in Salem, Tamil Nadu builders">
+  <meta name="author" content="Vijayasree Builders">
+  <meta name="theme-color" content="#C41E3A">
+  <title>Vijayasree Builders Salem | Premium 2BHK &amp; 3BHK Apartments | 30+ Years Excellence</title>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&amp;family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      box-sizing: border-box;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #FAFAFA;
+      color: #1A1A1A;
+      line-height: 1.7;
+      overflow-x: hidden;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+    }
+
+    .main-wrapper {
+      min-height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Mobile Menu Toggle */
+    .mobile-menu-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      padding: 10px;
+    }
+
+    .mobile-menu-toggle span {
+      width: 24px;
+      height: 2px;
+      background: #1A1A1A;
+      transition: all 0.3s ease;
+      display: block;
+    }
+
+    .mobile-menu-toggle.active span:nth-child(1) {
+      transform: rotate(45deg) translateY(8px);
+    }
+
+    .mobile-menu-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .mobile-menu-toggle.active span:nth-child(3) {
+      transform: rotate(-45deg) translateY(-8px);
+    }
+
+    /* Navigation */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(26, 26, 26, 0.08);
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+      z-index: 1000;
+      padding: 0.75rem 0;
+    }
+
+    .nav-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-section {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      cursor: pointer;
+      min-height: 80px;
+      flex-shrink: 0;
+    }
+
+    .logo-image-wrapper {
+      height: 80px;
+      width: 85px;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-img {
+      height: 100%;
+      width: 100%;
+      object-fit: fill;
+      display: block;
+    }
+
+    .logo-text-fallback {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-text-fallback h1 {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #1A1A1A;
+      margin-bottom: 0.25rem;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    .logo-text-fallback p {
+      font-size: 0.65rem;
+      color: #C41E3A;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .nav-link {
+      color: #4A4A4A;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      position: relative;
+      cursor: pointer;
+      letter-spacing: 0.3px;
+    }
+
+    .nav-link::before {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #C41E3A;
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: #C41E3A;
+    }
+
+    .nav-link:hover::before,
+    .nav-link.active::before {
+      width: 100%;
+    }
+
+    .contact-btn-header {
+      padding: 0.85rem 1.75rem;
+      background: #C41E3A;
+      color: white;
+      border: 2px solid #C41E3A;
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+      font-family: inherit;
+      border-radius: 2px;
+      white-space: nowrap;
+    }
+
+    .contact-btn-header:hover {
+      background: #A01830;
+      border-color: #A01830;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(196, 30, 58, 0.3);
+    }
+
+    /* Main Content */
+    main {
+      margin-top: 96px;
+      flex: 1;
+      width: 100%;
+    }
+
+    .page {
+      display: none;
+      animation: fadeIn 0.6s ease;
+      width: 100%;
+    }
+
+    .page.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Project Carousel */
+    .project-carousel {
+      position: relative;
+      width: 100%;
+      height: 600px;
+      overflow: hidden;
+      background: linear-gradient(135deg, #FFFFFF 0%, #F8F8F8 100%);
+      margin-bottom: 4rem;
+    }
+
+    .carousel-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .carousel-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      align-items: center;
+      padding: 0 4rem;
+      gap: 4rem;
+      opacity: 0;
+      visibility: hidden;
+      transform: scale(0.95);
+      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .carousel-slide.active {
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1);
+      z-index: 2;
+    }
+
+    .carousel-slide.prev {
+      transform: scale(0.95);
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .carousel-image-container {
+      width: 100%;
+      height: 450px;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 24px 64px rgba(0, 0, 0, 0.12);
+      position: relative;
+      background: #f5f5f5;
+      transform: translateY(0);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .carousel-slide.active .carousel-image-container {
+      animation: slideInLeft 0.8s ease forwards;
+    }
+
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .carousel-image-container:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 32px 80px rgba(0, 0, 0, 0.16);
+    }
+
+    .carousel-project-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .carousel-image-container:hover .carousel-project-image {
+      transform: scale(1.05);
+    }
+
+    .carousel-content {
+      text-align: left;
+      padding: 2rem 0;
+    }
+
+    .carousel-slide.active .carousel-content {
+      animation: slideInRight 0.8s ease 0.2s both;
+    }
+
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .carousel-badge {
+      display: inline-block;
+      padding: 0.6rem 1.25rem;
+      background: #C41E3A;
+      color: white;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      border-radius: 2px;
+    }
+
+    .carousel-badge.completed {
+      background: #059669;
+    }
+
+    .carousel-badge.ready {
+      background: #0891B2;
+    }
+
+    .carousel-content h3 {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 3rem;
+      font-weight: 700;
+      color: #1A1A1A;
+      margin-bottom: 1.5rem;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+    }
+
+    .carousel-content p {
+      font-size: 1.05rem;
+      color: #4A4A4A;
+      margin-bottom: 2.5rem;
+      line-height: 1.8;
+      font-weight: 400;
+    }
+
+    .carousel-btn {
+      padding: 0.5rem 0.5rem;
+      background: #C41E3A;
+      color: white;
+      border: 2px solid #C41E3A;
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: inherit;
+      border-radius: 2px;
+    }
+
+    .carousel-btn:hover {
+      background: #A01830;
+      border-color: #A01830;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(196, 30, 58, 0.3);
+    }
+
+    .carousel-navigation {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      transform: translateY(-50%);
+      display: flex;
+      justify-content: space-between;
+      padding: 0 1.5rem;
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    .carousel-nav-btn {
+      width: 50px;
+      height: 50px;
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid rgba(26, 26, 26, 0.1);
+      color: #1A1A1A;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: inherit;
+      border-radius: 50%;
+      pointer-events: auto;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    .carousel-nav-btn:hover {
+      background: #C41E3A;
+      color: white;
+      border-color: #C41E3A;
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(196, 30, 58, 0.3);
+    }
+
+    .carousel-dots {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 0.65rem;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 0.85rem 1.75rem;
+      border-radius: 50px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #D1D5DB;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+
+    .dot.active {
+      background: #C41E3A;
+      width: 32px;
+      border-radius: 5px;
+    }
+
+    .dot:hover {
+      background: #9CA3AF;
+      transform: scale(1.2);
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 500px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, #FFFFFF 0%, #F8F8F8 100%);
+      width: 100%;
+      padding: 4rem 0;
+      margin-bottom: 4rem;
+    }
+
+    .hero-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 4rem;
+      align-items: center;
+      width: 100%;
+    }
+
+    .hero-content h2 {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 4rem;
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 1.75rem;
+      color: #1A1A1A;
+      letter-spacing: -0.03em;
+    }
+
+    .hero-content p {
+      font-size: 1.1rem;
+      color: #4A4A4A;
+      margin-bottom: 3rem;
+      line-height: 1.8;
+      max-width: 600px;
+      font-weight: 400;
+    }
+
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.85rem;
+      padding: 1.25rem 3rem;
+      background: #C41E3A;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      border: 2px solid #C41E3A;
+      cursor: pointer;
+      border-radius: 2px;
+    }
+
+    .hero-cta:hover {
+      background: #A01830;
+      border-color: #A01830;
+      transform: translateX(4px);
+      box-shadow: 0 8px 24px rgba(196, 30, 58, 0.3);
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+    }
+
+    .stat-card {
+      background: #FFFFFF;
+      border: 1px solid rgba(26, 26, 26, 0.08);
+      padding: 2.5rem 2rem;
+      text-align: center;
+      transition: all 0.3s ease;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .stat-card:hover {
+      border-color: #C41E3A;
+      transform: translateY(-6px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+    }
+
+    .stat-number {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: #C41E3A;
+      margin-bottom: 0.65rem;
+      letter-spacing: -0.02em;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      color: #6B7280;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 600;
+    }
+
+    /* Google Reviews Section */
+    .reviews-section {
+      padding: 5rem 2rem;
+      background: #FFFFFF;
+      position: relative;
+      width: 100%;
+      margin-bottom: 4rem;
+      border-top: 1px solid rgba(26, 26, 26, 0.08);
+      border-bottom: 1px solid rgba(26, 26, 26, 0.08);
+    }
+
+    .reviews-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .google-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.65rem 1.5rem;
+      background: white;
+      border: 2px solid #4285F4;
+      margin-bottom: 1.75rem;
+      border-radius: 2px;
+    }
+
+    .google-logo {
+      font-size: 1.35rem;
+      font-weight: 700;
+    }
+
+    .google-logo .g { color: #4285F4; }
+    .google-logo .o1 { color: #EA4335; }
+    .google-logo .o2 { color: #FBBC05; }
+    .google-logo .g2 { color: #4285F4; }
+    .google-logo .l { color: #34A853; }
+    .google-logo .e { color: #EA4335; }
+
+    .reviews-title {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 3rem;
+      font-weight: 700;
+      color: #1A1A1A;
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.02em;
+    }
+
+    .reviews-subtitle {
+      font-size: 1.05rem;
+      color: #4A4A4A;
+      font-weight: 400;
+    }
+
+    .reviews-carousel-wrapper {
+      position: relative;
+      max-width: 1100px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .reviews-carousel-container {
+      position: relative;
+      height: 400px;
+    }
+
+    .review-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      opacity: 0;
+      transform: translateX(100px);
+      transition: all 0.6s ease;
+      pointer-events: none;
+    }
+
+    .review-slide.active {
+      opacity: 1;
+      transform: translateX(0);
+      pointer-events: auto;
+    }
+
+    .review-card {
+      background: white;
+      border: 1px solid rgba(26, 26, 26, 0.08);
+      padding: 3rem;
+      max-width: 900px;
+      margin: 0 auto;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+      border-radius: 4px;
+    }
+
+    .review-header {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .reviewer-avatar {
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, #C41E3A 0%, #A01830 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.75rem;
+      color: white;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .reviewer-info h4 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #1A1A1A;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.01em;
+    }
+
+    .review-stars {
+      display: flex;
+      gap: 0.25rem;
+      font-size: 1.15rem;
+      color: #FBBF24;
+    }
+
+    .review-text {
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: #4A4A4A;
+      font-style: italic;
+      margin-bottom: 1.75rem;
+      font-weight: 400;
+    }
+
+    .review-project {
+      display: inline-block;
+      padding: 0.6rem 1.15rem;
+      background: #F9FAFB;
+      border-left: 3px solid #C41E3A;
+      font-size: 0.85rem;
+      color: #1A1A1A;
+      font-weight: 600;
+    }
+
+    .reviews-nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      margin-top: 3.5rem;
+    }
+
+    .review-nav-btn {
+      width: 48px;
+      height: 48px;
+      background: #C41E3A;
+      border: 2px solid #C41E3A;
+      color: white;
+      font-size: 1.35rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: inherit;
+      border-radius: 50%;
+    }
+
+    .review-nav-btn:hover {
+      background: #A01830;
+      border-color: #A01830;
+      transform: scale(1.1);
+    }
+
+    .review-dots {
+      display: flex;
+      gap: 0.65rem;
+    }
+
+    .review-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #D1D5DB;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .review-dot.active {
+      background: #C41E3A;
+      width: 32px;
+      border-radius: 5px;
+    }
+
+    .google-reviews-link {
+      text-align: center;
+      margin-top: 3.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      justify-content: center;
+    }
+
+    .google-reviews-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 1.1rem 2.25rem;
+      background: #4285F4;
+      color: white;
+      border: 2px solid #4285F4;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border-radius: 2px;
+    }
+
+    .google-reviews-btn:hover {
+      background: #3367D6;
+      border-color: #3367D6;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(66, 133, 244, 0.3);
+    }
+
+    .google-reviews-btn.write-review {
+      background: #34A853;
+      border-color: #34A853;
+    }
+
+    .google-reviews-btn.write-review:hover {
+      background: #2D8E47;
+      border-color: #2D8E47;
+    }
+
+    /* Section Styles */
+    .section {
+      padding: 5rem 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .section-tag {
+      display: inline-block;
+      padding: 0.45rem 1.25rem;
+      background: #FEF3F2;
+      border: 1px solid #FEE2E2;
+      color: #C41E3A;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 1.75rem;
+      border-radius: 2px;
+    }
+
+    .section-title {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: #1A1A1A;
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.03em;
+    }
+
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: #4A4A4A;
+      max-width: 680px;
+      margin: 0 auto;
+      line-height: 1.8;
+      font-weight: 400;
+    }
+
+    /* Projects Filter */
+    .projects-filter {
+      display: flex;
+      justify-content: center;
+      gap: 1.25rem;
+      margin-bottom: 4rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      padding: 0.85rem 2rem;
+      background: #FFFFFF;
+      border: 1px solid rgba(26, 26, 26, 0.1);
+      color: #4A4A4A;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: inherit;
+      border-radius: 2px;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: #C41E3A;
+      color: white;
+      border-color: #C41E3A;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(196, 30, 58, 0.2);
+    }
+
+    /* Projects Grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .project-card {
+      background: #FFFFFF;
+      border: 1px solid rgba(26, 26, 26, 0.08);
+      overflow: hidden;
+      transition: all 0.4s ease;
+      cursor: pointer;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .project-card:hover {
+      border-color: #C41E3A;
+      transform: translateY(-8px);
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+    }
+
+    .project-image {
+      width: 100%;
+      height: 280px;
+      position: relative;
+      overflow: hidden;
+      background: #f5f5f5;
+    }
+
+    .project-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .project-card:hover .project-img {
+      transform: scale(1.08);
+    }
+
+    .project-badge {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.25rem;
+      padding: 0.55rem 1.25rem;
+      background: #C41E3A;
+      color: white;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      z-index: 2;
+      border-radius: 2px;
+    }
+
+    .project-badge.completed {
+      background: #059669;
+    }
+
+    .project-badge.ready {
+      background: #0891B2;
+    }
+
+    .project-content {
+      padding: 2.5rem;
+    }
+
+    .project-title {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #1A1A1A;
+      margin-bottom: 0.85rem;
+      letter-spacing: -0.01em;
+    }
+
+    .project-location {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #6B7280;
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+      font-weight: 500;
+    }
+
+    .project-details {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(26, 26, 26, 0.08);
+    }
+
+    .detail-box {
+      text-align: center;
+    }
+
+    .detail-label {
+      font-size: 0.7rem;
+      color: #6B7280;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.65rem;
+      font-weight: 600;
+    }
+
+    .detail-value {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #C41E3A;
+    }
+
+    /* About Section */
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+      margin-bottom: 5rem;
+    }
+
+    .about-image-container {
+      width: 100%;
+      height:340px;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 24px 64px rgba(0, 0, 0, 0.12);
+      position: relative;
+    }
+
+   
+    .about-text h3 {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 2.75rem;
+      font-weight: 700;
+      color: #1A1A1A;
+      margin-bottom: 2rem;
+      letter-spacing: -0.02em;
+    }
+
+    .about-text p {
+      font-size: 1.05rem;
+      color: #4A4A4A;
+      line-height: 1.85;
+      margin-bottom: 1.75rem;
+      font-weight: 400;
+    }
+
+    .about-features {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    .feature-box {
+      background: #FFFFFF;
+      border: 1px solid rgba(26, 26, 26, 0.08);
+      padding: 2.5rem;
+      transition: all 0.3s ease;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .feature-box:hover {
+      border-color: #C41E3A;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+      transform: translateY(-4px);
+    }
+
+    .feature-icon {
+      font-size: 2.75rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .feature-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #1A1A1A;
+      margin-bottom: 0.85rem;
+      letter-spacing: -0.01em;
+    }
+
+    .feature-text {
+      font-size: 0.95rem;
+      color: #4A4A4A;
+      line-height: 1.75;
+      font-weight: 400;
+    }
+
+    /* Contact Section */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 4rem;
+    }
+
+    .contact-info {
+      background: #FFFFFF;
+      border: 1px solid rgba(26, 26, 26, 0.08);
+      padding: 3.5rem;
+      border-radius: 4px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+      height: fit-content;
+    }
+
+    .contact-map {
+      width: 100%;
+      margin-top: 2rem;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    .contact-map iframe {
+      width: 100%;
+      height: 350px;
+      border: 0;
+      display: block;
+    }
+
+    .contact-info h3 {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1A1A1A;
+      margin-bottom: 2.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .info-item {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+      align-items: flex-start;
+    }
+
+    .info-icon {
+      font-size: 2rem;
+      color: #C41E3A;
+      min-width: 40px;
+    }
+
+    .info-text h4 {
+      font-size: 0.75rem;
+      color: #6B7280;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 0.65rem;
+      font-weight: 700;
+    }
+
+    .info-text p {
+      font-size: 1.05rem;
+      color: #1A1A1A;
+      font-weight: 600;
+      line-height: 1.6;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .social-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-size: 1.5rem;
+    }
+
+    .social-btn.facebook {
+      background: #1877F2;
+      color: white;
+    }
+
+    .social-btn.facebook:hover {
+      background: #145dbf;
+      transform: scale(1.1);
+    }
+
+    .social-btn.instagram {
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+      color: white;
+    }
+
+    .social-btn.instagram:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 12px rgba(188, 24, 136, 0.4);
+    }
+
+    .social-btn.linkedin {
+      background: #0A66C2;
+      color: white;
+    }
+
+    .social-btn.linkedin:hover {
+      background: #004182;
+      transform: scale(1.1);
+    }
+
+    .contact-form {
+      background: #FFFFFF;
+      border: 1px solid rgba(26, 26, 26, 0.08);
+      padding: 3.5rem;
+      border-radius: 4px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    }
+
+    .form-row {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2rem;
+    }
+
+    .form-row label {
+      font-size: 0.8rem;
+      color: #6B7280;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.85rem;
+      font-weight: 700;
+    }
+
+    .form-row input,
+    .form-row textarea {
+      padding: 1.15rem 1.35rem;
+      background: #F9FAFB;
+      border: 1px solid rgba(26, 26, 26, 0.1);
+      color: #1A1A1A;
+      font-size: 0.95rem;
+      font-family: inherit;
+      transition: all 0.3s ease;
+      border-radius: 2px;
+    }
+
+    .form-row input:focus,
+    .form-row textarea:focus {
+      outline: none;
+      border-color: #C41E3A;
+      background: white;
+      box-shadow: 0 0 0 3px rgba(196, 30, 58, 0.1);
+    }
+
+    .form-row textarea {
+      resize: vertical;
+      min-height: 140px;
+      line-height: 1.7;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 1.25rem;
+      background: #C41E3A;
+      color: white;
+      border: 2px solid #C41E3A;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: inherit;
+      border-radius: 2px;
+    }
+
+    .submit-btn:hover {
+      background: #A01830;
+      border-color: #A01830;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(196, 30, 58, 0.3);
+    }
+
+    .success-msg {
+      background: #D1FAE5;
+      border-left: 4px solid #059669;
+      color: #065F46;
+      padding: 1.15rem 1.5rem;
+      margin-bottom: 2rem;
+      display: none;
+      border-radius: 2px;
+      font-weight: 600;
+    }
+
+    .success-msg.show {
+      display: block;
+      animation: slideDown 0.4s ease;
+    }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Project Detail Styles */
+    .project-detail-header {
+      margin-bottom: 4rem;
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 0.85rem 1.85rem;
+      background: transparent;
+      border: 1px solid rgba(26, 26, 26, 0.15);
+      color: #4A4A4A;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-bottom: 2rem;
+      font-family: inherit;
+      border-radius: 2px;
+    }
+
+    .back-btn:hover {
+      border-color: #C41E3A;
+      color: #C41E3A;
+      transform: translateX(-4px);
+    }
+
+    .project-hero {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 4rem;
+      margin-bottom: 5rem;
+    }
+
+    .project-hero-image {
+      width: 100%;
+      height: 500px;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 24px 64px rgba(0, 0, 0, 0.12);
+      background: #f5f5f5;
+      position: relative;
+    }
+
+    .project-hero-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .project-hero-content h1 {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: #1A1A1A;
+      margin-bottom: 1.25rem;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+    }
+
+    .project-location-large {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-size: 1.15rem;
+      color: #6B7280;
+      margin-bottom: 2rem;
+      font-weight: 500;
+    }
+
+    .project-status-badge-large {
+      display: inline-block;
+      padding: 0.65rem 1.75rem;
+      background: #C41E3A;
+      color: white;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      border-radius: 2px;
+    }
+
+    .project-status-badge-large.completed {
+      background: #059669;
+    }
+
+    .project-status-badge-large.ready {
+      background: #0891B2;
+    }
+
+    .project-description {
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: #4A4A4A;
+      margin-bottom: 2.5rem;
+      font-weight: 400;
+    }
+
+    .project-price {
+      font-size: 2.75rem;
+      font-weight: 700;
+      color: #C41E3A;
+      margin-bottom: 2rem;
+      font-family: 'Crimson Pro', Georgia, serif;
+      letter-spacing: -0.02em;
+    }
+
+    .project-price-label {
+      font-size: 0.8rem;
+      color: #6B7280;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      display: block;
+      margin-bottom: 0.65rem;
+      font-weight: 700;
+    }
+
+    .project-cta-btn {
+      width: 100%;
+      padding: 1.35rem;
+      background: #C41E3A;
+      color: white;
+      border: 2px solid #C41E3A;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: inherit;
+      margin-bottom: 1rem;
+      border-radius: 2px;
+    }
+
+    .project-cta-btn:hover {
+      background: #A01830;
+      border-color: #A01830;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(196, 30, 58, 0.3);
+    }
+
+    .project-specifications {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+      margin-bottom: 5rem;
+    }
+
+    .spec-card {
+      background: #FFFFFF;
+      border: 1px solid rgba(26, 26, 26, 0.08);
+      padding: 3rem;
+      text-align: center;
+      transition: all 0.3s ease;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .spec-card:hover {
+      border-color: #C41E3A;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+      transform: translateY(-4px);
+    }
+
+    .spec-icon {
+      font-size: 3rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .spec-label {
+      font-size: 0.75rem;
+      color: #6B7280;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 0.85rem;
+      font-weight: 700;
+    }
+
+    .spec-value {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1A1A1A;
+      letter-spacing: -0.01em;
+    }
+
+    .project-features-section {
+      margin-bottom: 5rem;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.75rem;
+      background: #FFFFFF;
+      border: 1px solid rgba(26, 26, 26, 0.08);
+      padding: 2.5rem;
+      transition: all 0.3s ease;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .feature-item:hover {
+      border-color: #C41E3A;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+      transform: translateY(-4px);
+    }
+
+    .feature-item-icon {
+      font-size: 2.25rem;
+      color: #C41E3A;
+      min-width: 44px;
+    }
+
+    .feature-item-text h4 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #1A1A1A;
+      margin-bottom: 0.65rem;
+      letter-spacing: -0.01em;
+    }
+
+    .feature-item-text p {
+      font-size: 0.95rem;
+      color: #4A4A4A;
+      line-height: 1.75;
+      font-weight: 400;
+    }
+
+    .project-gallery-section {
+      margin-bottom: 5rem;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .gallery-item {
+      width: 100%;
+      height: 280px;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      background: #f5f5f5;
+      position: relative;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+    }
+
+    .gallery-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Contact Popup Modal */
+    .contact-popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.75);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10000;
+      opacity: 0;
+      pointer-events: none;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+      padding: 1rem;
+    }
+
+    .contact-popup-overlay.show {
+      opacity: 1;
+      pointer-events: auto;
+      visibility: visible;
+    }
+
+    .contact-popup {
+      background: #FFFFFF;
+      border: 1px solid rgba(26, 26, 26, 0.08);
+      padding: 3rem;
+      max-width: 600px;
+      width: 100%;
+      max-height: 90%;
+      overflow-y: auto;
+      position: relative;
+      animation: slideUp 0.4s ease;
+      border-radius: 4px;
+      box-shadow: 0 24px 64px rgba(0, 0, 0, 0.2);
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .popup-close {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.25rem;
+      width: 40px;
+      height: 40px;
+      background: #C41E3A;
+      color: white;
+      border: none;
+      font-size: 1.35rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      font-family: inherit;
+      border-radius: 2px;
+    }
+
+    .popup-close:hover {
+      background: #A01830;
+      transform: rotate(90deg);
+    }
+
+    .contact-popup h3 {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: #1A1A1A;
+      margin-bottom: 1.75rem;
+      letter-spacing: -0.02em;
+    }
+
+    /* Footer */
+    footer {
+      background: #FFFFFF;
+      border-top: 1px solid rgba(26, 26, 26, 0.08);
+      padding: 5rem 2rem 2.5rem;
+      width: 100%;
+    }
+
+    .footer-container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.75fr 1fr 1fr 1fr;
+      gap: 4rem;
+      margin-bottom: 4rem;
+    }
+
+    .footer-brand-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .footer-logo-wrapper {
+      height: 80px;
+      width: 85px;
+      margin-bottom: 1.75rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .footer-logo {
+      height: 100%;
+      width: 100%;
+      object-fit: fill;
+      display: block;
+    }
+
+    .footer-brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .footer-brand-text h3 {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.65rem;
+      letter-spacing: -0.01em;
+    }
+
+    .footer-tagline {
+      color: #C41E3A;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 1.75rem;
+      font-weight: 700;
+    }
+
+    .footer-desc {
+      color: #6B7280;
+      line-height: 1.75;
+      font-size: 0.9rem;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .footer-section h4 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #1A1A1A;
+      margin-bottom: 1.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .footer-section a,
+    .footer-section p {
+      color: #6B7280;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 1.1rem;
+      font-size: 0.9rem;
+      transition: color 0.3s ease;
+      line-height: 1.6;
+    }
+
+    .footer-section a:hover {
+      color: #C41E3A;
+      cursor: pointer;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 2.5rem;
+      border-top: 1px solid rgba(26, 26, 26, 0.08);
+      color: #6B7280;
+      font-size: 0.85rem;
+    }
+
+    .version-tag {
+      display: inline-block;
+      margin-left: 0.85rem;
+      padding: 0.3rem 0.75rem;
+      background: #FEF3F2;
+      border: 1px solid #FEE2E2;
+      color: #C41E3A;
+      font-size: 0.65rem;
+      font-weight: 700;
+      border-radius: 2px;
+      letter-spacing: 0.5px;
+    }
+
+    /* WhatsApp Float */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      z-index: 9999;
+      text-decoration: none;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.15) rotate(5deg);
+      box-shadow: 0 12px 32px rgba(37, 211, 102, 0.6);
+    }
+
+    .whatsapp-float svg {
+      width: 34px;
+      height: 34px;
+      fill: white;
+    }
+
+    /* Gradient Placeholder */
+    .gradient-placeholder {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      opacity: 0.85;
+    }
+
+    /* Privacy Policy Styles */
+    .privacy-content {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .privacy-section {
+      background: white;
+      border: 1px solid rgba(26, 26, 26, 0.08);
+      padding: 3.5rem;
+      margin-bottom: 2rem;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .privacy-section h3 {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 1.85rem;
+      color: #1A1A1A;
+      margin-bottom: 1.75rem;
+      letter-spacing: -0.02em;
+    }
+
+    .privacy-section p {
+      color: #4A4A4A;
+      line-height: 1.85;
+      margin-bottom: 1.35rem;
+      font-size: 1rem;
+    }
+
+    .privacy-section ul {
+      color: #4A4A4A;
+      line-height: 1.85;
+      margin-left: 2rem;
+      margin-bottom: 1.75rem;
+      font-size: 1rem;
+    }
+
+    .privacy-section ul li {
+      margin-bottom: 0.65rem;
+    }
+
+    .privacy-notice {
+      background: #FEF3F2;
+      border-left: 4px solid #C41E3A;
+      padding: 2rem;
+      margin-top: 2.5rem;
+      border-radius: 2px;
+    }
+
+    .privacy-notice p {
+      color: #4A4A4A;
+      line-height: 1.85;
+      margin-bottom: 0.65rem;
+      font-size: 1rem;
+    }
+
+    .privacy-notice strong {
+      color: #1A1A1A;
+      font-weight: 700;
+    }
+
+    /* SEO Content Sections */
+    .seo-content-section {
+      background: #FFFFFF;
+      border: 1px solid rgba(26, 26, 26, 0.08);
+      padding: 4rem 3rem;
+      margin-bottom: 2.5rem;
+      border-radius: 4px;
+    }
+
+    .seo-content-section h3 {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: #1A1A1A;
+      margin-bottom: 1.75rem;
+      letter-spacing: -0.02em;
+    }
+
+    .seo-content-section h4 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #1A1A1A;
+      margin: 2rem 0 1.25rem 0;
+      letter-spacing: -0.01em;
+    }
+
+    .seo-content-section p {
+      font-size: 1.05rem;
+      color: #4A4A4A;
+      line-height: 1.85;
+      margin-bottom: 1.5rem;
+      font-weight: 400;
+    }
+
+    .seo-content-section ul {
+      margin-left: 2rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .seo-content-section ul li {
+      font-size: 1rem;
+      color: #4A4A4A;
+      line-height: 1.85;
+      margin-bottom: 0.85rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1200px) {
+      .nav-container {
+        padding: 0 1.5rem;
+      }
+
+      .hero-container,
+      .carousel-slide {
+        padding: 0 2rem;
+      }
+
+      .section {
+        padding: 4rem 1.5rem;
+      }
+
+      .carousel-content h3 {
+        font-size: 2.5rem;
+      }
+
+      .hero-content h2 {
+        font-size: 3.5rem;
+      }
+
+      .section-title {
+        font-size: 3rem;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .hero-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .hero-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+      }
+
+      .stat-card {
+        padding: 2rem 1.5rem;
+      }
+
+      .stat-number {
+        font-size: 3rem;
+      }
+
+      .carousel-slide {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding: 3rem 2rem;
+      }
+
+      .carousel-image-container {
+        height: 380px;
+      }
+
+      .project-carousel {
+        height: auto;
+        min-height: 700px;
+      }
+
+      .about-content,
+      .contact-grid,
+      .project-hero {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+      }
+
+      .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .reviews-carousel-container {
+        height: 460px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .mobile-menu-toggle {
+        display: flex;
+      }
+
+      .nav-menu {
+        position: fixed;
+        top: 96px;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        padding: 2rem;
+        gap: 1.5rem;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 999;
+        align-items: flex-start;
+      }
+
+      .nav-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .nav-link {
+        font-size: 1.05rem;
+        width: 100%;
+        padding: 0.5rem 0;
+      }
+
+      .contact-btn-header {
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+      }
+
+      main {
+        margin-top: 96px;
+      }
+
+      .logo-section {
+        min-height: 70px;
+      }
+
+      .logo-image-wrapper {
+        height: 70px;
+        width: 75px;
+      }
+
+      .logo-text-fallback h1 {
+        font-size: 1.15rem;
+      }
+
+      .logo-text-fallback p {
+        font-size: 0.6rem;
+      }
+
+      .hero-content h2 {
+        font-size: 2.75rem;
+      }
+
+      .hero-content p {
+        font-size: 1rem;
+      }
+
+      .hero-stats {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+      }
+
+      .stat-card {
+        padding: 2rem;
+      }
+
+      .stat-number {
+        font-size: 3rem;
+      }
+
+      .carousel-content h3 {
+        font-size: 2.25rem;
+      }
+
+      .carousel-content p {
+        font-size: 1rem;
+      }
+
+      .carousel-image-container {
+        height: 300px;
+      }
+
+      .project-carousel {
+        height: auto;
+        min-height: 650px;
+      }
+
+      .carousel-slide {
+        padding: 2rem 1.5rem;
+        gap: 2.5rem;
+      }
+
+      .carousel-navigation {
+        padding: 0 1rem;
+      }
+
+      .carousel-nav-btn {
+        width: 44px;
+        height: 44px;
+        font-size: 1.25rem;
+      }
+
+      .section-title {
+        font-size: 2.5rem;
+      }
+
+      .section-subtitle {
+        font-size: 1rem;
+      }
+
+      .reviews-title {
+        font-size: 2.5rem;
+      }
+
+      .reviews-section {
+        padding: 4rem 1.5rem;
+      }
+
+      .review-card {
+        padding: 2.5rem 1.75rem;
+      }
+
+      .review-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+      }
+
+      .reviewer-avatar {
+        width: 56px;
+        height: 56px;
+        font-size: 1.5rem;
+      }
+
+      .reviewer-info h4 {
+        font-size: 1.15rem;
+      }
+
+      .review-text {
+        font-size: 1rem;
+      }
+
+      .reviews-carousel-container {
+        height: 500px;
+      }
+
+      .google-reviews-link {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .google-reviews-btn {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .projects-filter {
+        gap: 0.85rem;
+      }
+
+      .filter-btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.8rem;
+      }
+
+      .about-text h3 {
+        font-size: 2.25rem;
+      }
+
+      .about-text p {
+        font-size: 1rem;
+      }
+
+      .about-features {
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
+      }
+
+      .feature-box {
+        padding: 2rem;
+      }
+
+      .contact-info,
+      .contact-form {
+        padding: 2.5rem;
+      }
+
+      .contact-info h3 {
+        font-size: 1.75rem;
+      }
+
+      .contact-map iframe {
+        height: 300px;
+      }
+
+      .project-hero-content h1 {
+        font-size: 2.5rem;
+      }
+
+      .project-price {
+        font-size: 2.25rem;
+      }
+
+      .project-specifications,
+      .features-grid,
+      .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
+      }
+
+      .spec-card {
+        padding: 2.5rem;
+      }
+
+      .feature-item {
+        padding: 2rem;
+      }
+
+      .gallery-item {
+        height: 240px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .footer-brand-wrapper {
+        text-align: center;
+      }
+
+      .footer-logo-wrapper {
+        margin: 0 auto 1.5rem;
+      }
+
+      .contact-popup {
+        padding: 2.5rem 1.75rem;
+      }
+
+      .contact-popup h3 {
+        font-size: 1.85rem;
+      }
+
+      .whatsapp-float {
+        width: 56px;
+        height: 56px;
+        bottom: 1.5rem;
+        right: 1.5rem;
+      }
+
+      .whatsapp-float svg {
+        width: 30px;
+        height: 30px;
+      }
+
+      .privacy-section {
+        padding: 2.5rem 1.75rem;
+      }
+
+      .privacy-section h3 {
+        font-size: 1.65rem;
+      }
+
+      .seo-content-section {
+        padding: 3rem 2rem;
+      }
+
+      .seo-content-section h3 {
+        font-size: 2rem;
+      }
+
+      .seo-content-section h4 {
+        font-size: 1.25rem;
+      }
+
+      .social-links,
+      .footer-social {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .nav-container {
+        padding: 0 1rem;
+      }
+
+      .logo-text-fallback h1 {
+        font-size: 1rem;
+      }
+
+      .logo-text-fallback p {
+        font-size: 0.55rem;
+        letter-spacing: 1.5px;
+      }
+
+      .hero-content h2 {
+        font-size: 2.25rem;
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .carousel-content h3 {
+        font-size: 1.85rem;
+      }
+
+      .carousel-dots {
+        padding: 0.65rem 1.25rem;
+      }
+
+      .reviews-title {
+        font-size: 2rem;
+      }
+
+      .review-card {
+        padding: 2rem 1.5rem;
+      }
+
+      .reviews-carousel-container {
+        height: 540px;
+      }
+
+      .project-card {
+        border-radius: 4px;
+      }
+
+      .project-content {
+        padding: 2rem;
+      }
+
+      .contact-info,
+      .contact-form {
+        padding: 2rem;
+      }
+
+      .contact-map iframe {
+        height: 250px;
+      }
+
+      .footer-section h4 {
+        font-size: 0.9rem;
+      }
+
+      .privacy-section {
+        padding: 2rem 1.5rem;
+      }
+
+      .seo-content-section {
+        padding: 2.5rem 1.5rem;
+      }
+    }
+
+    /* Landscape Mobile */
+    @media (max-height: 500px) and (orientation: landscape) {
+      .project-carousel {
+        height: auto;
+        min-height: 600px;
+      }
+
+      .carousel-image-container {
+        height: 280px;
+      }
+
+      .hero {
+        min-height: 400px;
+      }
+    }
+
+    /* Print Styles */
+    @media print {
+      .navbar,
+      .whatsapp-float,
+      .carousel-navigation,
+      .carousel-dots,
+      .contact-popup-overlay,
+      .mobile-menu-toggle {
+        display: none !important;
+      }
+
+      main {
+        margin-top: 0;
+      }
+
+      .page {
+        display: block !important;
+        page-break-after: always;
+      }
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+ </head>
+ <body class="h-full">
+  <div class="main-wrapper"><!-- Navigation -->
+   <nav class="navbar">
+    <div class="nav-container">
+     <div class="logo-section" onclick="navigateToPage('home')">
+      <div class="logo-image-wrapper"><img src="https://lh3.googleusercontent.com/d/1naBavmqZLLesbFfXHv_m-2H-b2IvyVkI" alt="Vijayasree Builders Salem - Premium Residential Construction Company" class="logo-img" onerror="handleLogoError(this)">
+      </div>
+      <div class="logo-text-fallback">
+       <h1>Vijayasree Builders</h1>
+       <p>Your Dream, Our Responsibility</p>
+      </div>
+     </div><button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu"> <span></span> <span></span> <span></span> </button>
+     <ul class="nav-menu" id="navMenu">
+      <li><a class="nav-link active" onclick="navigateToPage('home')">Home</a></li>
+      <li><a class="nav-link" onclick="navigateToPage('projects')">Projects</a></li>
+      <li><a class="nav-link" onclick="navigateToPage('about')">About</a></li>
+      <li><a class="nav-link" onclick="navigateToPage('contact')">Contact</a></li>
+      <li><button class="contact-btn-header" onclick="openContactPopup()">Contact Us</button></li>
+     </ul>
+    </div>
+   </nav>
+   <main><!-- Home Page -->
+    <div id="home" class="page active"><!-- Project Carousel -->
+     <section class="project-carousel">
+      <div class="carousel-container" id="carouselContainer"></div>
+      <div class="carousel-navigation"><button class="carousel-nav-btn" onclick="changeSlide(-1)" aria-label="Previous slide">‹</button> <button class="carousel-nav-btn" onclick="changeSlide(1)" aria-label="Next slide">›</button>
+      </div>
+      <div class="carousel-dots" id="carouselDots"></div>
+     </section>
+     <section class="hero">
+      <div class="hero-container">
+       <div class="hero-content">
+        <h2 id="heroTitle">Building Dreams Into Reality</h2>
+        <p id="heroSubtitle">Premium residential spaces crafted with excellence and delivered with trust. Experience 30+ years of construction mastery in Salem, Tamil Nadu.</p><a class="hero-cta" onclick="navigateToPage('projects')"> <span id="heroButtonText">Explore Our Projects</span> <span>→</span> </a>
+       </div>
+       <div class="hero-stats">
+        <div class="stat-card">
+         <div class="stat-number" id="stat1Number">
+          30+
+         </div>
+         <div class="stat-label" id="stat1Label">
+          Years Excellence
+         </div>
+        </div>
+        <div class="stat-card">
+         <div class="stat-number" id="stat2Number">
+          700+
+         </div>
+         <div class="stat-label" id="stat2Label">
+          Happy Families
+         </div>
+        </div>
+        <div class="stat-card">
+         <div class="stat-number" id="stat3Number">
+          11
+         </div>
+         <div class="stat-label" id="stat3Label">
+          Total Projects
+         </div>
+        </div>
+       </div>
+      </div>
+     </section><!-- SEO Rich Content Section -->
+     <section class="section">
+      <div class="seo-content-section">
+       <h3>Why Choose Vijayasree Builders for Your Dream Home in Salem?</h3>
+       <p>Vijayasree Builders stands as Salem's most trusted residential construction company, delivering exceptional quality homes since 1990. With over three decades of experience in the real estate industry, we have transformed the landscape of premium apartment living across Salem, Tamil Nadu.</p>
+       <h4>Premium 2BHK and 3BHK Apartments in Salem's Prime Locations</h4>
+       <p>Our portfolio includes thoughtfully designed 2BHK and 3BHK apartments ranging from 1100 to 1900 square feet, strategically located in Salem's most sought-after neighborhoods including Ammapet, Chinna Thirupathi, Suramangalam, Hasthampatti, Seelanaickenpatti, and Shevapet. Each project is meticulously planned to offer excellent connectivity to schools, hospitals, shopping centers, and major transportation hubs.</p>
+       <h4>Quality Construction That Stands the Test of Time</h4>
+       <p>At Vijayasree Builders, we never compromise on construction quality. Every project utilizes premium-grade materials, advanced construction techniques, and adheres to stringent quality control measures. Our buildings feature:</p>
+       <ul>
+        <li>High-quality cement, steel, and aggregates from certified suppliers</li>
+        <li>Premium tiles, sanitaryware, and electrical fittings</li>
+        <li>Earthquake-resistant RCC framed structures</li>
+        <li>Superior waterproofing and weatherproofing solutions</li>
+        <li>Energy-efficient designs with optimal natural lighting and ventilation</li>
+        <li>Modern amenities including swimming pools, gymnasiums, and landscaped gardens</li>
+       </ul>
+       <h4>Transparent Dealings and Timely Delivery</h4>
+       <p>Founded by Dr. Rajendran, Vijayasree Builders operates with complete transparency in all transactions. We maintain clear communication throughout the buying process, with no hidden costs or surprise charges. Our commitment to timely project delivery has earned us the trust of over 700 families who now call our projects home.</p>
+      </div>
+     </section><!-- Google Reviews Section -->
+     <section class="reviews-section">
+      <div class="reviews-header">
+       <div class="google-badge"><span class="google-logo"> <span class="g">G</span><span class="o1">o</span><span class="o2">o</span><span class="g2">g</span><span class="l">l</span><span class="e">e</span> </span> <span style="color: #4A4A4A;">Reviews</span>
+       </div>
+       <h2 class="reviews-title" id="reviewsTitle">What Our Customers Say</h2>
+       <p class="reviews-subtitle" id="reviewsSubtitle">Real testimonials from happy homeowners living in our projects</p>
+      </div>
+      <div class="reviews-carousel-wrapper">
+       <div class="reviews-carousel-container" id="reviewsContainer"></div>
+       <div class="reviews-nav"><button class="review-nav-btn" onclick="changeReview(-1)" aria-label="Previous review">‹</button>
+        <div class="review-dots" id="reviewDots"></div><button class="review-nav-btn" onclick="changeReview(1)" aria-label="Next review">›</button>
+       </div>
+      </div>
+      <div class="google-reviews-link"><a href="https://share.google/KgQYF52Z0aQu42Bfe" target="_blank" rel="noopener noreferrer" class="google-reviews-btn"> <span>Read More Reviews on Google</span> <span>→</span> </a> <a href="https://www.google.com/maps/place//data=!4m3!3m2!1s0x3babf1b4986d4af5:0xace57f397232df12!12e1?source=g.page.m.ia._&amp;laa=nmx-review-solicitation-ia2" target="_blank" rel="noopener noreferrer" class="google-reviews-btn write-review"> <span>⭐ Write a Review</span> </a>
+      </div>
+     </section>
+    </div><!-- Projects Page -->
+    <div id="projects" class="page">
+     <section class="section">
+      <div class="section-header"><span class="section-tag">Our Portfolio</span>
+       <h2 class="section-title">Explore Our Projects</h2>
+       <p class="section-subtitle">Quality construction across Salem with a commitment to excellence in every detail. From affordable 2BHK apartments to luxury 3BHK residences.</p>
+      </div>
+      <div class="projects-filter"><button class="filter-btn active" onclick="filterProjects('all')">All Projects</button> <button class="filter-btn" onclick="filterProjects('ongoing')">Ongoing</button> <button class="filter-btn" onclick="filterProjects('ready')">Ready to Move</button> <button class="filter-btn" onclick="filterProjects('completed')">Completed</button>
+      </div>
+      <div class="projects-grid" id="projectsGrid"></div>
+     </section>
+    </div><!-- About Page -->
+    <div id="about" class="page">
+     <section class="section">
+      <div class="section-header"><span class="section-tag">About Us</span>
+       <h2 class="section-title">Building Trust Since 1990</h2>
+       <p class="section-subtitle">Three decades of excellence in residential construction across Salem, Tamil Nadu</p>
+      </div>
+      <div class="about-content">
+       <div class="about-image-container"><img src="assets/img/service/mahaveer.jpeg"></div>
+       <div class="about-text">
+        <h3>Your Dream, Our Responsibility</h3>
+        <p>Founded by Dr. Rajendran in 1990, Vijayasree Builders has been a trusted name in Salem's real estate landscape for over 30 years. We specialize in creating premium residential spaces that combine quality construction, timely delivery, and transparent dealings.</p>
+        <p>With 11 completed projects and over 700 happy families, we've established ourselves as one of Salem's most reliable builders. Our commitment to quality, attention to detail, and customer satisfaction has made us the preferred choice for homebuyers across the city.</p>
+       </div>
+      </div>
+      <div class="about-features">
+       <div class="feature-box">
+        <div class="feature-icon">
+         <img src="assets/img/logo/year.png" width="50px" height="50px">
+        </div>
+        <h4 class="feature-title">30+ Years Experience</h4>
+        <p class="feature-text">Three decades of excellence in residential construction across Salem, delivering premium homes that stand the test of time.</p>
+       </div>
+       <div class="feature-box">
+        <div class="feature-icon">
+          <img src="assets/img/logo/quality.png"  width="50px" height="50px">
+        </div>
+        <h4 class="feature-title">Quality Assurance</h4>
+        <p class="feature-text">Premium materials and superior construction standards in every project. We never compromise on quality.</p>
+       </div>
+       <div class="feature-box">
+        <div class="feature-icon">
+         <img src="assets/img/logo/time.png"  width="50px" height="50px">
+        </div>
+        <h4 class="feature-title">Timely Delivery</h4>
+        <p class="feature-text">Committed to delivering projects on or before the promised timeline. Your dream home, on schedule.</p>
+       </div>
+       <div class="feature-box">
+        <div class="feature-icon">
+         <img src="assets/img/logo/trust.png"  width="50px" height="50px">
+        </div>
+        <h4 class="feature-title">Transparent Dealings</h4>
+        <p class="feature-text">No hidden charges, complete transparency in all transactions. What you see is what you get.</p>
+       </div>
+      </div>
+     </section>
+    </div><!-- Contact Page -->
+    <div id="contact" class="page">
+     <section class="section">
+      <div class="section-header"><span class="section-tag">Get In Touch</span>
+       <h2 class="section-title">Contact Us</h2>
+       <p class="section-subtitle">Ready to find your dream home? We're here to help you every step of the way</p>
+      </div>
+      <div class="contact-grid">
+       <div>
+        <div class="contact-info">
+         <h3>Contact Information</h3>
+         <div class="info-item">
+          <div class="info-icon">
+           📞
+          </div>
+          <div class="info-text">
+           <h4>Phone</h4>
+           <p id="contactPhone">+91 93848 20759<br>
+            +91 93848 20760</p>
+          </div>
+         </div>
+         <div class="info-item">
+          <div class="info-icon">
+           ✉️
+          </div>
+          <div class="info-text">
+           <h4>Email</h4>
+           <p id="contactEmail">info@vijayasreebuilders.com</p>
+          </div>
+         </div>
+         <div class="info-item">
+          <div class="info-icon">
+           📍
+          </div>
+          <div class="info-text">
+           <h4>Office</h4>
+           <p id="officeAddress">Vijayasree Towers, 139 Cherry Road, Vincent Bus Stop, Kumarasamypatti, Salem - 636016</p>
+          </div>
+         </div>
+         <div class="social-links"><a href="https://www.facebook.com/share/1AXNMfakgL/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="social-btn facebook" aria-label="Visit our Facebook page">
+           <svg width="24" height="24" viewbox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+           </svg></a> <a href="https://www.instagram.com/vijayasree_builders?igsh=eGx6cWx1YWg1ZjBz&amp;utm_source=qr" target="_blank" rel="noopener noreferrer" class="social-btn instagram" aria-label="Visit our Instagram page">
+           <svg width="24" height="24" viewbox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+           </svg></a> <a href="https://www.linkedin.com/company/vijayasreebuilders/" target="_blank" rel="noopener noreferrer" class="social-btn linkedin" aria-label="Visit our LinkedIn page">
+           <svg width="24" height="24" viewbox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+           </svg></a>
+         </div>
+        </div>
+        <div class="contact-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3907.7418741859144!2d78.13641407507475!3d11.641679988639772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf1b4986d4af5%3A0xace57f397232df12!2sVijayasree%20Constructions!5e0!3m2!1sen!2sin!4v1704890000000!5m2!1sen!2sin" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+       </div>
+       <div class="contact-form">
+        <div class="success-msg" id="successMsg">
+         Thank you! We'll get back to you soon.
+        </div>
+        <form id="contactForm" onsubmit="handleContactSubmit(event)">
+         <div class="form-row"><label for="name">Your Name</label> <input type="text" id="name" required>
+         </div>
+         <div class="form-row"><label for="email">Email Address</label> <input type="email" id="email" required>
+         </div>
+         <div class="form-row"><label for="phone">Phone Number</label> <input type="tel" id="phone" required>
+         </div>
+         <div class="form-row"><label for="message">Your Message</label> <textarea id="message" required></textarea>
+         </div><button type="submit" class="submit-btn">Send Message</button>
+        </form>
+       </div>
+      </div>
+     </section>
+    </div><!-- Individual Project Pages -->
+    <div id="project-detail" class="page">
+     <section class="section">
+      <div id="projectDetailContent"></div>
+     </section>
+    </div><!-- Privacy Policy Page -->
+    <div id="privacy" class="page">
+     <section class="section">
+      <div class="section-header"><span class="section-tag">Legal</span>
+       <h2 class="section-title">Privacy Policy</h2>
+       <p class="section-subtitle">Your privacy is important to us. Learn how we collect, use, and protect your information.</p>
+      </div>
+      <div class="privacy-content">
+       <div class="privacy-section">
+        <h3>Information We Collect</h3>
+        <p>When you interact with Vijayasree Builders, we may collect the following information:</p>
+        <ul>
+         <li>Name, email address, and phone number</li>
+         <li>Property preferences and requirements</li>
+         <li>Communication history with our team</li>
+         <li>Site visit records and feedback</li>
+        </ul>
+       </div>
+       <div class="privacy-section">
+        <h3>How We Use Your Information</h3>
+        <p>We use your personal information to:</p>
+        <ul>
+         <li>Respond to your inquiries about our projects</li>
+         <li>Schedule property visits and provide project updates</li>
+         <li>Send information about new launches and offers</li>
+         <li>Improve our services and customer experience</li>
+         <li>Comply with legal and regulatory requirements</li>
+        </ul>
+       </div>
+       <div class="privacy-section">
+        <h3>Data Protection</h3>
+        <p>We implement appropriate security measures to protect your personal information from unauthorized access, alteration, or disclosure. Your data is stored securely and accessed only by authorized personnel.</p>
+       </div>
+       <div class="privacy-notice">
+        <p><strong>Last Updated:</strong> January 2024</p>
+        <p>This privacy policy may be updated periodically. We will notify you of any significant changes.</p>
+       </div>
+      </div>
+     </section>
+    </div>
+   </main><!-- Footer -->
+   <footer>
+    <div class="footer-container">
+     <div class="footer-grid">
+      <div class="footer-brand-wrapper">
+       <div class="footer-logo-wrapper"><img src="https://lh3.googleusercontent.com/d/1naBavmqZLLesbFfXHv_m-2H-b2IvyVkI" alt="Vijayasree Builders Salem Logo" class="footer-logo" onerror="handleFooterLogoError(this)">
+       </div>
+       <div class="footer-brand-text">
+        <h3>Vijayasree Builders</h3>
+       </div>
+       <p class="footer-tagline" id="footerTagline">Your Dream, Our Responsibility</p>
+       <p class="footer-desc" id="footerDescription">Building premium residential spaces in Salem since 1990. Quality construction, timely delivery, and transparent dealings.</p>
+       <div class="footer-social"><a href="https://www.facebook.com/share/1AXNMfakgL/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="social-btn facebook" aria-label="Visit our Facebook page">
+         <svg width="20" height="20" viewbox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+         </svg></a> <a href="https://www.instagram.com/vijayasree_builders?igsh=eGx6cWx1YWg1ZjBz&amp;utm_source=qr" target="_blank" rel="noopener noreferrer" class="social-btn instagram" aria-label="Visit our Instagram page">
+         <svg width="20" height="20" viewbox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+         </svg></a> <a href="https://www.linkedin.com/company/vijayasreebuilders/" target="_blank" rel="noopener noreferrer" class="social-btn linkedin" aria-label="Visit our LinkedIn page">
+         <svg width="20" height="20" viewbox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+         </svg></a>
+       </div>
+      </div>
+      <div class="footer-section">
+       <h4>Quick Links</h4><a onclick="navigateToPage('home')">Home</a> <a onclick="navigateToPage('projects')">Projects</a> <a onclick="navigateToPage('about')">About Us</a> <a onclick="navigateToPage('contact')">Contact</a> <a onclick="navigateToPage('privacy')">Privacy Policy</a>
+      </div>
+      <div class="footer-section">
+       <h4>Featured Projects</h4><a onclick="viewProjectDetail('king-palace')">King Palace</a> <a onclick="viewProjectDetail('vaishnavi-palace')">Vaishnavi Palace</a> <a onclick="viewProjectDetail('elite-towers')">Elite Towers</a> <a onclick="viewProjectDetail('harmony-residences')">Harmony Residences</a>
+      </div>
+      <div class="footer-section">
+       <h4>Contact</h4>
+       <p id="footerPhone">+91 93848 20759<br>
+        +91 93848 20760</p>
+       <p id="footerEmail">info@vijayasreebuilders.com</p>
+       <p>Salem, Tamil Nadu</p>
+       <p>Mon - Sat: 9 AM - 6 PM</p>
+      </div>
+     </div>
+     <div class="footer-bottom">
+      <p>© 2024 Vijayasree Builders. All rights reserved. <span class="version-tag">v3.0.0</span></p>
+     </div>
+    </div>
+   </footer><!-- WhatsApp Float Button --> <a href="https://api.whatsapp.com/message/PDOTUUFNBX6OB1?autoload=1&amp;app_absent=0" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Contact us on WhatsApp">
+    <svg viewbox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 0C7.164 0 0 7.164 0 16c0 2.825.738 5.488 2.031 7.806L0 32l8.394-2.031C10.512 31.262 13.175 32 16 32c8.836 0 16-7.164 16-16S24.836 0 16 0zm0 29.333c-2.506 0-4.906-.688-6.969-1.969l-.5-.294-5.175 1.25 1.25-5.175-.294-.5C2.688 20.906 2 18.506 2 16 2 8.269 8.269 2 16 2s14 6.269 14 14-6.269 13.333-14 13.333zm7.375-10.042c-.406-.203-2.375-1.172-2.75-1.297-.375-.125-.656-.203-.906.203-.25.406-.969 1.297-1.188 1.547-.219.25-.438.281-.844.078-.406-.203-1.719-.634-3.281-2.025-1.219-1.078-2.031-2.406-2.281-2.812-.219-.406-.031-.625.172-.828.172-.172.406-.438.625-.656.219-.219.281-.375.438-.625.156-.25.078-.469-.031-.656-.109-.188-.906-2.188-1.25-3-.328-.797-.656-.688-.906-.688-.219-.016-.469-.016-.719-.016-.25 0-.656.094-1 .5-.344.406-1.312 1.281-1.312 3.125s1.344 3.625 1.531 3.875c.188.25 2.625 4 6.375 5.625.891.391 1.594.625 2.125.797.906.281 1.719.234 2.375.141.719-.109 2.375-.969 2.703-1.906.328-.938.328-1.734.234-1.906-.094-.172-.344-.281-.75-.484z" />
+    </svg></a> <!-- Contact Popup -->
+   <div class="contact-popup-overlay" id="contactPopup">
+    <div class="contact-popup"><button class="popup-close" onclick="closeContactPopup()" aria-label="Close popup">×</button>
+     <h3>Get In Touch</h3>
+     <div class="success-msg" id="popupSuccessMsg">
+      Thank you! We'll contact you soon.
+     </div>
+     <form id="popupContactForm" onsubmit="handlePopupSubmit(event)">
+      <div class="form-row"><label for="popup-name">Your Name</label> <input type="text" id="popup-name" required>
+      </div>
+      <div class="form-row"><label for="popup-email">Email Address</label> <input type="email" id="popup-email" required>
+      </div>
+      <div class="form-row"><label for="popup-phone">Phone Number</label> <input type="tel" id="popup-phone" required>
+      </div>
+      <div class="form-row"><label for="popup-message">Your Message</label> <textarea id="popup-message" required></textarea>
+      </div><button type="submit" class="submit-btn">Send Message</button>
+     </form>
+    </div>
+   </div>
+  </div>
+  <script>
+    const defaultConfig = {
+      hero_title: 'Building Dreams Into Reality',
+      hero_subtitle: 'Premium residential spaces crafted with excellence and delivered with trust. Experience 30+ years of construction mastery in Salem, Tamil Nadu.',
+      hero_button_text: 'Explore Our Projects',
+      stat_1_number: '30+',
+      stat_1_label: 'Years Excellence',
+      stat_2_number: '700+',
+      stat_2_label: 'Happy Families',
+      stat_3_number: '11',
+      stat_3_label: 'Total Projects',
+      reviews_title: 'What Our Customers Say',
+      reviews_subtitle: 'Real testimonials from happy homeowners living in our projects',
+      footer_tagline: 'Your Dream, Our Responsibility',
+      footer_description: 'Building premium residential spaces in Salem since 1990. Quality construction, timely delivery, and transparent dealings.',
+      contact_phone: '+91 93848 20759, +91 93848 20760',
+      contact_email: 'info@vijayasreebuilders.com',
+      office_address: 'Vijayasree Towers, 139 Cherry Road, Vincent Bus Stop, Kumarasamypatti, Salem - 636016'
+    };
+
+    const projectsData = [
+     {
+  id: 'king-palace',
+  name: 'King Palace',
+  location: 'Chinna Thirupathi (near Jayaram school), Salem',
+  status: 'ongoing',
+  type: '2,3 & 4 BHK',
+  units: '135 Units',
+  size: '2200 sq.ft',
+  price: '₹45 - 68 Lakhs',
+  image: 'assets/img/service/king.png',
+  gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+  description: 'Experience luxury living at King Palace by Vijayasree Constructions, where modern architecture meets comfort. Located in Chinna Thirupathi near Jayaram school, this ongoing project offers spacious apartments with 25 premium amenities and excellent connectivity to all major landmarks in Salem.',
+  specifications: {
+    type: '2 ,3 & 4 BHK',
+    units: '48 Units',
+    size: '2BHK - 1100-1600 sq.ft,3BHK - 1700 - 200 sq.ft ,4BHK - 2200 Sq.ft',
+    floors: 'stilt + 5 Floors(Car parking)',
+    parking: 'Covered',
+    possession: 'Dec 27'
+  },
+  features: [
+    { icon: 'assets/img/logo/24h.png', title: '24x7 Security', desc: '24 hours CCTV surveillance and trained security personnel' },
+    { icon: 'assets/img/logo/water.png', title: '24 Hours Water Supply', desc: 'Non-stop water supply for uninterrupted convenience' },
+    { icon: 'assets/img/logo/bike.png', title: 'EV Charging Stations', desc: 'Electric bike and car charging stations available' },
+    { icon: 'assets/img/logo/theater.png', title: 'Mini Theater', desc: 'Conference hall with mini theater facility' },
+    { icon: 'assets/img/logo/fire.png', title: '100% Fire Safety', desc: 'Complete fire safety measures and equipment' },
+    { icon: 'assets/img/logo/senior.png', title: 'Senior Citizen Area', desc: 'Dedicated comfortable area for senior citizens' },
+    { icon: 'assets/img/logo/playground.png', title: 'Children\'s Park', desc: 'Safe and colorful play area for children' },
+    { icon: 'assets/img/logo/swimminh.png', title: 'Swimming Pool', desc: 'Temperature controlled swimming pool with separate kids pool' },
+    { icon: 'assets/img/logo/gym.png', title: 'Gymnasium', desc: 'Fully equipped modern gym with latest equipment' },
+    { icon: 'assets/img/logo/yoga.png', title: 'Terrace Yoga Area', desc: 'Peaceful terrace space for yoga and meditation' },
+    { icon: 'assets/img/logo/barbeque.png', title: 'Terrace Barbeque', desc: 'Barbeque counter for outdoor gatherings' },
+    { icon: 'assets/img/logo/club.png', title: 'Club House', desc: 'Modern clubhouse with recreational facilities' },
+    { icon: 'assets/img/logo/billiards.png', title: 'Billiards', desc: 'Indoor billiards room for entertainment' },
+    { icon: 'assets/img/logo/garden.png', title: 'Landscaped Garden', desc: 'Beautiful garden with walking tracks and seating areas' },
+    { icon: 'assets/img/logo/wall.png', title: 'Secured Compound Wall', desc: 'High-security compound wall for complete safety' },
+    { icon: 'assets/img/logo/solar-light.png', title: 'Solar Lighting', desc: 'Eco-friendly solar lights for common areas' },
+    { icon: 'assets/img/logo/powerbackup.png', title: 'Power Backup', desc: '100% power backup for all apartments' },
+    { icon: 'assets/img/logo/frontgate.png', title: 'Grand Entrance', desc: 'Impressive front entrance gate with security' },
+    { icon: 'assets/img/logo/liveroom.png', title: 'Spacious Living Room', desc: 'Well-designed living spaces for modern families' },
+    { icon: 'assets/img/logo/dinningroom.png', title: 'Dining Room', desc: 'Elegant dining areas for family gatherings' },
+    { icon: 'assets/img/logo/bed.png', title: 'Luxurious Bedrooms', desc: 'Comfortable bedrooms with ample natural light' },
+    { icon: 'assets/img/logo/kitchen.png', title: 'Modular Kitchen', desc: 'Modern kitchen with quality fittings' }
+  ],
+  gallery: [
+    'https://lh3.googleusercontent.com/d/1x094qwBiD3WxayIkyiAnNYl15Me8ikdu',
+    'https://drive.google.com/uc?export=download&id=1ot0Zo3L_keYoTLGG3bsVlJnJRgllAMB_',
+    'https://drive.google.com/uc?export=download&id=10kmf9uanyu7UwkC0FaYB-ZVqmPqWABeN'
+  ]
+},
+      {
+        id: 'vaishnavi-palace',
+        name: 'Vaishnavi Palace',
+        location: 'Ammapet, Salem',
+        status: 'ongoing',
+        type: '2 & 3 BHK',
+        units: '60 Units',
+        size: '1150-1750 sq.ft',
+        price: '₹42 - 65 Lakhs',
+        image: 'assets/img/service/vaishnavi.jpg',
+        gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
+        description: 'Vaishnavi Palace brings you elegant homes in the prime location of Ammapet. With thoughtfully designed spaces and world-class amenities, this ongoing project is set to redefine luxury living in Salem.',
+        specifications: {
+          type: '2 & 3 BHK',
+          units: '60 Units',
+          size: '1150-1750 sq.ft',
+          floors: '7 Floors',
+          parking: 'Covered',
+          possession: 'Dec 2024'
+        },
+        features: [
+          { icon: 'assets/img/logo/club.png', title: 'Clubhouse', desc: 'Spacious clubhouse for community gatherings and events' },
+          { icon: 'assets/img/logo/garden.png', title: 'Garden & Parks', desc: 'Lush green gardens with jogging track' },
+          { icon: 'assets/img/logo/parking.png', title: 'Ample Parking', desc: 'Covered parking for residents and visitors' },
+          { icon: 'assets/img/logo/water.png', title: 'Water Supply', desc: '24/7 water supply with water treatment plant' },
+          { icon: 'assets/img/logo/indoor.png', title: 'Indoor Games', desc: 'Dedicated area for indoor games and recreation' },
+          { icon: 'assets/img/logo/solar.png', title:'Solar Power', desc: 'Solar panels for common area power requirements' }
+        ],
+        gallery: [
+          'https://drive.google.com/thumbnail?id=1xkVR85iXIKRwoxcXvNnOE990Q4U2RxcD&sz=w1000',
+          null,
+          null
+        ]
+      },
+        {
+        id: 'sakthi-palace',
+        name: 'Sakthi palace',
+        location: 'Chinnathirupathi Road,Near Jayaram school,salem',
+        status: 'ongoing',
+        type: '2 & 3 BHK',
+        units: '6 Units',
+        size: '1200 sq.ft',
+        price: '₹42 - 65 Lakhs',
+        image: 'assets/img/service/sakthi.jpeg',
+        gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
+        description: 'Vaishnavi Palace brings you elegant homes in the prime location of Ammapet. With thoughtfully designed spaces and world-class amenities, this ongoing project is set to redefine luxury living in Salem.',
+        specifications: {
+          type: '3 BHK',
+          units: '6 Units',
+          size: '1200 sq.ft',
+          floors: 'stilt + 3 Floors',
+          parking: 'Covered',
+          possession: 'April 26'
+        },
+        features: [
+          { icon: 'assets/img/logo/club.png', title: 'Clubhouse', desc: 'Spacious clubhouse for community gatherings and events' },
+          { icon: 'assets/img/logo/garden.png', title: 'Garden & Parks', desc: 'Lush green gardens with jogging track' },
+          { icon: 'assets/img/logo/parking.png', title: 'Ample Parking', desc: 'Covered parking for residents and visitors' },
+          { icon: 'assets/img/logo/water.png', title: 'Water Supply', desc: '24/7 water supply with water treatment plant' },
+          { icon: 'assets/img/logo/indoor.png', title: 'Indoor Games', desc: 'Dedicated area for indoor games and recreation' },
+          { icon: 'assets/img/logo/solar.png', title:'Solar Power', desc: 'Solar panels for common area power requirements' }
+        ],
+        gallery: [
+          'https://drive.google.com/thumbnail?id=1xkVR85iXIKRwoxcXvNnOE990Q4U2RxcD&sz=w1000',
+          null,
+          null
+        ]
+      },
+      {
+        id: 'durga-lakshmi-apartment',
+        name: 'Durga Lakshmi Apartment',
+        location: 'Lakshmipuram,salem',
+        status: 'completed',
+        type: '2 & 3 BHK',
+        units: '20 Units',
+        size: '22000 sq.ft',
+        price: '₹38 - 58 Lakhs',
+        image: 'assets/img/service/Durga.jpg',
+        gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+        description: 'Durga Lakshmi Apartment is a completed residential project in the prime location of Gandhi Road, Lakshmipuram. With all modern amenities and excellent construction quality, it has become home to many happy families.',
+        specifications: {
+          type: '2 & 3 BHK',
+          units: '20 Units',
+          size: '22000 sq.ft',
+          floors: '4 Floors',
+          parking: 'Covered',
+          possession: 'Completed'
+        },
+        features: [
+          { icon: 'assets/img/logo/house.png', title: 'Vastu Compliant', desc: 'All apartments designed as per Vastu principles' },
+          { icon: 'assets/img/logo/ventilation.png', title: 'Well Ventilated', desc: 'Cross ventilation in all rooms for natural airflow' },
+          { icon: 'assets/img/logo/product-market-fit.png', title: 'Premium Fittings', desc: 'High-quality fittings and fixtures throughout' },
+          { icon: 'assets/img/logo/moon.png', title: 'Balcony Views', desc: 'Spacious balconies with scenic views' },
+          { icon: 'assets/img/logo/barrier.png', title: 'Secure Gating', desc: 'Gated community with controlled access' }
+        ],
+        gallery: ['https://lh3.googleusercontent.com/d/1QW1_Y-c4FkYULuF-wvOoOv5P5sIHX8Xc', null, null]
+      },
+       {
+        id: 'diamond-palace-apartment',
+        name: 'Diamond Palace Apartment',
+        location: 'Convent Road,Salem',
+        status: 'completed',
+        type: '3 BHK',
+        units: '20 Units',
+        size: '16000 sq.ft',
+        price: '₹38 - 58 Lakhs',
+        image: 'assets/img/service/Diamond.jpg',
+        gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+        description: 'Diamond palace Apartment is a completed residential project in the prime location of Convent Road, Salem. With all modern amenities and excellent construction quality, it has become home to many happy families.',
+        specifications: {
+          type: '3 BHK',
+          units: '12 Units',
+          size: '16000 sq.ft',
+          floors: '4 Floors',
+          parking: 'Covered',
+          possession: 'Completed'
+        },
+        features: [
+          { icon: 'assets/img/logo/house.png', title: 'Vastu Compliant', desc: 'All apartments designed as per Vastu principles' },
+          { icon: 'assets/img/logo/ventilation.png', title: 'Well Ventilated', desc: 'Cross ventilation in all rooms for natural airflow' },
+          { icon: 'assets/img/logo/product-market-fit.png', title: 'Premium Fittings', desc: 'High-quality fittings and fixtures throughout' },
+          { icon: 'assets/img/logo/moon.png', title: 'Balcony Views', desc: 'Spacious balconies with scenic views' },
+          { icon: 'assets/img/logo/barrier.png', title: 'Secure Gating', desc: 'Gated community with controlled access' }
+        ],
+        gallery: ['https://lh3.googleusercontent.com/d/1QW1_Y-c4FkYULuF-wvOoOv5P5sIHX8Xc', null, null]
+      },
+       {
+        id: 'sun-palce-apartment',
+        name: 'Sun Palace Apartment',
+        location: 'Kannakurichi,Salem',
+        status: 'completed',
+        type: '2 & 3 BHK',
+        units: '72 Units',
+        size: '79000 sq.ft',
+        price: '₹38 - 58 Lakhs',
+        image: 'assets/img/service/sum.jpg',
+        gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+        description: 'Durga Lakshmi Apartment is a completed residential project in the prime location of Gandhi Road, Lakshmipuram. With all modern amenities and excellent construction quality, it has become home to many happy families.',
+        specifications: {
+          type: '2 & 3 BHK',
+          units: '20 Units',
+          size: '22000 sq.ft',
+          floors: '4 Floors',
+          parking: 'Covered',
+          possession: 'Completed'
+        },
+        features: [
+          { icon: 'assets/img/logo/house.png', title: 'Vastu Compliant', desc: 'All apartments designed as per Vastu principles' },
+          { icon: 'assets/img/logo/ventilation.png', title: 'Well Ventilated', desc: 'Cross ventilation in all rooms for natural airflow' },
+          { icon: 'assets/img/logo/product-market-fit.png', title: 'Premium Fittings', desc: 'High-quality fittings and fixtures throughout' },
+          { icon: 'assets/img/logo/moon.png', title: 'Balcony Views', desc: 'Spacious balconies with scenic views' },
+          { icon: 'assets/img/logo/barrier.png', title: 'Secure Gating', desc: 'Gated community with controlled access' }
+        ],
+        gallery: ['https://lh3.googleusercontent.com/d/1QW1_Y-c4FkYULuF-wvOoOv5P5sIHX8Xc', null, null]
+      },
+      {
+        id: 'stat-apartment',
+        name: 'Stat Apartment',
+        location: 'Chinnathirupathi,Salem',
+        status: 'completed',
+        type: '2BHK',
+        units: '16 Units',
+        size: '22000 sq.ft',
+        price: '₹38 - 58 Lakhs',
+        image: 'assets/img/service/star.jpg',
+        gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+        description: 'Durga Lakshmi Apartment is a completed residential project in the prime location of Gandhi Road, Lakshmipuram. With all modern amenities and excellent construction quality, it has become home to many happy families.',
+        specifications: {
+          type: '2 & 3 BHK',
+          units: '20 Units',
+          size: '22000 sq.ft',
+          floors: '4 Floors',
+          parking: 'Covered',
+          possession: 'Completed'
+        },
+        features: [
+          { icon: 'assets/img/logo/house.png', title: 'Vastu Compliant', desc: 'All apartments designed as per Vastu principles' },
+          { icon: 'assets/img/logo/ventilation.png', title: 'Well Ventilated', desc: 'Cross ventilation in all rooms for natural airflow' },
+          { icon: 'assets/img/logo/product-market-fit.png', title: 'Premium Fittings', desc: 'High-quality fittings and fixtures throughout' },
+          { icon: 'assets/img/logo/moon.png', title: 'Balcony Views', desc: 'Spacious balconies with scenic views' },
+          { icon: 'assets/img/logo/barrier.png', title: 'Secure Gating', desc: 'Gated community with controlled access' }
+        ],
+        gallery: ['https://lh3.googleusercontent.com/d/1QW1_Y-c4FkYULuF-wvOoOv5P5sIHX8Xc', null, null]
+      },
+      {
+        id: 'golden-palace-apartment',
+        name: 'Golden Palace Apartment',
+        location: 'Junction,salem',
+        status: 'completed',
+        type: '2 & 3 BHK',
+        units: '20 Units',
+        size: '22000 sq.ft',
+        price: '₹38 - 58 Lakhs',
+        image: 'assets/img/service/Golden.jpg',
+        gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+        description: 'Durga Lakshmi Apartment is a completed residential project in the prime location of Gandhi Road, Lakshmipuram. With all modern amenities and excellent construction quality, it has become home to many happy families.',
+        specifications: {
+          type: '2 & 3 BHK',
+          units: '20 Units',
+          size: '22000 sq.ft',
+          floors: '4 Floors',
+          parking: 'Covered',
+          possession: 'Completed'
+        },
+        features: [
+          { icon: 'assets/img/logo/house.png', title: 'Vastu Compliant', desc: 'All apartments designed as per Vastu principles' },
+          { icon: 'assets/img/logo/ventilation.png', title: 'Well Ventilated', desc: 'Cross ventilation in all rooms for natural airflow' },
+          { icon: 'assets/img/logo/product-market-fit.png', title: 'Premium Fittings', desc: 'High-quality fittings and fixtures throughout' },
+          { icon: 'assets/img/logo/moon.png', title: 'Balcony Views', desc: 'Spacious balconies with scenic views' },
+          { icon: 'assets/img/logo/barrier.png', title: 'Secure Gating', desc: 'Gated community with controlled access' }
+        ],
+        gallery: ['https://lh3.googleusercontent.com/d/1QW1_Y-c4FkYULuF-wvOoOv5P5sIHX8Xc', null, null]
+      },
+     
+      {
+        id: 'lotus-apartment',
+        name: 'Lotus Apartment',
+        location: 'Alagapuram Pudur, Salem',
+        status: 'completed',
+        type: '2 & 3 BHK',
+        units: '20 Units',
+        size: '22000 sq.ft',
+        price: '₹38 - 58 Lakhs',
+        image: 'assets/img/service/lotus.jpg',
+        gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+        description: 'Durga Lakshmi Apartment is a completed residential project in the prime location of Gandhi Road, Lakshmipuram. With all modern amenities and excellent construction quality, it has become home to many happy families.',
+        specifications: {
+          type: '2 & 3 BHK',
+          units: '20 Units',
+          size: '22000 sq.ft',
+          floors: '4 Floors',
+          parking: 'Covered',
+          possession: 'Completed'
+        },
+        features: [
+          { icon: 'assets/img/logo/house.png', title: 'Vastu Compliant', desc: 'All apartments designed as per Vastu principles' },
+          { icon: 'assets/img/logo/ventilation.png', title: 'Well Ventilated', desc: 'Cross ventilation in all rooms for natural airflow' },
+          { icon: 'assets/img/logo/product-market-fit.png', title: 'Premium Fittings', desc: 'High-quality fittings and fixtures throughout' },
+          { icon: 'assets/img/logo/moon.png', title: 'Balcony Views', desc: 'Spacious balconies with scenic views' },
+          { icon: 'assets/img/logo/barrier.png', title: 'Secure Gating', desc: 'Gated community with controlled access' }
+        ],
+        gallery: ['https://lh3.googleusercontent.com/d/1QW1_Y-c4FkYULuF-wvOoOv5P5sIHX8Xc', null, null]
+      },
+     
+        {
+        id: 'mahaveer-palace',
+        name: 'Mahaveer Palace',
+        location: 'Gandhi Road, Lakshmipuram, Salem',
+        status: 'ready',
+        type: '2 & 3 BHK',
+        units: '24 Units',
+        size: '1100-1650 sq.ft',
+        price: '₹38 - 58 Lakhs',
+        image: 'assets/img/service/mahaveer.jpeg',
+        gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+        description: 'Durga Lakshmi Apartment is a completed residential project in the prime location of Gandhi Road, Lakshmipuram. With all modern amenities and excellent construction quality, it has become home to many happy families.',
+        specifications: {
+          type: '2 & 3 BHK',
+          units: '24 Units',
+          size: '1100-1650 sq.ft',
+          floors: '4 Floors',
+          parking: 'Covered',
+          possession: 'Completed'
+        },
+          features: [
+           { icon: 'assets/img/logo/24h.png', title: '24x7 Security', desc: '24 hours CCTV surveillance and trained security personnel' },
+          { icon: 'assets/img/logo/swimminh.png', title: 'Swimming Pool', desc: 'Temperature controlled swimming pool with separate kids pool' },
+           { icon: 'assets/img/logo/club.png', title: 'Club House', desc: 'Modern clubhouse with recreational facilities' },
+          { icon: 'assets/img/logo/theater.png', title: 'Mini Theater', desc: 'Conference hall with mini theater facility' },
+          { icon: 'assets/img/logo/playground.png', title: 'Children\'s Play Area', desc: 'Safe and colorful play area for children' },
+          { icon: 'assets/img/logo/barrier.png', title: 'Secure Gating', desc: 'Gated community with controlled access' }
+        ],
+        gallery: ['https://lh3.googleusercontent.com/d/1QW1_Y-c4FkYULuF-wvOoOv5P5sIHX8Xc', null, null]
+      },
+   
+     
+    ];
+
+    const reviewsData = [
+      {
+        name: 'Rajesh Kumar',
+        initial: 'R',
+        text: 'Excellent construction quality and timely delivery! We\'ve been living in King Palace for 2 years now and couldn\'t be happier. The amenities are well-maintained and the location is perfect for our family.',
+        project: 'King Palace, Chinna Thirupathi'
+      },
+      {
+        name: 'Priya Sankaran',
+        initial: 'P',
+        text: 'Best decision we made! The transparency in dealings and quality of materials used is outstanding. Dr. Rajendran sir personally ensures every detail is perfect. Our 3BHK in Durga Lakshmi Apartment is spacious and well-ventilated.',
+        project: 'Durga Lakshmi Apartment, Lakshmipuram'
+      },
+      {
+        name: 'Murugan Selvam',
+        initial: 'M',
+        text: 'Very professional and trustworthy builder. They delivered our apartment 2 months before the promised date! The construction quality is top-notch and there were no hidden charges.',
+        project: 'Royal Gardens, Ammapet'
+      },
+      {
+        name: 'Sudha Ramesh',
+        initial: 'S',
+        text: 'Amazing community living experience! The children\'s play area, gym, and garden spaces are beautifully maintained. Our neighbors are wonderful and we\'ve formed a close-knit community.',
+        project: 'Paradise Homes, Seelanaickenpatti'
+      },
+      {
+        name: 'Karthik Venkatesh',
+        initial: 'K',
+        text: 'Outstanding service from booking to possession! The team was always available to answer our questions. The quality of fittings, tiles, and paint work exceeded our expectations.',
+        project: 'Vaishnavi Palace, Ammapet'
+      }
+    ];
+
+    let currentSlide = 0;
+    let currentReview = 0;
+    let carouselInterval;
+    let reviewInterval;
+    let currentFilter = 'all';
+
+    function toggleMobileMenu() {
+      const navMenu = document.getElementById('navMenu');
+      const toggle = document.querySelector('.mobile-menu-toggle');
+      navMenu.classList.toggle('active');
+      toggle.classList.toggle('active');
+    }
+
+    function handleLogoError(img) {
+      img.style.display = 'none';
+    }
+
+    function handleFooterLogoError(img) {
+      img.style.display = 'none';
+    }
+
+    function init() {
+      renderCarousel();
+      renderReviews();
+      renderProjects();
+      startCarousel();
+      startReviewCarousel();
+      applyConfig(defaultConfig);
+    }
+
+    async function onConfigChange(config) {
+      const elements = {
+        heroTitle: document.getElementById('heroTitle'),
+        heroSubtitle: document.getElementById('heroSubtitle'),
+        heroButtonText: document.getElementById('heroButtonText'),
+        stat1Number: document.getElementById('stat1Number'),
+        stat1Label: document.getElementById('stat1Label'),
+        stat2Number: document.getElementById('stat2Number'),
+        stat2Label: document.getElementById('stat2Label'),
+        stat3Number: document.getElementById('stat3Number'),
+        stat3Label: document.getElementById('stat3Label'),
+        reviewsTitle: document.getElementById('reviewsTitle'),
+        reviewsSubtitle: document.getElementById('reviewsSubtitle'),
+        footerTagline: document.getElementById('footerTagline'),
+        footerDescription: document.getElementById('footerDescription'),
+        contactPhone: document.getElementById('contactPhone'),
+        contactEmail: document.getElementById('contactEmail'),
+        officeAddress: document.getElementById('officeAddress'),
+        footerPhone: document.getElementById('footerPhone'),
+        footerEmail: document.getElementById('footerEmail')
+      };
+      
+      if (elements.heroTitle) elements.heroTitle.textContent = config.hero_title || defaultConfig.hero_title;
+      if (elements.heroSubtitle) elements.heroSubtitle.textContent = config.hero_subtitle || defaultConfig.hero_subtitle;
+      if (elements.heroButtonText) elements.heroButtonText.textContent = config.hero_button_text || defaultConfig.hero_button_text;
+      if (elements.stat1Number) elements.stat1Number.textContent = config.stat_1_number || defaultConfig.stat_1_number;
+      if (elements.stat1Label) elements.stat1Label.textContent = config.stat_1_label || defaultConfig.stat_1_label;
+      if (elements.stat2Number) elements.stat2Number.textContent = config.stat_2_number || defaultConfig.stat_2_number;
+      if (elements.stat2Label) elements.stat2Label.textContent = config.stat_2_label || defaultConfig.stat_2_label;
+      if (elements.stat3Number) elements.stat3Number.textContent = config.stat_3_number || defaultConfig.stat_3_number;
+      if (elements.stat3Label) elements.stat3Label.textContent = config.stat_3_label || defaultConfig.stat_3_label;
+      if (elements.reviewsTitle) elements.reviewsTitle.textContent = config.reviews_title || defaultConfig.reviews_title;
+      if (elements.reviewsSubtitle) elements.reviewsSubtitle.textContent = config.reviews_subtitle || defaultConfig.reviews_subtitle;
+      if (elements.footerTagline) elements.footerTagline.textContent = config.footer_tagline || defaultConfig.footer_tagline;
+      if (elements.footerDescription) elements.footerDescription.textContent = config.footer_description || defaultConfig.footer_description;
+      
+      const phoneDisplay = (config.contact_phone || defaultConfig.contact_phone).replace(', ', '<br>');
+      if (elements.contactPhone) elements.contactPhone.innerHTML = phoneDisplay;
+      if (elements.footerPhone) elements.footerPhone.innerHTML = phoneDisplay;
+      
+      if (elements.contactEmail) elements.contactEmail.textContent = config.contact_email || defaultConfig.contact_email;
+      if (elements.officeAddress) elements.officeAddress.textContent = config.office_address || defaultConfig.office_address;
+      if (elements.footerEmail) elements.footerEmail.textContent = config.contact_email || defaultConfig.contact_email;
+    }
+
+    function applyConfig(config) {
+      onConfigChange(config);
+    }
+
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig: defaultConfig,
+        onConfigChange: onConfigChange,
+        mapToCapabilities: (config) => ({
+          recolorables: [],
+          borderables: [],
+          fontEditable: undefined,
+          fontSizeable: undefined
+        }),
+        mapToEditPanelValues: (config) => new Map([
+          ['hero_title', config.hero_title || defaultConfig.hero_title],
+          ['hero_subtitle', config.hero_subtitle || defaultConfig.hero_subtitle],
+          ['hero_button_text', config.hero_button_text || defaultConfig.hero_button_text],
+          ['stat_1_number', config.stat_1_number || defaultConfig.stat_1_number],
+          ['stat_1_label', config.stat_1_label || defaultConfig.stat_1_label],
+          ['stat_2_number', config.stat_2_number || defaultConfig.stat_2_number],
+          ['stat_2_label', config.stat_2_label || defaultConfig.stat_2_label],
+          ['stat_3_number', config.stat_3_number || defaultConfig.stat_3_number],
+          ['stat_3_label', config.stat_3_label || defaultConfig.stat_3_label],
+          ['reviews_title', config.reviews_title || defaultConfig.reviews_title],
+          ['reviews_subtitle', config.reviews_subtitle || defaultConfig.reviews_subtitle],
+          ['footer_tagline', config.footer_tagline || defaultConfig.footer_tagline],
+          ['footer_description', config.footer_description || defaultConfig.footer_description],
+          ['contact_phone', config.contact_phone || defaultConfig.contact_phone],
+          ['contact_email', config.contact_email || defaultConfig.contact_email],
+          ['office_address', config.office_address || defaultConfig.office_address]
+        ])
+      });
+    }
+
+    function navigateToPage(pageId) {
+      const pages = document.querySelectorAll('.page');
+      const navLinks = document.querySelectorAll('.nav-link');
+      const navMenu = document.getElementById('navMenu');
+      const toggle = document.querySelector('.mobile-menu-toggle');
+      
+      pages.forEach(page => page.classList.remove('active'));
+      navLinks.forEach(link => link.classList.remove('active'));
+      
+      document.getElementById(pageId).classList.add('active');
+      
+      navLinks.forEach(link => {
+        if (link.textContent.toLowerCase().includes(pageId) || 
+            (pageId === 'home' && link.textContent.toLowerCase() === 'home')) {
+          link.classList.add('active');
+        }
+      });
+      
+      // Close mobile menu
+      navMenu.classList.remove('active');
+      toggle.classList.remove('active');
+      
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function renderCarousel() {
+      const container = document.getElementById('carouselContainer');
+      const dotsContainer = document.getElementById('carouselDots');
+      
+      const carouselProjects = projectsData.filter(p => p.status === 'ongoing');
+      
+      container.innerHTML = carouselProjects.map((project, index) => {
+        const statusClass = project.status === 'ready' ? 'ready' : project.status === 'completed' ? 'completed' : '';
+        const statusText = project.status === 'ready' ? 'Ready to Move' : project.status === 'completed' ? 'Completed' : 'Ongoing';
+        
+        return `
+          <div class="carousel-slide ${index === 0 ? 'active' : ''}" data-project="${project.id}">
+            <div class="carousel-image-container">
+              ${project.image ? 
+                `<img src="${project.image}" alt="${project.name} - ${project.location}" class="carousel-project-image" 
+                     onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<div class=\\'gradient-placeholder\\' style=\\'background:${project.gradient}\\'>🏢</div>';">` :
+                `<div class="gradient-placeholder" style="background:${project.gradient}">🏢</div>`
+              }
+            </div>
+            <div class="carousel-content">
+              <span class="carousel-badge ${statusClass}">${statusText}</span>
+              <h3>${project.name}</h3>
+              <p style="display:inline-block;"><img src="assets/img/logo/location.png" width="20px" height="20px">${project.location}</p>
+              <br>
+              <button class="carousel-btn" onclick="viewProjectDetail('${project.id}')">View Details →</button>
+            </div>
+          </div>
+        `;
+      });
+      
+      dotsContainer.innerHTML = carouselProjects.map((_, index) => 
+        `<span class="dot ${index === 0 ? 'active' : ''}" onclick="goToSlide(${index})"></span>`
+      );
+      
+      window.carouselProjectsCount = carouselProjects.length;
+    }
+
+    function goToSlide(index) {
+      const slides = document.querySelectorAll('.carousel-slide');
+      const dots = document.querySelectorAll('.carousel-dots .dot');
+      const totalSlides = window.carouselProjectsCount || slides.length;
+      
+      if (slides.length === 0) return;
+      
+      slides[currentSlide].classList.remove('active');
+      slides[currentSlide].classList.add('prev');
+      dots[currentSlide].classList.remove('active');
+      
+      currentSlide = index;
+      
+      slides[currentSlide].classList.remove('prev');
+      slides[currentSlide].classList.add('active');
+      dots[currentSlide].classList.add('active');
+      
+      resetCarousel();
+    }
+
+    function nextSlide() {
+      const totalSlides = window.carouselProjectsCount || document.querySelectorAll('.carousel-slide').length;
+      goToSlide((currentSlide + 1) % totalSlides);
+    }
+
+    function changeSlide(direction) {
+      const totalSlides = window.carouselProjectsCount || document.querySelectorAll('.carousel-slide').length;
+      let newIndex = currentSlide + direction;
+      if (newIndex < 0) newIndex = totalSlides - 1;
+      if (newIndex >= totalSlides) newIndex = 0;
+      goToSlide(newIndex);
+    }
+
+    function startCarousel() {
+      carouselInterval = setInterval(nextSlide, 6000);
+    }
+
+    function resetCarousel() {
+      clearInterval(carouselInterval);
+      startCarousel();
+    }
+
+    function renderReviews() {
+      const container = document.getElementById('reviewsContainer');
+      const dotsContainer = document.getElementById('reviewDots');
+      
+      container.innerHTML = reviewsData.map((review, index) => `
+        <div class="review-slide ${index === 0 ? 'active' : ''}">
+          <div class="review-card">
+            <div class="review-header">
+              <div class="reviewer-avatar">${review.initial}</div>
+              <div class="reviewer-info">
+                <h4>${review.name}</h4>
+                <div class="review-stars">★★★★★</div>
+              </div>
+            </div>
+            <p class="review-text">"${review.text}"</p>
+            <div class="review-project">📍 ${review.project}</div>
+          </div>
+        </div>
+      `).join('');
+      
+      dotsContainer.innerHTML = reviewsData.map((_, index) => 
+        `<span class="review-dot ${index === 0 ? 'active' : ''}" onclick="goToReview(${index})"></span>`
+      ).join('');
+    }
+
+    function goToReview(index) {
+      const slides = document.querySelectorAll('.review-slide');
+      const dots = document.querySelectorAll('.review-dots .review-dot');
+      
+      slides[currentReview].classList.remove('active');
+      dots[currentReview].classList.remove('active');
+      
+      currentReview = index;
+      
+      slides[currentReview].classList.add('active');
+      dots[currentReview].classList.add('active');
+      
+      resetReviewCarousel();
+    }
+
+    function changeReview(direction) {
+      let newIndex = currentReview + direction;
+      if (newIndex < 0) newIndex = reviewsData.length - 1;
+      if (newIndex >= reviewsData.length) newIndex = 0;
+      goToReview(newIndex);
+    }
+
+    function startReviewCarousel() {
+      reviewInterval = setInterval(() => {
+        changeReview(1);
+      }, 7000);
+    }
+
+    function resetReviewCarousel() {
+      clearInterval(reviewInterval);
+      startReviewCarousel();
+    }
+
+    function renderProjects() {
+      const grid = document.getElementById('projectsGrid');
+      const filtered = currentFilter === 'all' ? 
+        projectsData : 
+        projectsData.filter(p => p.status === currentFilter);
+      
+      grid.innerHTML = filtered.map(project => {
+        const statusClass = project.status === 'ready' ? 'ready' : project.status === 'completed' ? 'completed' : '';
+        const statusText = project.status === 'ready' ? 'Ready to Move' : project.status === 'completed' ? 'Completed' : 'Ongoing';
+        
+        return `
+          <div class="project-card" data-status="${project.status}" onclick="viewProjectDetail('${project.id}')">
+            <div class="project-image">
+              ${project.image ? 
+                `<img src=${project.image} alt="${project.name} ${project.type} apartments in ${project.location}" class="project-img"
+                     onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<div class=\\'gradient-placeholder\\' style=\\'background:${project.gradient}\\'>��</div><span class=\\'project-badge ${statusClass}\\'>${statusText}</span>';">` :
+                `<div class="gradient-placeholder" style="background:${project.gradient}">🏠</div>`
+              }
+              <span class="project-badge ${statusClass}">${statusText}</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">${project.name}</h3>
+              <p class="project-location"><img src="assets/img/logo/location.png" width="20px" height="20px"> ${project.location}</p>
+              <div class="project-details">
+                <div class="detail-box">
+                  <div class="detail-label">Type</div>
+                  <div class="detail-value">${project.type}</div>
+                </div>
+                <div class="detail-box">
+                  <div class="detail-label">Units</div>
+                  <div class="detail-value">${project.units}</div>
+                </div>
+                <div class="detail-box">
+                  <div class="detail-label">Size</div>
+                  <div class="detail-value">${project.size}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function filterProjects(filter) {
+      currentFilter = filter;
+      
+      const buttons = document.querySelectorAll('.filter-btn');
+      buttons.forEach(btn => {
+        btn.classList.remove('active');
+        const btnText = btn.textContent.toLowerCase();
+        if ((filter === 'all' && btnText.includes('all')) ||
+            (filter === 'ongoing' && btnText.includes('ongoing')) ||
+            (filter === 'ready' && btnText.includes('ready')) ||
+            (filter === 'completed' && btnText.includes('completed'))) {
+          btn.classList.add('active');
+        }
+      });
+      
+      renderProjects();
+    }
+
+    function handleContactSubmit(event) {
+      event.preventDefault();
+      
+      const successMsg = document.getElementById('successMsg');
+      successMsg.classList.add('show');
+      
+      document.getElementById('contactForm').reset();
+      
+      setTimeout(() => {
+        successMsg.classList.remove('show');
+      }, 5000);
+    }
+
+    function handlePopupSubmit(event) {
+      event.preventDefault();
+      
+      const successMsg = document.getElementById('popupSuccessMsg');
+      successMsg.classList.add('show');
+      
+      document.getElementById('popupContactForm').reset();
+      
+      setTimeout(() => {
+        successMsg.classList.remove('show');
+        closeContactPopup();
+      }, 3000);
+    }
+
+    function openContactPopup() {
+      document.getElementById('contactPopup').classList.add('show');
+    }
+
+    function closeContactPopup() {
+      document.getElementById('contactPopup').classList.remove('show');
+    }
+
+    function viewProjectDetail(projectId) {
+      const project = projectsData.find(p => p.id === projectId);
+      if (!project) return;
+
+      const statusClass = project.status === 'ready' ? 'ready' : project.status === 'completed' ? 'completed' : '';
+      const statusText = project.status === 'ready' ? 'Ready to Move' : project.status === 'completed' ? 'Completed' : 'Ongoing';
+
+      const content = `
+        <div class="project-detail-header">
+          <button class="back-btn" onclick="navigateToPage('projects')">
+            <span>←</span>
+            <span>Back to Projects</span>
+          </button>
+        </div>
+
+        <div class="project-hero">
+          <div class="project-hero-image">
+            ${project.image ? 
+              `<img src="${project.image}" alt="${project.name} ${project.type} apartments in ${project.location}" class="project-hero-img"
+                   onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<div class=\\'gradient-placeholder\\' style=\\'background:${project.gradient}\\'>🏠</div>';">` :
+              `<div class="gradient-placeholder" style="background:${project.gradient}">🏠</div>`
+            }
+          </div>
+          <div class="project-hero-content">
+            <h1>${project.name}</h1>
+            <p class="project-location-large"><img src="assets/img/logo/location.png" width="20px" height="20px"> ${project.location}</p>
+            <span class="project-status-badge-large ${statusClass}">${statusText}</span>
+            <p class="project-description">${project.description}</p>
+            ${project.id !== 'durga-lakshmi-apartment' ? `
+            <div class="project-price">
+              <span class="project-price-label">Starting Price</span>
+              ${project.price}
+            </div>
+            <button class="project-cta-btn" onclick="openContactPopup()">Schedule Site Visit</button>
+            <button class="project-cta-btn" style="background: transparent; color: #C41E3A;" onclick="openContactPopup()">Request Brochure</button>
+            ` : ''}
+          </div>
+        </div>
+
+        <div class="section-header">
+          <h2 class="section-title">Project Specifications</h2>
+        </div>
+        <div class="project-specifications">
+          ${Object.entries(project.specifications).map(([key, value]) => {
+            const icons = {
+              type: 'assets/img/logo/mansion.png',
+              units: 'assets/img/logo/apartments.png',
+              size: 'assets/img/logo/house-design.png',
+              floors: 'assets/img/logo/stairs.png',
+              parking: 'assets/img/logo/parking.png',
+              possession: 'assets/img/logo/possession.png'
+            };
+            return `
+              <div class="spec-card">
+                <div class="spec-icon"><img src='${icons[key] || '📋'}' width="100px" height="100px"></div>
+                <div class="spec-label">${key}</div>
+                <div class="spec-value">${value}</div>
+              </div>
+            `;
+          }).join('')}
+        </div>
+
+        <div class="project-features-section">
+          <div class="section-header">
+            <h2 class="section-title">Amenities & Features</h2>
+          </div>
+          <div class="features-grid">
+            ${project.features.map(feature => `
+              <div class="feature-item">
+                <div class="feature-item-icon"><img src='${feature.icon}' width="100px" height="100px"></div>
+                <div class="feature-item-text">
+                  <h4>${feature.title}</h4>
+                  <p>${feature.desc}</p>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+        ${project.id !== 'durga-lakshmi-apartment' ? `
+        <div class="project-gallery-section">
+          <div class="section-header">
+            <h2 class="section-title">Project Gallery</h2>
+          </div>
+          <div class="gallery-grid">
+            ${project.gallery.map((img, idx) => `
+              <div class="gallery-item">
+                ${img ? 
+                  `<img src="${img}" alt="${project.name} gallery image ${idx + 1}" class="gallery-img"
+                       onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<div class=\\'gradient-placeholder\\' style=\\'background:${project.gradient}\\'>🏠</div>';">` :
+                  `<div class="gradient-placeholder" style="background:${project.gradient}">🏠</div>`
+                }
+              </div>
+            `).join('')}
+          </div>
+        </div>
+        ` : ''}
+
+        <div style="text-align: center; margin-top: 5rem; padding: 4rem 3rem; background: #FFFFFF; border: 1px solid rgba(26, 26, 26, 0.08); border-radius: 4px;">
+          <h3 style="font-family: 'Crimson Pro', Georgia, serif; font-size: 2.5rem; font-weight: 700; margin-bottom: 2rem; color: #1A1A1A;">Interested in ${project.name}?</h3>
+          <p style="font-size: 1.05rem; color: #4A4A4A; margin-bottom: 2.5rem; max-width: 560px; margin-left: auto; margin-right: auto;">Contact us today to schedule a site visit or request more information about this premium residential project in Salem.</p>
+          <button class="project-cta-btn" style="max-width: 480px; margin: 0 auto;" onclick="openContactPopup()">Contact Us Now</button>
+        </div>
+      `;
+
+      document.getElementById('projectDetailContent').innerHTML = content;
+      navigateToPage('project-detail');
+    }
+
+    document.getElementById('contactPopup').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeContactPopup();
+      }
+    });
+
+    window.addEventListener('load', function() {
+      setTimeout(openContactPopup, 2000);
+    });
+
+    document.addEventListener('DOMContentLoaded', init);
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9ba9769511ff3989',t:'MTc2Nzg1MTkwOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
