@@ -1608,6 +1608,12 @@
       margin-bottom: 5rem;
     }
 
+    .project-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -2680,7 +2686,14 @@
        <h2 class="reviews-title" id="reviewsTitle">What Our Customers Say</h2>
        <p class="reviews-subtitle" id="reviewsSubtitle">Real testimonials from happy homeowners living in our projects</p>
       </div>
-      <div class="tagembed-widget" style="width:100%;height:100%;overflow:auto;" data-widget-id="313640" data-website="1"></div><script src="https://widget.tagembed.com/embed.min.js" type="text/javascript"></script>
+      <div class="reviews-carousel-wrapper">
+       <div class="reviews-carousel-container" id="reviewsContainer"></div>
+       <div class="reviews-nav"><button class="review-nav-btn" onclick="changeReview(-1)" aria-label="Previous review">‹</button>
+        <div class="review-dots" id="reviewDots"></div><button class="review-nav-btn" onclick="changeReview(1)" aria-label="Next review">›</button>
+       </div>
+      </div>
+      <div class="google-reviews-link"><a href="https://share.google/KgQYF52Z0aQu42Bfe" target="_blank" rel="noopener noreferrer" class="google-reviews-btn"> <span>Read More Reviews on Google</span> <span>→</span> </a> <a href="https://www.google.com/maps/place//data=!4m3!3m2!1s0x3babf1b4986d4af5:0xace57f397232df12!12e1?source=g.page.m.ia._&amp;laa=nmx-review-solicitation-ia2" target="_blank" rel="noopener noreferrer" class="google-reviews-btn write-review"> <span>⭐ Write a Review</span> </a>
+      </div>
      </section>
     </div><!-- Projects Page -->
     <div id="projects" class="page">
@@ -2949,9 +2962,9 @@
   description: 'Experience luxury living at King Palace by Vijayasree Constructions, where modern architecture meets comfort. Located in Chinna Thirupathi near Jayaram school, this ongoing project offers spacious apartments with 25 premium amenities and excellent connectivity to all major landmarks in Salem.',
   specifications: {
     type: '2 ,3 & 4 BHK',
-    units: '48 Units',
+    units: '135 Units',
     size: '2BHK - 1100-1600 sq.ft,3BHK - 1700 - 200 sq.ft ,4BHK - 2200 Sq.ft',
-    floors: 'stilt + 5 Floors(Car parking)',
+    floors: 'stilt + 5 Floors',
     parking: 'Covered',
     possession: 'Dec 27'
   },
@@ -3001,7 +3014,7 @@
           type: '2 & 3 BHK',
           units: '35 Units',
           size: '1270-1440 sq.ft',
-          floors: '5 Floors',
+          floors: 'stilt + 5 Floors',
           parking: 'Covered',
           possession: 'March 2027'
         },
@@ -3014,9 +3027,9 @@
           { icon: 'assets/img/logo/barrier.png', title: 'CCTV Camera', desc: '24/7 CCTV surveillance for enhanced security' }
         ],
         gallery: [
-          'https://drive.google.com/thumbnail?id=1xkVR85iXIKRwoxcXvNnOE990Q4U2RxcD&sz=w1000',
-          null,
-          null
+          'assets/img/service/Night View.jpg',
+          'assets/img/service/Side Elevation.jpg',
+          'assets/img/service/park only 1.jpg'
         ]
       },
         {
@@ -3262,34 +3275,33 @@
 
     const reviewsData = [
       {
-        name: 'Rajesh Kumar',
-        initial: 'R',
-        text: 'Excellent construction quality and timely delivery! We\'ve been living in King Palace for 2 years now and couldn\'t be happier. The amenities are well-maintained and the location is perfect for our family.',
-        project: 'King Palace, Chinna Thirupathi'
-      },
-      {
-        name: 'Priya Sankaran',
+        name: 'Pushpalatha Priya',
         initial: 'P',
-        text: 'Best decision we made! The transparency in dealings and quality of materials used is outstanding. Dr. Rajendran sir personally ensures every detail is perfect. Our 3BHK in Durga Lakshmi Apartment is spacious and well-ventilated.',
-        project: 'Durga Lakshmi Apartment, Lakshmipuram'
+        text: 'Good working in construction ☺️',
+       
       },
       {
-        name: 'Murugan Selvam',
+        name: 'Mohana Loganathan',
         initial: 'M',
-        text: 'Very professional and trustworthy builder. They delivered our apartment 2 months before the promised date! The construction quality is top-notch and there were no hidden charges.',
-        project: 'Royal Gardens, Ammapet'
+        text: 'Its very big construction company  .. did lots of project.  Especially school construction works .. the office is too good',
       },
       {
-        name: 'Sudha Ramesh',
-        initial: 'S',
-        text: 'Amazing community living experience! The children\'s play area, gym, and garden spaces are beautifully maintained. Our neighbors are wonderful and we\'ve formed a close-knit community.',
-        project: 'Paradise Homes, Seelanaickenpatti'
+        name: 'jeet j',
+        initial: 'M',
+        text: 'Big company promoting apartments with good facilities in Salem at market best prices',
+      
       },
       {
-        name: 'Karthik Venkatesh',
-        initial: 'K',
-        text: 'Outstanding service from booking to possession! The team was always available to answer our questions. The quality of fittings, tiles, and paint work exceeded our expectations.',
-        project: 'Vaishnavi Palace, Ammapet'
+        name: 'Dheeraj Lakhi',
+        initial: 'D',
+        text: 'Most reliable and genuine builders with the best quality and best value.',
+       
+      },
+      {
+        name: 'Venkatesan Sharan kumar',
+        initial: 'VSK',
+        text: 'Construction , civil engineering company, and legal advisory consultant.',
+      
       }
     ];
 
@@ -3530,10 +3542,10 @@
               <div class="reviewer-info">
                 <h4>${review.name}</h4>
                 <div class="review-stars">★★★★★</div>
+                 <p class="review-text">"${review.text}"</p>
               </div>
             </div>
-            <p class="review-text">"${review.text}"</p>
-            <div class="review-project">📍 ${review.project}</div>
+          
           </div>
         </div>
       `).join('');
@@ -3766,6 +3778,22 @@
             `).join('')}
           </div>
         </div>
+
+        ${project.id === 'vaishnavi-palace' && project.gallery && project.gallery.length > 0 && project.gallery.some(img => img) ? `
+        <div class="project-gallery-section">
+          <div class="section-header">
+            <h2 class="section-title">Project Gallery</h2>
+          </div>
+          <div class="project-gallery-grid">
+            ${project.gallery.filter(img => img).map(img => `
+              <div class="gallery-item">
+                <img src="${img}" alt="${project.name} gallery image" class="gallery-img" 
+                     onerror="this.style.display='none';">
+              </div>
+            `).join('')}
+          </div>
+        </div>
+        ` : ''}
 
         <div style="text-align: center; margin-top: 5rem; padding: 4rem 3rem; background: #FFFFFF; border: 1px solid rgba(26, 26, 26, 0.08); border-radius: 4px;">
           <h3 style="font-family: 'Crimson Pro', Georgia, serif; font-size: 2.5rem; font-weight: 700; margin-bottom: 2rem; color: #1A1A1A;">Interested in ${project.name}?</h3>
